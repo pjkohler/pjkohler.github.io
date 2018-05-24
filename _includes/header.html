@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<nav>
+	<ul>
+	{% for item in site.navigation %}
+	  {% assign class = navbar_nil %}
+	  {% if page.url contains item.url %}
+	      {% assign class = 'navbar_act' %}
+	  {% endif %}
+      <li><a href="{{ item.url }}" class="{{ class }}">{{ item.title }}</a></li>
+	{% endfor %}
+	</ul>
+</nav>

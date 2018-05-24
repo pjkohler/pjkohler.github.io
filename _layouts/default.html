@@ -3,19 +3,13 @@
 	<head>
 		<title>{{ page.title }}</title>
 		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">About Me</a></li>
-        		<li><a href="/blog">Blog</a></li>
-	        	<li><a href="/research">Research</a></li>
-        		<li><a href="/data">Datasets</a></li>
-        		<li><a href="/pubs">Publications</a></li>
-        		<li><a href="/cv">CV</a></li>
-    		</ul>
-		</nav>
+		<img id="logo" src="{{ site.url }}/assets/logo/su_seal.png" alt="Stanford Logo"> 
+		<h1>{{ "Peter J. Kohler, PhD" }}</h1>
+		<h2>{{ "Stanford Vision and Neurodevelopment Lab" }}</h2>
+		{% include header.html %}
 		<div class="container">
     		{{ content }}
 		</div><!-- /.container -->
