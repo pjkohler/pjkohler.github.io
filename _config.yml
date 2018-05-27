@@ -1,12 +1,17 @@
 name: Peter J. Kohler, PhD
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+kramdown:
+  # parse markdown inside block-level HTML tag
+  parse_block_html: true
+
+include: ["_pages"]
 
 navigation:
 - title: About Me
   url: /
 - title: News
-  url: /blog/
+  url: /news/
 - title: Research
   url: /research/
 - title: Datasets

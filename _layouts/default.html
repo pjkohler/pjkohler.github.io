@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ page.title }}</title>
+		<title>pjkohler: {{ page.title }}</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
+	<header>
+	<img id="logo" src="{{ site.url }}/assets/logos/su_seal.png" alt="Stanford Logo">
+	<h1 class="static">{{ "Peter J. Kohler" }}</h1>
+	<h3 class="static">{{ "Stanford Vision and Neurodevelopment Lab" }}</h3>
+	<nav>
+		<ul id="nav">
+	  	{% for node in site.navigation %}
+	  		{% if node.url == "/" %}
+	  			{% if page.url == node.url %}
+    				{% assign class = "active" %}
+    			{% else %}
+    				{% assign class = "nil" %}
+    			{% endif %}
+			{% else %}
+    			{% if page.url contains node.url %}
+					{% assign class = "active" %}
+				{% else %}
+					{% assign class = "nil" %}
+				{% endif %}
+			{% endif %}
+			<li><a class="{{ class }}" href="{{ node.url }}">{{ node.title }}</a></li>
+  		{% endfor %}
+		</ul>
+	</nav>
+	</header>
 	<body>
-		<img id="logo" src="{{ site.url }}/assets/logo/su_seal.png" alt="Stanford Logo"> 
-		<h1>{{ "Peter J. Kohler, PhD" }}</h1>
-		<h2>{{ "Stanford Vision and Neurodevelopment Lab" }}</h2>
-		<nav>
-			<ul>
-			{% for item in site.navigation %}
-			  {% assign class = navbar_nil %}
-			  {% if page.url contains item.url %}
-			      {% assign class = 'navbar_act' %}
-			  {% endif %}
-		      <li><a href="{{ item.url }}" class="{{ class }}">{{ item.title }}</a></li>
-			{% endfor %}
-			</ul>
-		</nav>
 		<div class="container">
     		{{ content }}
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:pjkohl3r@gmail.com">email</a></li>
-        		<li><a href="http://github.com/pjkohler">github.com/pjkohler</a></li>
-			</ul>
-		</footer>
+		</div>
 	</body>
+	<footer>
+		<ul id="links">
+			<li id="email"><a href="mailto: pjkohler@stanford.edu" target="_blank">EMAIL</a></li>
+			<li id="scholar"><a href="http://scholar.google.com/citations?user=kV2t964AAAAJ&amp;hl=en" target="_blank">SCHOLAR</a></li>
+			<li id="github"><a href="https://github.com/pjkohler" target="_blank">GITHUB</a></li>
+			<li id="publons"><a href="https://publons.com/author/1193872/peter-j-kohler#profile" target="_blank">PUBLONS</a></li>
+		</ul>
+	</footer>
 </html>
