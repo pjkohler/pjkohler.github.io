@@ -75,7 +75,11 @@ header {
     clear: both;
 }
 
-ul {
+ul#nav {
+    list-style-type: none;
+    top:120px;
+    height:50px;
+    background-color: var(--dark-red);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -84,17 +88,18 @@ ul {
     position:fixed;
     z-index:9;
 }
-ul#nav {
-    list-style-type: none;
-    top:120px;
-    height:50px;
-    background-color: var(--dark-red);
-}
 
 ul#links {
     bottom:0px;
     height:50px;
     background-color: var(--dark-red);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    left: 0px;
+    position:fixed;
+    z-index:9;
 }
 
 #nav li, #links li {
@@ -165,7 +170,39 @@ a {
     background-color: var(--gray);
 }
 
+ul#posts { 
+    background-color: var(--sand);
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 72px;
+    font-size: 18px;
+    line-height: 27px;
+    position: relative;
+    left: -40px;
+}
+
+#posts li {
+    font-size: 27px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 18px;
+    color: var(--dark-red);
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    clear: left;
+}
+#posts li a {
+    color: var(--linkblue);
+    text-decoration: underline;
+    font-style: italic;
+}
+
 ol {
+    margin-top: 0px;
     margin-right: 50px;
     margin-left: 20px;
     display: block;
@@ -234,33 +271,6 @@ p {
     margin-right: 80px;
     z-index:1;
     position:relative;
-}
-
-
-ul#posts { 
-    background-color: var(--sand);
-    margin-right: 0px;
-    margin-left: 40px;
-    margin-top: 0px;
-    padding-bottom: 75px;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: left;
-}
-
-ul#posts li {
-    /*list-style: none;*/
-    float: left;
-}
-ul#posts li a {
-    color: var(--textblack);
-    text-decoration: none;
-    display: inline;
-    font-size: 18px;
-    line-height: 27px;    
-    font-weight: 400;
-    text-align: left;
-    padding: 14px 16px;
 }
 
 .blurb {
