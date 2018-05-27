@@ -173,7 +173,7 @@ a {
 ul#posts { 
     background-color: var(--sand);
     width: 100%;
-    padding-top: 5px;
+    padding-top: 9px;
     padding-bottom: 72px;
     font-size: 18px;
     line-height: 27px;
@@ -183,7 +183,7 @@ ul#posts {
 
 #posts li {
     font-size: 27px;
-    line-height: 27px;
+    line-height: 18px;
     font-style: normal;
     font-weight: 400;
     text-align: left;
@@ -191,6 +191,7 @@ ul#posts {
     padding-bottom: 18px;
     color: var(--dark-red);
     text-decoration: none;
+    font-style: italic;
     list-style-type: none;
     float: left;
     clear: left;
@@ -198,7 +199,7 @@ ul#posts {
 #posts li a {
     color: var(--linkblue);
     text-decoration: underline;
-    font-style: italic;
+    font-style: normal;
 }
 
 ol {

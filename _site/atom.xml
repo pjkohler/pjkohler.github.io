@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Peter J. Kohler's Blog</title>
-	<link href="http://pjkohler.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://pjkohler.github.io/blog"/>
-	<updated>2018-05-27T15:07:17-07:00</updated>
-	<id>http://pjkohler.github.io/blog</id>
+	<link href="http://pjkohler.github.io/news/atom.xml" rel="self"/>
+	<link href="http://pjkohler.github.io/news"/>
+	<updated>2018-05-27T15:19:36-07:00</updated>
+	<id>http://pjkohler.github.io/news</id>
 	<author>
 		<name>Peter J. Kohler, PhD</name>
 		<email>pjkohl3r@gmail.com</email>
@@ -14,18 +14,18 @@
 	
 		<entry>
 			<title>Getting closer</title>
-			<link href="http://pjkohler.github.io/blog/2018/05/27/getting-closer"/>
+			<link href="http://pjkohler.github.io/news/2018/05/27/getting-closer"/>
 			<updated>2018-05-27T00:00:00-07:00</updated>
-			<id>http://pjkohler.github.io/blog/2018/05/27/getting-closer</id>
+			<id>http://pjkohler.github.io/news/2018/05/27/getting-closer</id>
 			<content type="html">&lt;p&gt;Getting closer to replicating my old drupal site. I have learned a lot about CSS. Still a few layout things I am slightly unhappy with, and the research section still needs to be done, but I am happy to have gotten this far.&lt;/p&gt;
 </content>
 		</entry>
 	
 		<entry>
 			<title>pjkohler site launched</title>
-			<link href="http://pjkohler.github.io/blog/2018/05/20/pjkohler-site-launched"/>
+			<link href="http://pjkohler.github.io/news/2018/05/20/pjkohler-site-launched"/>
 			<updated>2018-05-20T00:00:00-07:00</updated>
-			<id>http://pjkohler.github.io/blog/2018/05/20/pjkohler-site-launched</id>
+			<id>http://pjkohler.github.io/news/2018/05/20/pjkohler-site-launched</id>
 			<content type="html">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.&lt;/p&gt;
 </content>
 		</entry>

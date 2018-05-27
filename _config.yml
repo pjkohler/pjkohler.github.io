@@ -1,6 +1,6 @@
 name: Peter J. Kohler, PhD
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /news/:year/:month/:day/:title
 kramdown:
   # parse markdown inside block-level HTML tag
   parse_block_html: true
