@@ -3,7 +3,6 @@ layout: default
 title: Publications
 permalink: /pubs/
 ---
-{::options parse_block_html="true" /}
 <div class="row">
 <div class="column">
 ### Peer-reviewed Articles
