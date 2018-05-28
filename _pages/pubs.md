@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Publications
+title: publications
 permalink: /pubs/
 ---
 <div class="row">

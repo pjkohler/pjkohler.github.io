@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Me
+title: about
 permalink: /
 ---
 ![picture of the author](/assets/pjkohler.jpg "Peter J. Kohler"){: #image }
