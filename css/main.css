@@ -2,9 +2,10 @@
     --dark-red:#8C1515;
     --sand:#F9F6EF;
     --linkblue: #006CB8;
-    --gray: #007c92;
+    --dark-blue: #007c92;
     --fogwhite:#F4F4F4;
     --textblack:#3B3738;
+    --gray: #b6b1a9;
 }
 
 html{
@@ -26,11 +27,10 @@ body {
     font-style: normal;
     font-weight: 400;
     position:relative;
-    top:160px;
+    top:120px;
     z-index:10;
 }
 footer {
-    font-size: 1em;
     bottom:60px;
     position: fixed;
     z-index:99;
@@ -42,16 +42,12 @@ footer {
     vertical-align: middle;
 }
 header {
-    font-size: 1em;
     width: 100%;
     top: 0px;
-    height:120px;
     position: fixed;
-    border:;
     z-index:99;
     overflow: hidden;
     background-color: var(--sand);
-    width: 100%;
     display:block;
     vertical-align: middle;
 }
@@ -77,8 +73,8 @@ header {
 
 ul#nav {
     list-style-type: none;
-    top:120px;
-    height:50px;
+    top:80px;
+    height:40px;
     background-color: var(--dark-red);
     margin: 0;
     padding: 0;
@@ -91,7 +87,7 @@ ul#nav {
 
 ul#links {
     bottom:0px;
-    height:50px;
+    height:40px;
     background-color: var(--dark-red);
     margin: 0;
     padding: 0;
@@ -130,24 +126,26 @@ a {
     background-position: 30px 12px;
     background-image: url("/assets/icons/email.png");
     z-index:99;
-    padding-right:30px;
+    padding-left:50px;
 }
 
 #links li#scholar a {
     background-position: 10px 12px;
     background-image: url("/assets/icons/scholar.png");
-    z-index:99;   
+    z-index:99; 
+    padding-left:40px;  
 }
 #links li#github a {
     background-position: 20px 10px;
     background-image: url("/assets/icons/github.png");
     z-index:99;
-    padding-right:20px;
+    padding-left:45px;
 }
 #links li#publons a {
     background-position: 15px 10px;
     background-image: url("/assets/icons/publons.png");
     z-index:99;
+    padding-left:40px;
 }
 
 #nav li a, #links li a {
@@ -156,18 +154,20 @@ a {
     color: var(--fogwhite);
     font-size: 18px;
     font-weight: 400;
-    text-align: right;
-    padding: 15px 15px;
+    text-align: center;
+    padding: 15px;
     height:100px;
-    vertical-align:middle;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
 }
 
 #nav li a.active {
-    background-color: var(--gray);
+    background-color: var(--dark-blue);
 }
 
 #nav li a:hover, #links li a:hover {
-    background-color: var(--gray);
+    background-color: var(--dark-blue);
 }
 
 ul#posts { 
@@ -223,20 +223,20 @@ ol li {
 }
 
 h1 {
-    font-size: 54px;
-    line-height: 27px;
+    font-size: 48px;
     font-weight: 400;
+    line-height: 0px;
 }
 h2 {
     font-size: 36px;
-    line-height: 18px;
     font-weight: 400;
+    line-height: 0px;
 }
 h3 {
-    font-size: 27px;
-    line-height: 18px;
+    font-size: 24px;
     font-style: italic;
     font-weight: 400;
+    line-height: 0px;
 }
 
 h1.relative, h2.relative, h3.relative {
@@ -257,7 +257,7 @@ h1.static{
     top:0px;
 }
 h3.static{
-    top:60px;
+    top:40px;
 }
 .research-logo {
     float: left;
@@ -274,12 +274,32 @@ p {
     position:relative;
 }
 
+.data-text {
+    border-left: 2px solid black; 
+    border-right: 2px solid black; 
+    border-bottom: 2px solid black; 
+    padding-left: 5%; 
+    padding-right: 0px; 
+    margin-right: 80px; 
+    padding-top: 10px; 
+    position: relative; top:-10px;"
+}
+
+.data-head {
+    border: 2px solid black; 
+    padding: 0% 0% 0% 5%; 
+    margin-right: 80px; 
+    background-color: var(--dark-blue);
+    color: var(--fogwhite);
+    display: block;
+}
+
 .blurb {
     min-height:100%; 
 }
 
 #logo {
-    height: 165px;
+    height: 120px;
     float: right;
     vertical-align: text-top;
     display:inline;
@@ -324,7 +344,7 @@ p {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .column {
         width: 100%;
     }
