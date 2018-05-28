@@ -31,10 +31,11 @@ body {
     z-index:10;
 }
 footer {
-    bottom:60px;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
     position: fixed;
     z-index:99;
-    width: 100%;
     margin-left: 0px;
     padding: 0;
     background-color: var(--sand);
@@ -42,8 +43,9 @@ footer {
     vertical-align: middle;
 }
 header {
-    width: 100%;
     top: 0px;
+    width: 100%;
+    height: 120px;
     position: fixed;
     z-index:99;
     overflow: hidden;
@@ -86,7 +88,7 @@ ul#nav {
 }
 
 ul#links {
-    bottom:0px;
+    bottom:20px;
     height:40px;
     background-color: var(--dark-red);
     margin: 0;
