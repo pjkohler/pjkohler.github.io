@@ -56,6 +56,8 @@ permalink: /pubs/
 </div>
 <div class="column">
 ### First-Author Conference Presentations
+0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2018.m4v)
+	**Kohler**, P.J., Meredith, W. J. & Norcia, A.M. Characterizing late-developing binocular motion mechanisms in human visual cortex. Talk at *Vision Sciences Society 2018*, St. Petersburg, FL.
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2017.m4v)
 	**Kohler**, P.J., Meredith, W. J. & Norcia, A.M. Neural responses to motion in 2 and 3 dimensions. Talk at *Vision Sciences Society 2017*,St. Petersburg, FL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_fens2016.pdf)

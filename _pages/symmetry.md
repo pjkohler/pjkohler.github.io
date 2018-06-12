@@ -1,0 +1,12 @@
+---
+layout: default
+title: research
+permalink: /research/symmetry
+---
+### Symmetry in Textures
+![Schematic of the 17 wallpaper groups](/assets/research/symmetry_allgroups.png "Schematic of the 17 wallpaper groups"){: #rightnarrow }
+Symmetry is a one of the most perceptually salient properties of visual images and has been a recurring feature in art, architecture and other artifacts of human construction for centuries. The gestalt psychologists working in Germany in the early 20th century were among the first to recognize the importance of symmetry in visual perception, identifying symmetry as a fundamental principle of visual organization. Since then, the majority of the work on symmetry in psychology and neuroscience has focused on mirror symmetry, but there are several other types of symmetry that have yet to be studied. Crystallographers in the late 19th century discovered that any two-dimensional repetitive pattern can be classified as belonging to one of 17 “wallpaper” groups, based on unique combinations of four fundamental types of symmetry: reflection, translation, rotation and glide reflection. Examples of all 17 groups are shown to the right (illustration from David Wade, 1993).
+
+Because all forms of symmetry can be exhaustively described in terms of the wallpaper groups, they provide a more complete and theoretically motivated framework for studying symmetry experimentally. We have developed a technique that makes it possible to automatically generate exemplar patterns corresponding to each of the 17 wallpaper groups. The patterns are based on small “seed” regions comprised of 2-dimensional random noise patches. A new symmetric pattern emerges with every new seed region. These patterns are ideal for studying symmetry perception, because a near-infinite number of different images can be generated, each of which is tightly controlled in terms of low-level visual features, while still very being visually compelling and evoking a strong visual response.
+
+I have presented our work on four of the wallpaper groups groups, all containing rotation symmetry, at the Vision Sciences Society conference in 2014, 2015 and 2016, and the findings have been published in The Journal of Neuroscience [(Kohler et al., 2016)](/assets/papers/kohler_et_al_2016.pdf) and NeuroImage [(Kohler et al., 2018)](/assets/papers/kohler_et_al_2018.pdf) .
