@@ -1,11 +1,11 @@
 :root {
-    --dark-red:#8C1515;
-    --sand:#F9F6EF;
-    --linkblue: #006CB8;
+    --fg_color:#8C1515;
+    --bg_color: #F8F6EA;
+    --box_color: #b6b1a9;
+    --link_color: #006CB8;
     --dark-blue: #007c92;
     --fogwhite:#F4F4F4;
     --textblack:#3B3738;
-    --gray: #b6b1a9;
 }
 
 html{
@@ -14,8 +14,8 @@ html{
 
 
 body {
-    background-color: var(--sand);
-    color: var(--dark-red);
+    background-color: var(--bg_color);
+    color: var(--fg_color);
     padding-bottom: 69px;
     padding-left: 12px;
     padding-right: 36px;
@@ -25,7 +25,7 @@ body {
     font-style: normal;
     font-weight: 400;
     position:relative;
-    top:120px;
+    top:144px;
     z-index:10;
     vertical-align: middle;
 }
@@ -36,7 +36,7 @@ footer {
     position: fixed;
     z-index:99;
     padding: 0;
-    background-color: var(--sand);
+    background-color: var(--bg_color);
     display:block;
     vertical-align: middle;
 }
@@ -47,7 +47,7 @@ header {
     position: fixed;
     z-index:99;
     overflow: hidden;
-    background-color: var(--sand);
+    background-color: var(--bg_color);
     display:block;
     vertical-align: middle;
 }
@@ -73,9 +73,9 @@ header {
 
 ul#nav {
     list-style-type: none;
-    top:80px;
+    top:96px;
     height:40px;
-    background-color: var(--dark-red);
+    background-color: var(--fg_color);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -88,7 +88,7 @@ ul#nav {
 ul#links {
     bottom:20px;
     height:40px;
-    background-color: var(--dark-red);
+    background-color: var(--fg_color);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -108,7 +108,7 @@ ul#links {
 /* links */
 
 a {
-    color: var(--linkblue);
+    color: var(--link_color);
     text-decoration: underline;
 }
 
@@ -171,7 +171,7 @@ a {
 }
 
 ul#posts { 
-    background-color: var(--sand);
+    background-color: var(--bg_color);
     width: 100%;
     padding-top: 9px;
     padding-bottom: 72px;
@@ -189,7 +189,7 @@ ul#posts {
     text-align: left;
     padding-left: 0px;
     padding-bottom: 18px;
-    color: var(--dark-red);
+    color: var(--fg_color);
     text-decoration: none;
     font-style: italic;
     list-style-type: none;
@@ -197,7 +197,7 @@ ul#posts {
     clear: left;
 }
 #posts li a {
-    color: var(--linkblue);
+    color: var(--link_color);
     text-decoration: underline;
     font-style: normal;
 }
@@ -241,23 +241,28 @@ h3 {
 
 h1.relative, h2.relative, h3.relative {
     display:block;
-    color: var(--dark-red);
+    color: var(--fg_color);
     font-weight: 400;
     z-index: 1;
     position: relative;
 }
 
-h1.static, h3.static{
+h2.static, h3.static{
     font-weight: 400;
-    color: var(--dark-red);
+    color: var(--fg_color);
     position:fixed;
     z-index:1;
 }
 h1.static{
     top:0px;
+    font-weight: 400;
+    color: var(--textblack);
+    position:fixed;
+    z-index:1;
+    text-decoration: underline;
 }
 h3.static{
-    top:40px;
+    top:48px;
 }
 .research-logo {
     float: left;
@@ -277,9 +282,9 @@ p {
 }
 
 .box-text {
-    border-left: 2px solid black; 
-    border-right: 2px solid black; 
-    border-bottom: 2px solid black; 
+    border-left: 5px solid var(--box_color);
+    border-right: 5px solid var(--box_color); 
+    border-bottom: 5px solid var(--box_color);
     padding: 18px;
     border-radius: 0px 0px 15px 15px;
     top: 0px;"
@@ -287,13 +292,12 @@ p {
 }
 
 .box-head {
-    border: 2px solid black; 
+    border: 0px; 
     border-radius: 15px 15px 0px 0px;
-    padding: 18px 12px 18px 12px; 
+    padding: 24px 12px 24px 12px; 
     margin-right: 0px;
     margin-top: 9px; 
-    color: var(--fogwhite);
-    background-color: var(--dark-red);
+    background-color: var(--box_color);
     display: block;
     font-size: 24px;
     font-style: italic;
@@ -301,7 +305,7 @@ p {
     line-height: 0px;
     display: block;
     text-decoration: none;
-    color: var(--fogwhite);
+    color: var(--textblack);
     margin-right: 0px; 
     display: block;
     height:100%;
@@ -310,6 +314,13 @@ p {
 
 .box-head:hover {
     background-color: var(--dark-blue);
+    color: var(--fogwhite);
+    border-color: var(--dark-blue);
+}
+
+.box-head:hover ~ .box-text {
+    border-color: var(--dark-blue);
+    background-color: var(--dark-blue);
 }
 
 .blurb {
@@ -317,7 +328,7 @@ p {
 }
 
 #logo {
-    height: 120px;
+    height: 136px;
     float: right;
     vertical-align: text-top;
     display:inline;
@@ -385,7 +396,7 @@ p {
     font-weight: 500;
 }
 #site-slogan {
-    color: var(--dark-red);
+    color: var(--fg_color);
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
