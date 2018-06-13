@@ -1,4 +1,5 @@
 name: Peter J. Kohler, PhD
+title: pjkohler
 markdown: kramdown
 permalink: /news/:year/:month/:day/:title
 kramdown:
@@ -6,6 +7,9 @@ kramdown:
   parse_block_html: true
 
 include: ["_pages"]
+
+plugins:
+  - jekyll-sitemap
 
 navigation:
 - title: About Me
