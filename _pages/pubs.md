@@ -6,8 +6,8 @@ permalink: /pubs/
 <div class="row">
 <div class="column">
 ### Peer-reviewed Articles
-0. **Kohler**, P. J., Meredith, W. J. and Norcia, A. M. (in revision). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications.*
 0. **Kohler**, P. J., Cottereau, B. R. and Norcia, A.M. (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
+0. **Kohler**, P. J., Meredith, W. J. and Norcia, A. M. (accepted, in press). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/alp_et_al_2018.pdf) 
 	Alp, N., **Kohler**, P. J., Kogo, N., Wagemans, J. and Norcia, A.M. (2018). Measuring Integration Processes in Visual Symmetry with Frequency-Tagged EEG. *Scientific Reports* 8:6969. 
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kanayet_et_al_2018.pdf) 
