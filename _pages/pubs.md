@@ -6,22 +6,23 @@ permalink: /pubs/
 <div class="row">
 <div class="column">
 ### Peer-reviewed Articles
-0. **Kohler**, P. J., Cottereau, B. R. and Norcia, A.M. (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
-0. **Kohler**, P. J., Meredith, W. J. and Norcia, A. M. (accepted, in press). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications.*
+0. Sievers, B., Parkinson, C., **Kohler**, P.J., Hughes, J., Fogelson, S. &amp; Wheatley, T. (under review). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
+0. **Kohler**, P.J., Cottereau, B.R. &amp; Norcia, A.M. (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
+0. **Kohler**, P.J., Meredith, W.J. &amp; Norcia, A.M. (accepted, in press). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/alp_et_al_2018.pdf) 
-	Alp, N., **Kohler**, P. J., Kogo, N., Wagemans, J. and Norcia, A.M. (2018). Measuring Integration Processes in Visual Symmetry with Frequency-Tagged EEG. *Scientific Reports* 8:6969. 
+	Alp, N., **Kohler**, P.J., Kogo, N., Wagemans, J. &amp; Norcia, A.M. (2018). Measuring Integration Processes in Visual Symmetry with Frequency-Tagged EEG. *Scientific Reports* 8:6969. 
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kanayet_et_al_2018.pdf) 
-	Kanayet, F., Mattarella-Micke, A., **Kohler**, P. J., Norcia, A. M., McCandliss, B. and  McClelland, J. L. (2018). Distinct representations of magnitude and spatial position within parietal cortex during number-space mapping. *Journal of Cognitive Neuroscience 30* 200-218.
+	Kanayet, F., Mattarella-Micke, A., **Kohler**, P.J., Norcia, A.M., McCandliss, B. &amp; McClelland, J.L. (2018). Distinct representations of magnitude and spatial position within parietal cortex during number-space mapping. *Journal of Cognitive Neuroscience 30* 200-218.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2018.pdf) 
-	**Kohler**, P. J., Cottereau, B. R. and Norcia, A.M. (2018). Dynamics of Perceptual Decisions About Symmetry in Visual Cortex. *NeuroImage 167* 316-330.
+	**Kohler**, P.J., Cottereau, B.R. &amp; Norcia, A.M. (2018). Dynamics of Perceptual Decisions About Symmetry in Visual Cortex. *NeuroImage 167* 316-330.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/norcia_et_al_2017.pdf) 
-	Norcia, A.M., Pei, F. & **Kohler**, P. J. (2017). Evidence for long-range spatio-temporal interactions in infant and adult visual cortex. *Journal of Vision 17* (6):12.
+	Norcia, A.M., Pei, F. & **Kohler**, P.J. (2017). Evidence for long-range spatio-temporal interactions in infant and adult visual cortex. *Journal of Vision 17* (6):12.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2017.pdf) 
 	**Kohler**, P.J., Cavanagh, P., &amp; Tse, P.U. (2017). Motion-induced position shifts activate early visual cortex. *Frontiers in Neuroscience*11:168.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2016.pdf)
 	**Kohler**, P.J., Clarke, A., Yakovleva, A., Liu, Y. & Norcia, A.M. (2016). Representation of maximally regular textures in human visual cortex. *Journal of Neuroscience 36*(3) (714 –729).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/mccarthy_et_al_2015.pdf)
-	McCarthy, J. D., **Kohler**, P. J., Tse, P. U. & Caplovitz, G. P. (2015). Extrastriate Visual Areas Integrate Form Features over Space and Time to Construct Representations of Stationary and Rigidly Rotating Objects. *Journal of Cognitive Neuroscience 27*(2158-2173).
+	McCarthy, J.D., **Kohler**, P.J., Tse, P.U. & Caplovitz, G.P. (2015). Extrastriate Visual Areas Integrate Form Features over Space and Time to Construct Representations of Stationary and Rigidly Rotating Objects. *Journal of Cognitive Neuroscience 27*(2158-2173).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2015.pdf)
 	**Kohler**, P.J., Cavanagh, P., &amp; Tse, P.U. (2015). Motion-induced position shifts are influenced by global motion, but dominated by component motion. *Vision Research 110A* (93-99).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/schlegel_et_al_2015.pdf)
@@ -57,9 +58,9 @@ permalink: /pubs/
 <div class="column">
 ### First-Author Conference Presentations
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2018.m4v)
-	**Kohler**, P.J., Meredith, W. J. & Norcia, A.M. Characterizing late-developing binocular motion mechanisms in human visual cortex. Talk at *Vision Sciences Society 2018*, St. Petersburg, FL.
+	**Kohler**, P.J., Meredith, W.J. & Norcia, A.M. Characterizing late-developing binocular motion mechanisms in human visual cortex. Talk at *Vision Sciences Society 2018*, St. Petersburg, FL.
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2017.m4v)
-	**Kohler**, P.J., Meredith, W. J. & Norcia, A.M. Neural responses to motion in 2 and 3 dimensions. Talk at *Vision Sciences Society 2017*,St. Petersburg, FL.
+	**Kohler**, P.J., Meredith, W.J. & Norcia, A.M. Neural responses to motion in 2 and 3 dimensions. Talk at *Vision Sciences Society 2017*, St. Petersburg, FL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_fens2016.pdf)
  	**Kohler**, P.J., Cottereau, B.R. & Norcia, A.M. Cortical areas encoding visual segmentation cues from relative motion and relative disparity. Poster at *FENS Forum of Neuroscience 2016*, Copenhagen, Denmark.
  0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2016.pdf)
