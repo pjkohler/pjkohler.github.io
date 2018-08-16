@@ -83,7 +83,7 @@ permalink: /pubs/
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2010.pdf)
 	**Kohler**, PJ, Fogelson, SV, Reavis EA, Guntupalli, JS & Tse, PU (2010). The Relationship Between Multivariate Pattern Classification Accuracy and Hemodynamic Response Level in Visual Cortical Areas. Poster at *Vision Sciences Society*, Naples, FL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2009.pdf)
-	**Kohler**, PJ, Caplovitz, GP & Tse, PU The whole moves less than the spin of its parts. (2009). Poster at Poster at *Vision Sciences Society 2009*, Naples, FL.
+	**Kohler**, PJ, Caplovitz, GP & Tse, PU (2009). The whole moves less than the spin of its parts. Poster at Poster at *Vision Sciences Society*, Naples, FL.
 {: reversed="reversed"}
 </div>
 </div>
