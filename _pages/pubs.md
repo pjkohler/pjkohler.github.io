@@ -30,11 +30,11 @@ permalink: /pubs/
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2014.pdf)
 	**Kohler**, PJ, Caplovitz, GP &amp; Tse, PU (2014). The global slowdown effect: Why does perceptual grouping reduce perceived speed? *Attention, Perception and Psychophysics 76*(3) (780-792).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/fogelson_et_al_2014.pdf)
-	Fogelson, SV, **Kohler**, PJ, Miller, KJ, Granger, R., and Tse, PU (2014). Unconscious neural processing differs with method used to render stimuli invisible. *Frontiers in Psychology* 5:601.
+	Fogelson, SV, **Kohler**, PJ, Miller, KJ, Granger, R, and Tse, PU (2014). Unconscious neural processing differs with method used to render stimuli invisible. *Frontiers in Psychology* 5:601.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/schlegel_et_al_2013.pdf)
-	Schlegel, AS, **Kohler**, PJ, Fogelson, SV, Alexander, P, Konuthula, D. &amp; Tse, PU (2013). Network structure and dynamics of the mental workspace. *Proceedings of the National Academy of Sciences 110*(40) (16277-16282).
+	Schlegel, AS, **Kohler**, PJ, Fogelson, SV, Alexander, P, Konuthula, D &amp; Tse, PU (2013). Network structure and dynamics of the mental workspace. *Proceedings of the National Academy of Sciences 110*(40) (16277-16282).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2013.pdf)
-	**Kohler**, PJ, Fogelson, SV Reavis, EA, Meng, M., Guntupalli, J.S., Hanke, M., Halchenko, YO., Connolly, AC., Haxby, J.V. &amp; Tse, PU (2013). Pattern classification precedes regional-average hemodynamic response in early visual cortex. *NeuroImage 78* (249–260).
+	**Kohler**, PJ, Fogelson, SV Reavis, EA, Meng, M, Guntupalli, JS, Hanke, M, Halchenko, YO, Connolly, AC, Haxby, JV &amp; Tse, PU (2013). Pattern classification precedes regional-average hemodynamic response in early visual cortex. *NeuroImage 78* (249–260).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/reavis_et_al_2013.pdf)
 	Reavis, EA, **Kohler**, PJ, Caplovitz, CP, Wheatley, T &amp; Tse, PU (2013). Effects of attention on visual experience during monocular rivalry. *Vision Research 83* (76-81).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/parkinson_et_al_2012.pdf)
