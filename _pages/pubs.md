@@ -8,7 +8,8 @@ permalink: /pubs/
 ### Peer-reviewed Articles
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (under review). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
 0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
-0. **Kohler**, PJ, Meredith, WJ &amp; Norcia, AM (accepted, in press). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications.*
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_ncomms_2018.pdf)
+	**Kohler**, PJ, Meredith, WJ &amp; Norcia, AM (2018). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications* 9:3511.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/alp_et_al_2018.pdf) 
 	Alp, N, **Kohler**, PJ, Kogo, N, Wagemans, J &amp; Norcia, AM (2018). Measuring Integration Processes in Visual Symmetry with Frequency-Tagged EEG *Scientific Reports* 8:6969. 
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kanayet_et_al_2018.pdf) 
@@ -18,7 +19,7 @@ permalink: /pubs/
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/norcia_et_al_2017.pdf) 
 	Norcia, AM, Pei, F & **Kohler**, PJ (2017). Evidence for long-range spatio-temporal interactions in infant and adult visual cortex. *Journal of Vision 17* (6):12.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2017.pdf) 
-	**Kohler**, PJ, Cavanagh, P, &amp; Tse, PU (2017). Motion-induced position shifts activate early visual cortex. *Frontiers in Neuroscience*11:168.
+	**Kohler**, PJ, Cavanagh, P, &amp; Tse, PU (2017). Motion-induced position shifts activate early visual cortex. *Frontiers in Neuroscience* 11:168.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2016.pdf)
 	**Kohler**, PJ, Clarke, A, Yakovleva, A, Liu, Y & Norcia, AM (2016). Representation of maximally regular textures in human visual cortex. *Journal of Neuroscience 36*(3) (714 –729).
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/mccarthy_et_al_2015.pdf)
