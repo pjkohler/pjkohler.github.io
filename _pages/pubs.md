@@ -6,6 +6,7 @@ permalink: /pubs/
 <div class="row">
 <div class="column">
 ### Peer-reviewed Articles
+0. Manning, C, Kaneshiro, B, **Kohler**, PJ, Duta, M, Scerif, G &amp; Norcia, AM (under review). Neural dynamics underlying coherent motion perception in children and adults. *Developmental Cognitive Neuroscience.*
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (under review). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
 0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_ncomms_2018.pdf)
