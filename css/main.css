@@ -8,24 +8,27 @@
     --textblack:#3B3738;
 }
 
+/*@font-face {
+    font-family: "Adam";
+    src: url("/assets/fonts/adam_cg_pro.otf") format("opentype");
+}*/
+
 html{
-  height:100%;
+    height:100%;
 }
 
 
 body {
     background-color: var(--bg_color);
     color: var(--fg_color);
-    padding-bottom: 69px;
-    padding-left: 12px;
-    padding-right: 36px;
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     font-family: "Helvetica", Helvetica, Arial,sans-serif;
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
     position:relative;
-    top:144px;
     z-index:10;
     vertical-align: middle;
 }
@@ -43,7 +46,6 @@ footer {
 header {
     top: 0px;
     width: 100%;
-    height: 120px;
     position: fixed;
     z-index:99;
     overflow: hidden;
@@ -69,6 +71,89 @@ header {
     content: "";
     display: table;
     clear: both;
+}
+
+ /* Add a black background color to the top navigation */
+.topnav {
+  background-color: var(--fg_color);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--fogwhite);
+    background-color: var(--fg_color);
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+  padding: 9px 15px 9px 15px;
+  margin: 0px;
+}
+
+/* links */
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: var(--fg_color); /* Dark-grey background */
+  overflow: hidden; /* Overflow due to float */
+  z-index: 99;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  justify-content: center
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: var(--fogwhite); /* White text color */
+  padding: 10px 15px 0px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  height: 45px;
+}
+
+.icon-bar a:hover {
+  background-color: var(--dark-blue);; /* Add a hover color */
+}
+
+.active {
+  background-color: var(--dark-blue);; /* Add an active/current color */
+}
+
+
+/*a {
+    color: var(--link_color);
+    text-decoration: underline;
 }
 
 ul#nav {
@@ -103,13 +188,6 @@ ul#links {
     position: relative;
     left: 20px;
     vertical-align: middle;
-}
-
-/* links */
-
-a {
-    color: var(--link_color);
-    text-decoration: underline;
 }
 
 #links li {
@@ -168,7 +246,7 @@ a {
 
 #nav li a:hover, #links li a:hover {
     background-color: var(--dark-blue);
-}
+}*/
 
 ul#posts { 
     background-color: var(--bg_color);
@@ -215,54 +293,47 @@ ol li {
     padding-left: 20px;
     padding-bottom:10px;
     text-indent:-20px;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 110%;
     color: var(--textblack);
     position:relative;
     z-index:0;
 }
 
 h1 {
+    font-family: "Futura", Futura, sans-serif;
     font-size: 48px;
     font-weight: 400;
-    line-height: 0px;
+    line-height: 0%;
 }
 h2 {
-    font-size: 36px;
+    font-family: "Futura", Futura, sans-serif;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 0px;
+    line-height: 100%;
 }
 h3 {
-    font-size: 24px;
+    font-size: 30px;
     font-style: italic;
     font-weight: 400;
-    line-height: 0px;
+    line-height: 0%;
 }
 
-h1.relative, h2.relative, h3.relative {
-    display:block;
-    color: var(--fg_color);
-    font-weight: 400;
-    z-index: 1;
-    position: relative;
-}
-
-h2.static, h3.static{
+h2.relative, h3.relative{
     font-weight: 400;
     color: var(--fg_color);
-    position:fixed;
+    position:relative;
+    text-align: center;
     z-index:1;
 }
-h1.static{
+h1.relative{
     top:0px;
     font-weight: 400;
     color: var(--textblack);
-    position:fixed;
+    text-align: center;
+    position:relative;
     z-index:1;
-    text-decoration: underline;
-}
-h3.static{
-    top:48px;
+    text-decoration: bold;
 }
 .research-logo {
     float: left;
@@ -333,7 +404,7 @@ p {
     vertical-align: text-top;
     display:inline;
     margin: 0 auto;
-    z-index:99;
+    z-index:-1;
     right: 36px;
     top:0px;
     border:none;
@@ -366,8 +437,9 @@ p {
 }
 
 .container {
-    margin: 0px;
+    margin: 10px 10px 55px 10px;
     padding: 0px;
+    height: 100%;
 }
 
 #leftnarrow, #leftwide{
@@ -399,12 +471,55 @@ p {
     color: var(--fg_color);
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 900px) {
+/* Responsive layout */
+
+.short-text {
+    display: none;
+}
+.long-text {
+    display: inline-block;
+}
+
+
+ /* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) 
+{
+    .topnav a:not(.active) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    /* makes the two columns stack on top of each other instead of next to each other */
     .column {
         width: 100%;
     }
     #logo {
         visibility:hidden
     }
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
+
+@media screen and (max-width: 400px) 
+{
+    .short-text {
+        display: block;
+    }
+    .long-text {
+        display: none;
+    }
