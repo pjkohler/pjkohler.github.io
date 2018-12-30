@@ -473,15 +473,32 @@ p {
 
 /* Responsive layout */
 
-.short-text {
+.short-title {
     display: none;
 }
-.long-text {
+.long-title {
     display: inline-block;
 }
 
+.short-heading {
+    display: none;
+}
+.long-heading {
+    display: inline-block;
+}
 
- /* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) 
+{
+    /* use short headings */
+    .short-heading {
+        display: inline-block;
+    }
+    .long-heading {
+        display: none;
+    }
+
+
+/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 700px) 
 {
     .topnav a:not(.active) {
@@ -497,6 +514,13 @@ p {
     }
     #logo {
         visibility:hidden
+    }
+    /* use long headings */
+    .short-heading {
+        display: none;
+    }
+    .long-heading {
+        display: inline-block;
     }
 
     /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -515,11 +539,18 @@ p {
     }
 }
 
-@media screen and (max-width: 400px) 
+@media screen and (max-width: 500px) 
 {
-    .short-text {
+    .short-title {
         display: block;
     }
-    .long-text {
+    .long-title {
+        display: none;
+    }
+    /* use short headings */
+    .short-heading {
+        display: inline-block;
+    }
+    .long-heading {
         display: none;
     }

@@ -5,7 +5,8 @@ permalink: /pubs/
 ---
 <div class="row">
 <div class="column">
-### Peer-reviewed Articles
+<h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
+<h3 class="relative"><span class="short-heading">Articles</span></h3>
 0. Manning, C, Kaneshiro, B, **Kohler**, PJ, Duta, M, Scerif, G &amp; Norcia, AM (under review). Neural dynamics underlying coherent motion perception in children and adults. *Developmental Cognitive Neuroscience.*
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
 0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
@@ -51,14 +52,15 @@ permalink: /pubs/
 	Mala, H, Castro, MR, Knippel, J, **Kohler**, PJ, Lassen, P &amp; Mogensen, J (2008). Therapeutic effects of a restraint procedure on posttraumatic place learning in fimbria-fornix transected rats. *Brain Research 1217* (221-231).
 {: reversed="reversed"}
 
-### Book Chapters	
+<h3 class="relative">Book Chapters</h3>
 0. Caplovitz, GP Hsieh, P-J, Kohler, PJ &amp; Porter, KB (2017). The Spinning Ellipse Speed Illusion. In *Oxford Compendium of Visual Illusions*: Oxford University Press.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/tse_et_al_2013.pdf)
 	Tse, PU, Reavis, EA, **Kohler**, PJ, Caplovitz, GP, &amp; Wheatley, T (2013). How Attention can Alter Appearances. In *Handbook of Experimental Phenomenology* (pp. 291-315): John Wiley & Sons, Ltd.
 {: reversed="reversed"}
 </div>
 <div class="column">
-### First-Author Conference Presentations
+<h3 class="relative"><span class="long-heading">First-Author Conference Presentations</span></h3>
+<h3 class="relative"><span class="short-heading">Conferences</span></h3>
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2018.m4v)
 	**Kohler**, PJ, Meredith, WJ & Norcia, AM (2018). Characterizing late-developing binocular motion mechanisms in human visual cortex. Talk at *Vision Sciences Society*, St. Petersburg, FL.
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2017.m4v)
