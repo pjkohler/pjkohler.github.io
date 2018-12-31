@@ -150,6 +150,14 @@ header {
   background-color: var(--dark-blue);; /* Add an active/current color */
 }
 
+.big-image {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
+}
 
 /*a {
     color: var(--link_color);
@@ -286,7 +294,7 @@ ol {
     display: block;
     position:relative;
     z-index:0;
-    text-align: justify;
+    text-align: left;
 }
 
 ol li {
@@ -316,7 +324,7 @@ h3 {
     font-size: 30px;
     font-style: italic;
     font-weight: 400;
-    line-height: 0%;
+    line-height: 100%;
 }
 
 h2.relative, h3.relative{
@@ -349,7 +357,7 @@ p {
     border: 0px;
     z-index:1;
     position:relative;
-    text-align: justify;
+    text-align: left;
 }
 
 .box-text {
@@ -360,6 +368,7 @@ p {
     border-radius: 0px 0px 15px 15px;
     top: 0px;"
     min-height: 50%;
+    overflow:auto
 }
 
 .box-head {
@@ -429,12 +438,16 @@ p {
 }
 
 #logo-img{
-    width: 25%;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    padding-right: 10px;
+    display: inline-block;
     float: left;
-    margin: 0px;
-    padding-right: 18px;
     vertical-align: text-top;
+    display: inline-block;
 }
+
 
 .container {
     margin: 10px 10px 55px 10px;
