@@ -1,3 +1,4 @@
+/* COLORS */
 :root {
     --fg_color:#8C1515;
     --bg_color: #F8F6EA;
@@ -8,15 +9,10 @@
     --textblack:#3B3738;
 }
 
-/*@font-face {
-    font-family: "Adam";
-    src: url("/assets/fonts/adam_cg_pro.otf") format("opentype");
-}*/
-
+/* OVERALL STYLES: HEADER, FOOTER, BODY */
 html{
     height:100%;
 }
-
 
 body {
     background-color: var(--bg_color);
@@ -54,26 +50,15 @@ header {
     vertical-align: middle;
 }
 
-/* columns */
-* {
-    box-sizing: border-box;
+/* NAVIGATION BARS AND LISTS */
+/* set color of active links */
+.active {
+  background-color: var(--dark-blue);; /* Add an active/current color */
+  color: white;
 }
+/* top bar */
 
-/* Create two equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 50%;
-    padding-bottom: 0px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
- /* Add a black background color to the top navigation */
+/* Add a background color to the top navigation */
 .topnav {
   background-color: var(--fg_color);
   position: -webkit-sticky; /* Safari */
@@ -105,12 +90,6 @@ header {
   color: white;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: var(--dark-blue);
-  color: white;
-}
-
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
@@ -118,7 +97,7 @@ header {
   margin: 0px;
 }
 
-/* links */
+/* bottom bar */
 
 .icon-bar {
   width: 100%; /* Full-width */
@@ -146,9 +125,183 @@ header {
   background-color: var(--dark-blue);; /* Add a hover color */
 }
 
-.active {
-  background-color: var(--dark-blue);; /* Add an active/current color */
+/* style used for news */
+
+ul#posts { 
+    background-color: var(--bg_color);
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 72px;
+    font-size: 18px;
+    line-height: 27px;
+    position: relative;
+    left: -40px;
 }
+
+#posts li {
+    font-size: 18px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 18px;
+    color: var(--fg_color);
+    text-decoration: none;
+    font-style: italic;
+    list-style-type: none;
+    float: left;
+    clear: left;
+}
+#posts li a {
+    color: var(--link_color);
+    text-decoration: underline;
+    font-style: normal;
+}
+
+/* ordered list (used for publications and presentations) */
+ol {
+    margin-right: 30px;
+    margin-left: 10px;
+    display: block;
+    position:relative;
+    z-index:0;
+    text-align: left;
+}
+
+ol li {
+    padding-left: 20px;
+    padding-bottom:10px;
+    text-indent:-20px;
+    font-size: 18px;
+    line-height: 110%;
+    color: var(--textblack);
+    position:relative;
+    z-index:0;
+}
+
+/* TEXT STYLES (paragraph, headers) */
+
+.container {
+    margin: 10px 10px 55px 10px;
+    padding: 0px;
+    height: 100%;
+}
+
+/* headers */
+h1 {
+    font-family: "Futura", Futura, sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 0%;
+}
+h2 {
+    font-family: "Futura", Futura, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 100%;
+}
+h3 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 0%;
+}
+
+h2.relative, h3.relative{
+    font-weight: 400;
+    color: var(--fg_color);
+    position:relative;
+    text-align: center;
+    z-index:1;
+}
+h1.relative{
+    top:0px;
+    font-weight: 400;
+    color: var(--textblack);
+    text-align: center;
+    position:relative;
+    z-index:1;
+    text-decoration: bold;
+}
+
+/* paragraph style, used for all regular text */
+p {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--textblack);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    z-index:1;
+    position:relative;
+    text-align: left;
+}
+/* columns */
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding-bottom: 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* TEXT BOX STYLES (used for research and data sets) */
+.box-body {
+    border-left: 5px solid var(--box_color);
+    border-right: 5px solid var(--box_color); 
+    border-bottom: 5px solid var(--box_color);
+    padding: 18px;
+    border-radius: 0px 0px 15px 15px;
+    top: 0px;"
+    min-height: 50%;
+    overflow:auto
+}
+
+.box-head {
+    border: 0px; 
+    border-radius: 15px 15px 0px 0px;
+    padding: 24px 12px 24px 12px; 
+    margin-right: 0px;
+    margin-top: 9px; 
+    background-color: var(--box_color);
+    display: block;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 0px;
+    display: block;
+    text-decoration: none;
+    color: var(--textblack);
+    margin-right: 0px; 
+    display: block;
+    height:100%;
+    width:100%
+}
+
+.box-head:hover {
+    background-color: var(--dark-blue);
+    color: var(--fogwhite);
+    border-color: var(--dark-blue);
+}
+
+.box-head:hover ~ .box-body {
+    border-color: var(--dark-blue);
+    background-color: var(--dark-blue);
+}
+
+/* IMAGE STYLES */
 
 .big-image {
     width: 50%;
@@ -158,6 +311,137 @@ header {
     display: inline-block;
     float: left;
 }
+
+/* research logos */
+#logo-img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    float: left;
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+/* stanford logo (not currently used) */
+#stanford-img {
+    height: 136px;
+    float: right;
+    vertical-align: text-top;
+    display:inline;
+    margin: 0 auto;
+    z-index:-1;
+    right: 36px;
+    top:0px;
+    border:none;
+    position:fixed;
+}
+
+/* ICON STYLES */
+
+#pdf-icon {
+    height:30px;
+    position:absolute;
+    width:30px;
+    left:0%;
+    margin-left:-55px;
+    margin-top:-6px;
+}
+#movie-icon {
+    height:20px;
+    position:absolute;
+    width:20px;
+    left:0%;
+    margin-left:-50px;
+    margin-top:-2px;
+}
+
+
+/* RESPONSIVE LAYOUT, LONG AND SHORT HEADINGS TITLES */
+
+.short-title {
+    display: none;
+}
+.long-title {
+    display: inline-block;
+}
+
+.short-heading {
+    display: none;
+}
+.long-heading {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1100px) 
+{
+    /* use short headings */
+    .short-heading {
+        display: inline-block;
+    }
+    .long-heading {
+        display: none;
+    }
+
+
+/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) 
+{
+    .topnav a:not(.active) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    /* makes the two columns stack on top of each other instead of next to each other */
+    .column {
+        width: 100%;
+    }
+    #logo {
+        visibility:hidden
+    }
+    /* use long headings */
+    .short-heading {
+        display: none;
+    }
+    .long-heading {
+        display: inline-block;
+    }
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 550px) 
+{
+    .short-title {
+        display: block;
+    }
+    .long-title {
+        display: none;
+    }
+    /* use short headings */
+    .short-heading {
+        display: inline-block;
+    }
+    .long-heading {
+        display: none;
+    }
 
 /*a {
     color: var(--link_color);
@@ -254,205 +538,15 @@ ul#links {
 
 #nav li a:hover, #links li a:hover {
     background-color: var(--dark-blue);
-}*/
-
-ul#posts { 
-    background-color: var(--bg_color);
-    width: 100%;
-    padding-top: 9px;
-    padding-bottom: 72px;
-    font-size: 18px;
-    line-height: 27px;
-    position: relative;
-    left: -40px;
-}
-
-#posts li {
-    font-size: 18px;
-    line-height: 18px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
-    padding-left: 0px;
-    padding-bottom: 18px;
-    color: var(--fg_color);
-    text-decoration: none;
-    font-style: italic;
-    list-style-type: none;
-    float: left;
-    clear: left;
-}
-#posts li a {
-    color: var(--link_color);
-    text-decoration: underline;
-    font-style: normal;
-}
-
-ol {
-    margin-right: 30px;
-    margin-left: 10px;
-    display: block;
-    position:relative;
-    z-index:0;
-    text-align: left;
-}
-
-ol li {
-    padding-left: 20px;
-    padding-bottom:10px;
-    text-indent:-20px;
-    font-size: 18px;
-    line-height: 110%;
-    color: var(--textblack);
-    position:relative;
-    z-index:0;
-}
-
-h1 {
-    font-family: "Futura", Futura, sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 0%;
-}
-h2 {
-    font-family: "Futura", Futura, sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 100%;
-}
-h3 {
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 0%;
-}
-
-h2.relative, h3.relative{
-    font-weight: 400;
-    color: var(--fg_color);
-    position:relative;
-    text-align: center;
-    z-index:1;
-}
-h1.relative{
-    top:0px;
-    font-weight: 400;
-    color: var(--textblack);
-    text-align: center;
-    position:relative;
-    z-index:1;
-    text-decoration: bold;
-}
-.research-logo {
-    float: left;
-    margin: 0px 20px 0px 20px;
-}
-p {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 18px;
-    line-height: 27px;
-    color: var(--textblack);
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    z-index:1;
-    position:relative;
-    text-align: left;
-}
-
-.box-text {
-    border-left: 5px solid var(--box_color);
-    border-right: 5px solid var(--box_color); 
-    border-bottom: 5px solid var(--box_color);
-    padding: 18px;
-    border-radius: 0px 0px 15px 15px;
-    top: 0px;"
-    min-height: 50%;
-    overflow:auto
-}
-
-.box-head {
-    border: 0px; 
-    border-radius: 15px 15px 0px 0px;
-    padding: 24px 12px 24px 12px; 
-    margin-right: 0px;
-    margin-top: 9px; 
-    background-color: var(--box_color);
-    display: block;
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 0px;
-    display: block;
-    text-decoration: none;
-    color: var(--textblack);
-    margin-right: 0px; 
-    display: block;
-    height:100%;
-    width:100%
-}
-
-.box-head:hover {
-    background-color: var(--dark-blue);
-    color: var(--fogwhite);
-    border-color: var(--dark-blue);
-}
-
-.box-head:hover ~ .box-text {
-    border-color: var(--dark-blue);
-    background-color: var(--dark-blue);
 }
 
 .blurb {
     min-height:100%; 
 }
 
-#logo {
-    height: 136px;
-    float: right;
-    vertical-align: text-top;
-    display:inline;
-    margin: 0 auto;
-    z-index:-1;
-    right: 36px;
-    top:0px;
-    border:none;
-    position:fixed;
-}
-
-#pdf-icon {
-    height:30px;
-    position:absolute;
-    width:30px;
-    left:0%;
-    margin-left:-55px;
-    margin-top:-6px;
-}
-#movie-icon {
-    height:20px;
-    position:absolute;
-    width:20px;
-    left:0%;
-    margin-left:-50px;
-    margin-top:-2px;
-}
-
-#logo-img{
-    width: 50%;
-    max-width: 300px;
-    height: auto;
-    padding-right: 10px;
-    display: inline-block;
+.research-logo {
     float: left;
-    vertical-align: text-top;
-    display: inline-block;
-}
-
-
-.container {
-    margin: 10px 10px 55px 10px;
-    padding: 0px;
-    height: 100%;
+    margin: 0px 20px 0px 20px;
 }
 
 #leftnarrow, #leftwide{
@@ -484,86 +578,4 @@ p {
     color: var(--fg_color);
 }
 
-/* Responsive layout */
-
-.short-title {
-    display: none;
-}
-.long-title {
-    display: inline-block;
-}
-
-.short-heading {
-    display: none;
-}
-.long-heading {
-    display: inline-block;
-}
-
-@media screen and (max-width: 1100px) 
-{
-    /* use short headings */
-    .short-heading {
-        display: inline-block;
-    }
-    .long-heading {
-        display: none;
-    }
-
-
-/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 700px) 
-{
-    .topnav a:not(.active) {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-    /* makes the two columns stack on top of each other instead of next to each other */
-    .column {
-        width: 100%;
-    }
-    #logo {
-        visibility:hidden
-    }
-    /* use long headings */
-    .short-heading {
-        display: none;
-    }
-    .long-heading {
-        display: inline-block;
-    }
-
-    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 550px) 
-{
-    .short-title {
-        display: block;
-    }
-    .long-title {
-        display: none;
-    }
-    /* use short headings */
-    .short-heading {
-        display: inline-block;
-    }
-    .long-heading {
-        display: none;
-    }
+*/

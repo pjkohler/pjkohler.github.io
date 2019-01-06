@@ -4,7 +4,7 @@ title: research
 permalink: /research/mips
 ---
 ### Motion-Induced Position Shifts
-<span id="rightwide">
+<span class="big-image">
 	<video controls="controls" width="100%">
 	  		<source src="/assets/demos/globalmotiongrab.mov" type="video/mov"/>
 	  		<source src="/assets/demos/globalmotiongrab.ogv" type="video/ogg"/>

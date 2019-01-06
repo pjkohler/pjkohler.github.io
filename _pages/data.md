@@ -9,7 +9,7 @@ I have recently started adopting the Brain Imaging Data Structure (BIDS; [Gorgol
 Number Line Marking
 </a>
 
-<p class="box-text">
+<p class="box-body">
 **event-related design `|` 19 participants `|` whole-brain `|` 2 mm isotropic `|` 2-sec TR<br>**
 
 published in: Kanayet, F., Mattarella-Micke, A., Kohler, P. J., Norcia, A. M., McCandliss, B. and McClelland, J. L. (2018). Distinct representations of magnitude and spatial position within parietal cortex during number-space mapping. *Journal of Cognitive Neuroscience 30* 200-218. 
