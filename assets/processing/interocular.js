@@ -1,20 +1,6 @@
-var x, y, z, eyesize, dotsize, eyesep, move_x, dots_per_row, filled_per_row, frame_width, rand_idx;
-var testrow;
-var refrow;
-var col;
-var ref_c = [];
-var left_c = [];
-var right_c = [];
-var perc_c = [];
-var disp_list = [];
-var test_x = [];
-var alt_x = [];
-var test_y = [];
-var alt_y = [];
-var ref_x = [];
-var ref_y = [];
-var myFont;
-var pg_3D;
+// gui
+var visible = true;
+var gui
 
 // gui params
 var reference = true
@@ -23,18 +9,20 @@ var plane_breaking = false
 var vertical = false
 var highlight_bars = false
 var highlight_dots = false
-//var interocularly = ['correlated','uncorrelated']
 var interocular_correlation = true;
 
 // colors
 var color_blue, color_red, color_green, color_pink, light_gray, mid_gray, dark_gray, bg_color, l_color, r_color, h_color;
 
-// gui
-var visible = true;
-var gui
-
 // canvas stuff
 var canvas, canvas_div, width, div_rect, c_size; 
+
+// stimulus stuff
+var eyesize, dotsize, eyesep, move_x;
+
+// variables to hold dot coordinates
+var ref_c = [], perc_c =[], left_c = [], right_c = [];
+var test_x = [], test_y = [], alt_x = [], alt_y = [], ref_x = [], ref_y = [];
 
 // random dot
 var test_rand, ref_rand, alt_rand;
@@ -56,7 +44,6 @@ function setup() {
   rectMode(CORNER);
 
   div_rect = canvas_div.getBoundingClientRect();
-  //console.log(div_rect.top, div_rect.right, div_rect.bottom, div_rect.left);
 
   // colors
   light_gray = 204
@@ -80,16 +67,20 @@ function setup() {
   eyesize = 360;
   eyesep = eyesize * 1.1;
   dotsize = 9;
-  dots_per_row = eyesize / 4 / dotsize;
+  var dots_per_row = eyesize / 4 / dotsize;
   if (dots_per_row % 1 != 0) {
     print("dots per row not integer, exiting ...");
     exit();
   }
-  filled_per_row = 3;
+  var filled_per_row = 3;
   if (filled_per_row > dots_per_row / 2) {
     print("filled_per_row more than twice the size of dots_per_row, exiting ...");
     exit();
   }
+  //
+  test_x = [], test_y = [];
+  alt_x = [], alt_y = [];
+  ref_x = [], ref_y = [];
 
   for (var h = 0; h < eyesize * 2; h += dotsize) {
     for (var v = 0; v < 4; v += 1) {
@@ -99,6 +90,7 @@ function setup() {
         append(rand_list, q);
       }
       rand_list = shuffle_list(rand_list);
+      var rand_idx;
       for (var q = 0; q < filled_per_row; q += 1) {
         rand_idx = rand_list[q];
         raw_y = dotsize * rand_idx + dots_per_row * v * dotsize;
@@ -123,6 +115,10 @@ function setup() {
 }
 
 function draw() {
+  var cur_rect = canvas_div.getBoundingClientRect()
+  if (div_rect.top != cur_rect.top ) {
+    setup()
+  }
   clear();
   if (plane_breaking) {
     if (move_x <= 0) {
@@ -178,7 +174,6 @@ function draw_left(move_x) {
   left_buffer.clear()
   if (frameCount == 1) {
     div_rect = canvas_div.getBoundingClientRect();
-    // console.log(rect.top, rect.right, rect.bottom, rect.left);
     // Create Layout GUI
     gui = createGui('Settings', 0, div_rect.top*.9);
     gui.addGlobals('dot_movement','reference','plane_breaking','vertical','interocular_correlation','highlight_bars','highlight_dots');
@@ -351,7 +346,7 @@ function draw_right() {
     left_buffer.text("no movement in depth", eyesize/2+eyesep, eyesize/2*.8);
   } else {
     // make frame
-    frame_width = eyesize/32;
+    var frame_width = eyesize/32;
     right_buffer.fill(0);
     // horizontal frame
     right_buffer.push();
