@@ -11,7 +11,7 @@
 
 /* OVERALL STYLES: HEADER, FOOTER, BODY */
 html{
-    height:100%;
+    height:100
 }
 
 body {
@@ -236,7 +236,8 @@ p {
     border: 0px;
     z-index:1;
     position:relative;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
 }
 /* columns */
 * {
@@ -247,7 +248,7 @@ p {
 .column {
     float: left;
     width: 50%;
-    padding-bottom: 0px;
+    padding: 0px;
 }
 
 /* Clear floats after the columns */
@@ -255,6 +256,7 @@ p {
     content: "";
     display: table;
     clear: both;
+    padding: 0px;
 }
 
 /* TEXT BOX STYLES (used for research and data sets) */
@@ -308,6 +310,14 @@ p {
     max-width: 500px;
     height: auto;
     padding-right: 10px;
+    display: inline-block;
+    float: left;
+}
+#p5-holder {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0px; padding: 0px;
     display: inline-block;
     float: left;
 }
