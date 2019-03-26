@@ -61,6 +61,8 @@ permalink: /pubs/
 <div class="column">
 <h3 class="relative"><span class="long-heading">First-Author Conference Presentations</span></h3>
 <h3 class="relative"><span class="short-heading">Conferences</span></h3>
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_cns2019.pdf)
+	**Kohler**, PJ, Norcia, AM & McCandliss, B (2019). Assessing Parietal Contributions to Abstract Numerosity with Steady State Visual Evoked Potentials (SSVEPs). Poster at *Cognitive Neuroscience Society*, San Francisco, CA
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2018.m4v)
 	**Kohler**, PJ, Meredith, WJ & Norcia, AM (2018). Characterizing late-developing binocular motion mechanisms in human visual cortex. Talk at *Vision Sciences Society*, St. Petersburg, FL.
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2017.m4v)
