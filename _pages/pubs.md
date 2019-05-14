@@ -7,7 +7,8 @@ permalink: /pubs/
 <div class="column">
 <h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
 <h3 class="relative"><span class="short-heading">Articles</span></h3>
-0. Barzegaran, E, Bosse, S, **Kohler**, PJ &amp; Norcia, AM (submitted). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods.*
+0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J, Hardan, AY (under review). Visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder and Attention Deficit Hyperactivity Disorder. *Biological Psychiatry.*
+0. Barzegaran, E, Bosse, S, **Kohler**, PJ &amp; Norcia, AM (in revision). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods.*
 0. Manning, C, Kaneshiro, B, **Kohler**, PJ, Duta, M, Scerif, G &amp; Norcia, AM (in revision). Neural dynamics underlying coherent motion perception in children and adults. *Developmental Cognitive Neuroscience.*
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
 0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
@@ -62,6 +63,8 @@ permalink: /pubs/
 <div class="column">
 <h3 class="relative"><span class="long-heading">First-Author Conference Presentations</span></h3>
 <h3 class="relative"><span class="short-heading">Conferences</span></h3>
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2019.pdf)
+	**Kohler**, PJ, Barzegaran, E, Davis, BE & Norcia, AM (2019). Encoding- and decision-related brain activity during a motion judgment task. Poster at *Vision Sciences Society*, St. Petersburg, FL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_cns2019.pdf)
 	**Kohler**, PJ, Norcia, AM & McCandliss, B (2019). Assessing Parietal Contributions to Abstract Numerosity with Steady State Visual Evoked Potentials (SSVEPs). Poster at *Cognitive Neuroscience Society*, San Francisco, CA
 0. [![movie_icon](/assets/icons/movie.png "download movie"){: #movie-icon }](/assets/talks/kohler_vss2018.m4v)
