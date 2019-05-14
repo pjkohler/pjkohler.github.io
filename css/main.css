@@ -53,7 +53,7 @@ header {
 /* NAVIGATION BARS AND LISTS */
 /* set color of active links */
 .active {
-  background-color: var(--dark-blue);; /* Add an active/current color */
+  background-color: var(--dark-blue); /* Add an active/current color */
   color: white;
 }
 /* top bar */
@@ -86,6 +86,12 @@ header {
 
 /* Change the color of links on hover */
 .topnav a:hover {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
   background-color: var(--dark-blue);
   color: white;
 }

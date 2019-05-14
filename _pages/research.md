@@ -9,7 +9,7 @@ permalink: /research/
 </p>
 
 <a class="box-head" href="/research/integration">Spatial and Interocular Integration</a>
-<p class="box-body"><img id="logo-img" src="/assets/logos/logo_integration.gif" alt="mips logo"> 
+<p class="box-body"><img id="logo-img" src="/assets/logos/logo_integration.gif" alt="integration logo"> 
 	The perception of movement in depth and image segmentation of motion relies on integration both over space (spatial integration) and between the two eyes (interocular integration). In a recent series of experiments, I used a steady-state EEG design to measure response thresholds from separate neural populations coding movement and segmentation.
 </p>
 
