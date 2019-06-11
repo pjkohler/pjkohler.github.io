@@ -7,11 +7,11 @@ permalink: /pubs/
 <div class="column">
 <h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
 <h3 class="relative"><span class="short-heading">Articles</span></h3>
+0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
 0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J, Hardan, AY (under review). Visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder and Attention Deficit Hyperactivity Disorder. *Biological Psychiatry.*
 0. Barzegaran, E, Bosse, S, **Kohler**, PJ &amp; Norcia, AM (in revision). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods.*
-0. Manning, C, Kaneshiro, B, **Kohler**, PJ, Duta, M, Scerif, G &amp; Norcia, AM (in revision). Neural dynamics underlying coherent motion perception in children and adults. *Developmental Cognitive Neuroscience.*
-0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
-0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (in revision). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
+0. Manning, C, Kaneshiro, B, **Kohler**, PJ, Duta, M, Scerif, G &amp; Norcia, AM (accepted). Neural dynamics underlying coherent motion perception in children and adults. *Developmental Cognitive Neuroscience.*
+0. **Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (accepted). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_ncomms_2018.pdf)
 	**Kohler**, PJ, Meredith, WJ &amp; Norcia, AM (2018). Revisiting the functional significance of binocular cues for perceiving motion in depth. *Nature Communications* 9:3511.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/alp_et_al_2018.pdf) 
