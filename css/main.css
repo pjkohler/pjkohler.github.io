@@ -1,12 +1,12 @@
 /* COLORS */
 :root {
-    --fg_color:#8C1515;
+    --fg_color: #8C1515;
     --bg_color: #F8F6EA;
     --box_color: #b6b1a9;
     --link_color: #006CB8;
     --dark-blue: #007c92;
-    --fogwhite:#F4F4F4;
-    --textblack:#3B3738;
+    --fogwhite: #F4F4F4;
+    --textblack: #3B3738;
 }
 
 /* OVERALL STYLES: HEADER, FOOTER, BODY */

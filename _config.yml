@@ -1,7 +1,7 @@
-name: Peter J. Kohler, PhD
-title: pjkohler
+name: Kohler Visual Neuroscience Laboratory
+title: KVNL
 markdown: kramdown
-permalink: /news/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 kramdown:
   # parse markdown inside block-level HTML tag
   parse_block_html: true
@@ -12,10 +12,10 @@ plugins:
   - jekyll-sitemap
 
 navigation:
-- title: About Me
+- title: About
   url: /
-- title: News
-  url: /news/
+- title: People
+  url: /people/
 - title: Research
   url: /research/
 - title: Datasets

@@ -5,10 +5,10 @@ layout: default
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Peter J. Kohler's Blog</title>
-	<link href="http://pjkohler.github.io/news/atom.xml" rel="self"/>
-	<link href="http://pjkohler.github.io/news"/>
+	<link href="http://pjkohler.github.io/atom.xml" rel="self"/>
+	<link href="http://pjkohler.github.io"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://pjkohler.github.io/news</id>
+	<id>http://pjkohler.github.io</id>
 	<author>
 		<name>Peter J. Kohler, PhD</name>
 		<email>pjkohl3r@gmail.com</email>
