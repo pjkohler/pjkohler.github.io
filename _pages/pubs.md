@@ -8,8 +8,9 @@ permalink: /pubs/
 <h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
 <h3 class="relative"><span class="short-heading">Articles</span></h3>
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
-0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J, Hardan, AY (under review). Visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder and Attention Deficit Hyperactivity Disorder. *Biological Psychiatry.*
-0. Barzegaran, E, Bosse, S, **Kohler**, PJ &amp; Norcia, AM (accepted). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods.*
+0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J, Hardan, AY (under review). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Molecular Autism*.
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/barzegaran_et_al_2019.pdf) Barzegaran, E, Bosse, S, **Kohler**,
+	PJ &amp; Norcia, AM (2019). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods* 328:108377.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2019.pdf)
 	**Kohler**, PJ, Cottereau, BR &amp; Norcia, AM (2019). Image Segmentation Based on Relative Motion and Relative Disparity Cues in Topographically Organized Areas of Human Visual Cortex. *Scientific Reports* 9:9308.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/manning_et_al_2019.pdf)
