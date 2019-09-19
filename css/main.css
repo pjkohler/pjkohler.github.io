@@ -443,7 +443,7 @@ p {
     }
 }
 
-@media screen and (max-width: 550px) 
+@media screen and (max-width: 900px) 
 {
     .short-title {
         display: block;
