@@ -1,12 +1,11 @@
 /* COLORS */
 :root {
-    --fg_color: #8C1515;
-    --bg_color: #F8F6EA;
-    --box_color: #b6b1a9;
-    --link_color: #006CB8;
-    --dark-blue: #007c92;
-    --fogwhite: #F4F4F4;
-    --textblack: #3B3738;
+    --red: #9A0100;
+    --white: #FFFFFF;
+    --taupe: #E4DECE;
+    --black: #000000;
+    --blue: #004A8D;
+    --gold: #D49F0F;
 }
 
 /* OVERALL STYLES: HEADER, FOOTER, BODY */
@@ -15,8 +14,8 @@ html{
 }
 
 body {
-    background-color: var(--bg_color);
-    color: var(--fg_color);
+    background-color: var(--taupe);
+    color: var(--black);
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -35,7 +34,7 @@ footer {
     position: fixed;
     z-index:99;
     padding: 0;
-    background-color: var(--bg_color);
+    background-color: var(--taupe);
     display:block;
     vertical-align: middle;
 }
@@ -45,7 +44,7 @@ header {
     position: fixed;
     z-index:99;
     overflow: hidden;
-    background-color: var(--bg_color);
+    background-color: var(--taupe);
     display:block;
     vertical-align: middle;
 }
@@ -53,14 +52,14 @@ header {
 /* NAVIGATION BARS AND LISTS */
 /* set color of active links */
 .active {
-  background-color: var(--dark-blue); /* Add an active/current color */
-  color: white;
+  background-color: var(--gold); /* Add an active/current color */
+  color: var(--black);
 }
 /* top bar */
 
 /* Add a background color to the top navigation */
 .topnav {
-  background-color: var(--fg_color);
+  background-color: var(--red);
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0px;
@@ -75,8 +74,8 @@ header {
 .topnav a {
     float: left;
     display: block;
-    color: var(--fogwhite);
-    background-color: var(--fg_color);
+    color: var(--white);
+    background-color: var(--red);
     transition: all 0.3s ease; /* Add transition for hover effects */
     text-align: center;
     padding: 10px 15px 10px 15px;
@@ -86,14 +85,14 @@ header {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: var(--dark-blue);
-  color: white;
+  background-color: var(--gold);
+  color: var(--black);
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: var(--dark-blue);
-  color: white;
+  background-color: var(--gold);
+  color: var(--black);
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -107,7 +106,7 @@ header {
 
 .icon-bar {
   width: 100%; /* Full-width */
-  background-color: var(--fg_color); /* Dark-grey background */
+  background-color: var(--red); /* Dark-grey background */
   overflow: hidden; /* Overflow due to float */
   z-index: 99;
   position: fixed;
@@ -120,7 +119,7 @@ header {
   float: left; /* Float links side by side */
   text-align: center; /* Center-align text */
   transition: all 0.3s ease; /* Add transition for hover effects */
-  color: var(--fogwhite); /* White text color */
+  color: var(--white); /* White text color */
   padding: 10px 15px 0px 15px;
   text-decoration: none;
   font-size: 20px;
@@ -128,13 +127,13 @@ header {
 }
 
 .icon-bar a:hover {
-  background-color: var(--dark-blue);; /* Add a hover color */
+  background-color: var(--gold);; /* Add a hover color */
 }
 
 /* style used for news */
 
 ul#posts { 
-    background-color: var(--bg_color);
+    background-color: var(--taupe);
     width: 100%;
     padding-top: 9px;
     padding-bottom: 72px;
@@ -152,7 +151,7 @@ ul#posts {
     text-align: left;
     padding-left: 0px;
     padding-bottom: 18px;
-    color: var(--fg_color);
+    color: var(--red);
     text-decoration: none;
     font-style: italic;
     list-style-type: none;
@@ -160,7 +159,7 @@ ul#posts {
     clear: left;
 }
 #posts li a {
-    color: var(--link_color);
+    color: var(--blue);
     text-decoration: underline;
     font-style: normal;
 }
@@ -181,7 +180,7 @@ ol li {
     text-indent:-20px;
     font-size: 18px;
     line-height: 110%;
-    color: var(--textblack);
+    color: var(--black);
     position:relative;
     z-index:0;
 }
@@ -216,7 +215,7 @@ h3 {
 
 h2.relative, h3.relative{
     font-weight: 400;
-    color: var(--fg_color);
+    color: var(--red);
     position:relative;
     text-align: center;
     z-index:1;
@@ -224,7 +223,7 @@ h2.relative, h3.relative{
 h1.relative{
     top:0px;
     font-weight: 400;
-    color: var(--textblack);
+    color: var(--black);
     text-align: center;
     position:relative;
     z-index:1;
@@ -236,7 +235,7 @@ p {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 18px;
     line-height: 27px;
-    color: var(--textblack);
+    color: var(--black);
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -267,9 +266,9 @@ p {
 
 /* TEXT BOX STYLES (used for research and data sets) */
 .box-body {
-    border-left: 5px solid var(--box_color);
-    border-right: 5px solid var(--box_color); 
-    border-bottom: 5px solid var(--box_color);
+    border-left: 5px solid var(--blue);
+    border-right: 5px solid var(--blue); 
+    border-bottom: 5px solid var(--blue);
     padding: 18px;
     border-radius: 0px 0px 15px 15px;
     top: 0px;"
@@ -283,7 +282,7 @@ p {
     padding: 24px 12px 24px 12px; 
     margin-right: 0px;
     margin-top: 9px; 
-    background-color: var(--box_color);
+    background-color: var(--blue);
     display: block;
     font-size: 24px;
     font-style: italic;
@@ -291,7 +290,7 @@ p {
     line-height: 0px;
     display: block;
     text-decoration: none;
-    color: var(--textblack);
+    color: var(--white);
     margin-right: 0px; 
     display: block;
     height:100%;
@@ -299,14 +298,15 @@ p {
 }
 
 .box-head:hover {
-    background-color: var(--dark-blue);
-    color: var(--fogwhite);
-    border-color: var(--dark-blue);
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--black);
 }
 
 .box-head:hover ~ .box-body {
-    border-color: var(--dark-blue);
-    background-color: var(--dark-blue);
+    border-color: var(--gold);
+    background-color: var(--gold);
+    color: var(--black);
 }
 
 /* IMAGE STYLES */
@@ -319,6 +319,15 @@ p {
     display: inline-block;
     float: left;
 }
+
+.small-image {
+    width: 200px;
+    height: auto;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
+}
+
 #p5-holder {
     width: 100%;
     max-width: 600px;
@@ -460,7 +469,7 @@ p {
     }
 
 /*a {
-    color: var(--link_color);
+    color: var(--blue);
     text-decoration: underline;
 }
 
@@ -468,7 +477,7 @@ ul#nav {
     list-style-type: none;
     top:96px;
     height:40px;
-    background-color: var(--fg_color);
+    background-color: var(--red);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -481,7 +490,7 @@ ul#nav {
 ul#links {
     bottom:20px;
     height:40px;
-    background-color: var(--fg_color);
+    background-color: var(--red);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -537,7 +546,7 @@ ul#links {
 #nav li a, #links li a {
     text-decoration: none;
     display: block;
-    color: var(--fogwhite);
+    color: var(--white);
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -549,11 +558,11 @@ ul#links {
 }
 
 #nav li a.active {
-    background-color: var(--dark-blue);
+    background-color: var(--gold);
 }
 
 #nav li a:hover, #links li a:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--gold);
 }
 
 .blurb {
@@ -587,11 +596,11 @@ ul#links {
 }
 
 .site-name a, .site-name a:hover {
-    color: var(--textblack);
+    color: var(--blue);
     font-weight: 500;
 }
 #site-slogan {
-    color: var(--fg_color);
+    color: var(--red);
 }
 
 */
