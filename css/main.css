@@ -265,17 +265,6 @@ p {
 }
 
 /* TEXT BOX STYLES (used for research and data sets) */
-.box-body {
-    border-left: 5px solid var(--blue);
-    border-right: 5px solid var(--blue); 
-    border-bottom: 5px solid var(--blue);
-    padding: 18px;
-    border-radius: 0px 0px 15px 15px;
-    top: 0px;"
-    min-height: 50%;
-    overflow:auto
-}
-
 .box-head {
     border: 0px; 
     border-radius: 15px 15px 0px 0px;
@@ -303,10 +292,23 @@ p {
     color: var(--black);
 }
 
+.box-body {
+    border-left: 5px solid var(--blue);
+    border-right: 5px solid var(--blue); 
+    border-bottom: 5px solid var(--blue);
+    padding: 18px;
+    border-radius: 0px 0px 15px 15px;
+    top: 0px;"
+    min-height: 50%;
+    overflow:auto
+}
+
+
+.box-head:hover .box-body,
 .box-head:hover ~ .box-body {
-    border-color: var(--gold);
-    background-color: var(--gold);
-    color: var(--black);
+    border-left: 5px solid var(--gold);
+    border-right: 5px solid var(--gold); 
+    border-bottom: 5px solid var(--gold);
 }
 
 /* IMAGE STYLES */
