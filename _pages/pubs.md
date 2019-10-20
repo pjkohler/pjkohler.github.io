@@ -64,8 +64,10 @@ permalink: /pubs/
 {: reversed="reversed"}
 </div>
 <div class="column">
-<h3 class="relative"><span class="long-heading">First-Author Conference Presentations</span></h3>
+<h3 class="relative"><span class="long-heading">Selected Conference Presentations</span></h3>
 <h3 class="relative"><span class="short-heading">Conferences</span></h3>
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_sfn2019.pdf)
+	**Kohler**, PJ, Norcia, AM & McCandliss, B (2019). Steady-state visual evoked potentials reveal parietal contributions to abstract numerosity. Poster at *Neuroscience*, Chicago, IL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2019.pdf)
 	**Kohler**, PJ, Barzegaran, E, Davis, BE & Norcia, AM (2019). Encoding- and decision-related brain activity during a motion judgment task. Poster at *Vision Sciences Society*, St. Petersburg, FL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_cns2019.pdf)
