@@ -18,6 +18,8 @@ navigation:
   url: /people/
 - title: Research
   url: /research/
+- title: Online Experiments
+  url: /online-exp/
 - title: Datasets
   url: /data/
 - title: Publications
