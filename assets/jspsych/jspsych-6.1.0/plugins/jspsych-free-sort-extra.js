@@ -98,7 +98,7 @@ jsPsych.plugins['free-sort'] = (function() {
       '<div '+
       'id="jspsych-free-sort-arena" '+
       'class="jspsych-free-sort-arena" '+
-      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; border:20px solid #fc9272; margin: auto; ';
+      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; border:'+trial.sort_area_height*.05+'px solid #fc9272; margin: auto; ';
     
     if ( trial.sort_area_shape == "ellipse") {
       html += 'webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%"></div>'
