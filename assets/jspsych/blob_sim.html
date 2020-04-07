@@ -44,33 +44,27 @@
       check_fn: check_consent
     };
 
-    var div_style = "margin-right: 30px; width: 300px; height: 300px; display: inline-block;"+
-      "webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%; border: 15px solid"
+    var div_style = "margin-right: 20px; width: 200px; height: 200px; display: inline-block;"+
+      "webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%; border: 10px solid"
 
-    var p_style = "margin: auto; width: 300px; height: 300px; text-align: center; vertical-align: middle; display:table-cell"
+    var p_style = "margin: auto; width: 200px; height: 200px; text-align: center; vertical-align: middle; display:table-cell"
 
     var instructions = {
       type: "html-keyboard-response",
-      stimulus: "<p>On each trial of this experiment, you will be asked to position 32 objects inside a <strong>circular arena</strong>.</p>" +
-        "<p>You move objects by clicking and dragging them with your mouse or mousepad.</p>" + 
+      stimulus: "<p>On each trial of this experiment, you will be asked to position 32 items inside a <strong>circular arena</strong>.</p>" +
+        "<p>You move items by clicking and dragging them with your mouse or mousepad.</p>" + 
         "<p>Your job is to sort the items, placing items that look <strong>more similar</strong> closer to each other.</p>" +
-        "<p>The color of the arena border will indicate whether the object you are currently moving is inside or outside the arena.</p>" +
-        "<p>When all objects are inside, the arena background color will turn green and you can proceed to the next trial.</p>" +
-        "<p>Take your time and move objects around as many times as necessary. There are two trials in the experiment.</p>" +
-        "<div style = '"+ div_style + " #fc9272;'><p style = '" + p_style + "'>Current object is outside <br>the sorting arena.</p></div>"+
-        "<div style = '"+ div_style + " #a1d99b;'><p style = '" + p_style + "'>Current object is inside <br>the sorting arena.</p></div>"+
+        "<p>The color of the arena border will indicate whether the item you are currently moving is inside or outside the arena.</p>" +
+        "<p>When all items are inside, the arena background color will turn green and you can proceed to the next trial.</p>" +
+        "<p>Take your time and move items around as many times as necessary. There are two trials in the experiment.</p>" +
+        "<div style = '"+ div_style + " #fc9272;'><p style = '" + p_style + "'>Current item is outside <br>the sorting arena.</p></div>"+
+        "<div style = '"+ div_style + " #a1d99b;'><p style = '" + p_style + "'>Current item is inside <br>the sorting arena.</p></div>"+
         "<div style = '"+ div_style + " #a1d99b; background-color: #a1d99b'>"+
-          "<p style = '" + p_style + "'>All objects are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
+          "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
         "<p>Press any key to begin.</p>"
     };
     // timeline.push(welcome, consent, instructions);
     timeline.push(welcome, consent, instructions);
-
-    /* test trials */
-    var test_stimuli = [
-      { stimulus: "img/blue.png", data: {test_part: 'test', correct_response: 'f'}},
-      { stimulus: "img/orange.png", data: {test_part: 'test', correct_response: 'j'}}
-    ]
 
     var stim_3D = [];
       for (var i = 1; i <= 8; i++) {
@@ -91,12 +85,13 @@
     var sort_2D = {
       type: 'free-sort',
       stimuli: stim_2D,
-      prompt: "<p>Click and drag the images below to sort them so that similar items are close together.</p>",
-      sort_area_height: 700,
-      sort_area_width: 700,
+      prompt: "<p>Click and drag the items to place them inside the arena such that more similar items are closer together.</p>",
+      sort_area_height: 500,
+      sort_area_width: 500,
       sort_area_shape: "ellipse",
-      stim_height: 150,
-      stim_width: 150
+      stim_height: 100,
+      stim_width: 100,
+      prompt_location: "above"
     };
 
     var sort_3D = Object.assign({}, sort_2D);
@@ -129,7 +124,7 @@
         data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
       },
       exclusions: {
-        min_width: 1600,
+        min_width: 1200,
         min_height: 800
       }
     });

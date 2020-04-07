@@ -1,6 +1,6 @@
 /**
  * jspsych-free-sort
- * plugin for drag-and-drop sorting of a collection of images
+ * plugin for drag-and-drop sorting of a collection of items
  * Josh de Leeuw
  *
  * documentation: docs.jspsych.org
@@ -11,7 +11,7 @@ jsPsych.plugins['free-sort'] = (function() {
 
   var plugin = {};
 
-  jsPsych.pluginAPI.registerPreload('free-sort', 'stimuli', 'image');
+  jsPsych.pluginAPI.registerPreload('free-sort', 'stimuli', 'item');
 
   plugin.info = {
     name: 'free-sort',
@@ -22,19 +22,19 @@ jsPsych.plugins['free-sort'] = (function() {
         pretty_name: 'Stimuli',
         default: undefined,
         array: true,
-        description: 'Images to be displayed.'
+        description: 'items to be displayed.'
       },
       stim_height: {
         type: jsPsych.plugins.parameterType.INT,
         pretty_name: 'Stimulus height',
         default: 100,
-        description: 'Height of images in pixels.'
+        description: 'Height of items in pixels.'
       },
       stim_width: {
         type: jsPsych.plugins.parameterType.INT,
         pretty_name: 'Stimulus width',
         default: 100,
-        description: 'Width of images in pixels'
+        description: 'Width of items in pixels'
       },
       scale_factor: {
         type: jsPsych.plugins.parameterType.FLOAT,
@@ -77,7 +77,7 @@ jsPsych.plugins['free-sort'] = (function() {
       button_label: {
         type: jsPsych.plugins.parameterType.STRING,
         pretty_name: 'Button label',
-        default:  'Continue',
+        default:  'continue',
         description: 'The text that appears on the button to continue to the next trial.'
       }
     }
@@ -87,18 +87,11 @@ jsPsych.plugins['free-sort'] = (function() {
 
     var start_time = performance.now();
 
-    var html = "";
-    // check if there is a prompt and if it is shown above
-    if (trial.prompt !== null && trial.prompt_location == "above") {
-      html += trial.prompt;
-      html += '<button id="jspsych-free-sort-done-btn" class="jspsych-btn">'+trial.button_label+'</button>'
-    }
-
-    html += 
+    var html = 
       '<div '+
       'id="jspsych-free-sort-arena" '+
       'class="jspsych-free-sort-arena" '+
-      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; border:'+trial.sort_area_height*.05+'px solid #fc9272; margin: auto; ';
+      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; border:'+trial.sort_area_height*.05+'px solid #fc9272; margin: auto; line-height: 0em; ';
     
     if ( trial.sort_area_shape == "ellipse") {
       html += 'webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%"></div>'
@@ -106,10 +99,16 @@ jsPsych.plugins['free-sort'] = (function() {
       html += 'webkit-border-radius: 0%; moz-border-radius: 0%; border-radius: 0%"></div>'
     }
 
-    // check if prompt exists and if it is shown below
-    if (trial.prompt !== null && trial.prompt_location == "below") {
-      html += trial.prompt;
-      html += '<button id="jspsych-free-sort-done-btn" class="jspsych-btn">'+trial.button_label+'</button>'
+    // variable that has the prompt text, counter and button
+    var html_text = '<div style="line-height: 0em">' + trial.prompt + 
+      '<p id="jspsych-free-sort-counter" style="display: inline-block; line-height: 1em">You still need to place ' + trial.stimuli.length + ' items inside the arena.</p>' +
+      '<button id="jspsych-free-sort-done-btn" class="jspsych-btn" '+ 
+      'style="display: none; margin: 5px; padding: 5px; text-align: center; font-weight: bold; font-size: 18px; vertical-align:baseline; line-height: 1em">' + trial.button_label+'</button></div>'
+    // check if there is a prompt and if it is shown above
+    if (trial.prompt_location == "below") {
+        html += html_text
+    } else {
+        html = html_text + html
     }
 
     display_element.innerHTML = html;
@@ -181,7 +180,6 @@ jsPsych.plugins['free-sort'] = (function() {
 
     var arena = display_element.querySelector("#jspsych-free-sort-arena")
     var button = display_element.querySelector('#jspsych-free-sort-done-btn')
-    button.style.visibility = "hidden";
 
     for(var i=0;i<draggables.length; i++){
       draggables[i].addEventListener('mousedown', function(event){
@@ -204,9 +202,21 @@ jsPsych.plugins['free-sort'] = (function() {
             arena.style.borderColor = "#fc9272";
             arena.style.background = "None";
           }
-          // replace in overall array, grab idx from image id
+          // replace in overall array, grab idx from item id
           inside.splice(elem.id, true, cur_in)
-          console.log(elem)
+          if (inside.every(Boolean)) {
+            arena.style.background = "#a1d99b";
+            button.style.display = "inline-block";
+            display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "All items placed. Feel free to reposition any item if necessary. Otherwise, click here to "
+          } else {
+            arena.style.background = "none";
+            button.style.display = "none";
+            if ( (inside.length - inside.filter(Boolean).length) > 1 ) {
+              display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "You still need to place " + (inside.length - inside.filter(Boolean).length) + " items inside the arena."
+            } else {
+              display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "You still need to place " + (inside.length - inside.filter(Boolean).length) + " item inside the arena."
+            }
+          }
         }
         document.addEventListener('mousemove', mousemoveevent);
 
@@ -216,11 +226,12 @@ jsPsych.plugins['free-sort'] = (function() {
           if (inside.every(Boolean)) {
             arena.style.background = "#a1d99b";
             arena.style.borderColor = "#a1d99b";
-            button.style.visibility = "visible";
+            // button.style.display = "inline-block";
+            // display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "All items placed. Feel free to reposition any item if necessary. Otherwise, click here to "
           } else {
-            arena.style.background = "None";
+            arena.style.background = "none";
             arena.style.borderColor = "#fc9272";
-            button.style.visibility = "hidden";
+            // button.style.display = "none";
           }
           moves.push({
             "src": elem.dataset.src,
@@ -234,11 +245,13 @@ jsPsych.plugins['free-sort'] = (function() {
     }
 
     display_element.querySelector('#jspsych-free-sort-done-btn').addEventListener('click', function(){
+      
+      //display_element.querySelectorAll('.jspsych-free-sort-counter').innerHTML = inside.filter(Boolean).length + ' out of ' + inside.length + '</div>'
       if (inside.every(Boolean)) {
         var end_time = performance.now();
         var rt = end_time - start_time;
         // gather data
-        // get final position of all objects
+        // get final position of all items
         var final_locations = [];
         var matches = display_element.querySelectorAll('.jspsych-free-sort-draggable');
         for(var i=0; i<matches.length; i++){
