@@ -12,7 +12,7 @@
     <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   </head>
-  <body></body> 
+  <body>
   <script>
       /* create timeline */
     var timeline = [];
@@ -67,7 +67,7 @@
     timeline.push(welcome, consent, instructions);
 
     var stim_3D = [];
-      for (var i = 1; i <= 8; i++) {
+      for (var i = 1; i <= 2; i++) {
         stim_3D.push("img/select_asym/asym_00" + i + "_3D_ort.png");
         stim_3D.push("img/select_asym/asym_00" + i + "_3D_per.png");
         stim_3D.push("img/select_sym/sym_00" + i + "_3D_ort.png");
@@ -75,7 +75,7 @@
     }
 
     var stim_2D = [];
-      for (var i = 1; i <= 8; i++) {
+      for (var i = 1; i <= 2; i++) {
         stim_2D.push("img/select_asym/asym_00" + i + "_2D_ort.png");
         stim_2D.push("img/select_asym/asym_00" + i + "_2D_per.png");
         stim_2D.push("img/select_sym/sym_00" + i + "_2D_ort.png");
@@ -115,19 +115,17 @@
       }
     };
 
-    timeline.push(debrief_block);
+    // timeline.push(debrief_block);
 
     /* start the experiment */
     jsPsych.init({
       timeline: timeline,
-      on_finish: function(data){
-        data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-      },
+      on_finish: function(){jsPsych.data.displayData();},
       exclusions: {
         min_width: 1200,
         min_height: 700
       }
     });
-
   </script>
+  </body> 
 </html>
