@@ -7,125 +7,142 @@
     <script src="jspsych-6.1.0/jspsych.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-free-sort-extra.js"></script>
+    <script src="jspsych-6.1.0/plugins/jspsych-free-sort-ext.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
     <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   </head>
   <body>
-  <script>
-      /* create timeline */
-    var timeline = [];
+    <script>
+        /* create timeline */
+      let timeline = [];
 
-    /* define welcome message trial */
-    var welcome = {
-      type: "html-keyboard-response",
-      stimulus: "Welcome to the experiment. Press any key to begin."
-    };
+      /* define welcome message trial */
+      const welcome = {
+        type: "html-keyboard-response",
+        stimulus: "Welcome to the experiment. Press any key to begin."
+      };
 
-    /* define consent from trial */
-    var check_consent = function(elem) {
-      if (document.getElementById('consent_checkbox').checked) {
-        return true;
-      }
-      else {
-        alert("If you wish to participate, you must consent to participate by checking the box");
+      /* define consent from trial */
+      const check_consent = function(elem) {
+        if (document.getElementById('consent_checkbox').checked) {
+          return true;
+        }
+        else {
+          alert("If you wish to participate, you must consent to participate by checking the box");
+          return false;
+        }
         return false;
+      };
+
+      // declare the block.
+      const consent = {
+        type:'external-html',
+        url: "consent.html",
+        cont_btn: "start",
+        check_fn: check_consent
+      };
+
+      const div_style = "margin-right: 20px; width: 200px; height: 200px; display: inline-block;"+
+        "webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%; border: 6px solid"
+
+      const p_style = "margin: auto; width: 200px; height: 200px; text-align: center; vertical-align: middle; display:table-cell"
+
+      const instructions = {
+        type: "html-keyboard-response",
+        stimulus: "<p>On each trial of this experiment, you will be asked to position 32 items inside a <strong>circular arena</strong>.</p>" +
+          "<p>You move items by clicking and dragging them with your mouse or mousepad.</p>" + 
+          "<p>Your job is to sort the items, placing items that look <strong>more similar</strong> closer to each other.</p>" +
+          "<p>The color of the arena border will indicate whether the item you are currently moving is inside or outside the arena.</p>" +
+          "<p>When all items are inside, the arena background color will turn green and you can proceed to the next trial.</p>" +
+          "<p>Take your time and move items around as many times as necessary. There are two trials in the experiment.</p>" +
+          "<div style = '"+ div_style + " #fc9272;'><p style = '" + p_style + "'>Current item is outside <br>the sorting arena.</p></div>"+
+          "<div style = '"+ div_style + " #a1d99b;'><p style = '" + p_style + "'>Current item is inside <br>the sorting arena.</p></div>"+
+          "<div style = '"+ div_style + " #a1d99b; background-color: #a1d99b'>"+
+            "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
+          "<p>Press any key to begin.</p>"
+      };
+      timeline.push(welcome, consent, instructions);
+
+      let stim_3D = [];
+        for (let i = 1; i <= 1; i++) {
+          stim_3D.push("img/select_asym/asym_00" + i + "_3D_ort.png");
+          stim_3D.push("img/select_asym/asym_00" + i + "_3D_per.png");
+          stim_3D.push("img/select_sym/sym_00" + i + "_3D_ort.png");
+          stim_3D.push("img/select_sym/sym_00" + i + "_3D_per.png");
       }
-      return false;
-    };
 
-
-    // declare the block.
-    var consent = {
-      type:'external-html',
-      url: "consent.html",
-      cont_btn: "start",
-      check_fn: check_consent
-    };
-
-    var div_style = "margin-right: 20px; width: 200px; height: 200px; display: inline-block;"+
-      "webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%; border: 10px solid"
-
-    var p_style = "margin: auto; width: 200px; height: 200px; text-align: center; vertical-align: middle; display:table-cell"
-
-    var instructions = {
-      type: "html-keyboard-response",
-      stimulus: "<p>On each trial of this experiment, you will be asked to position 32 items inside a <strong>circular arena</strong>.</p>" +
-        "<p>You move items by clicking and dragging them with your mouse or mousepad.</p>" + 
-        "<p>Your job is to sort the items, placing items that look <strong>more similar</strong> closer to each other.</p>" +
-        "<p>The color of the arena border will indicate whether the item you are currently moving is inside or outside the arena.</p>" +
-        "<p>When all items are inside, the arena background color will turn green and you can proceed to the next trial.</p>" +
-        "<p>Take your time and move items around as many times as necessary. There are two trials in the experiment.</p>" +
-        "<div style = '"+ div_style + " #fc9272;'><p style = '" + p_style + "'>Current item is outside <br>the sorting arena.</p></div>"+
-        "<div style = '"+ div_style + " #a1d99b;'><p style = '" + p_style + "'>Current item is inside <br>the sorting arena.</p></div>"+
-        "<div style = '"+ div_style + " #a1d99b; background-color: #a1d99b'>"+
-          "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
-        "<p>Press any key to begin.</p>"
-    };
-    // timeline.push(welcome, consent, instructions);
-    timeline.push(welcome, consent, instructions);
-
-    var stim_3D = [];
-      for (var i = 1; i <= 2; i++) {
-        stim_3D.push("img/select_asym/asym_00" + i + "_3D_ort.png");
-        stim_3D.push("img/select_asym/asym_00" + i + "_3D_per.png");
-        stim_3D.push("img/select_sym/sym_00" + i + "_3D_ort.png");
-        stim_3D.push("img/select_sym/sym_00" + i + "_3D_per.png");
-    }
-
-    var stim_2D = [];
-      for (var i = 1; i <= 2; i++) {
-        stim_2D.push("img/select_asym/asym_00" + i + "_2D_ort.png");
-        stim_2D.push("img/select_asym/asym_00" + i + "_2D_per.png");
-        stim_2D.push("img/select_sym/sym_00" + i + "_2D_ort.png");
-        stim_2D.push("img/select_sym/sym_00" + i + "_2D_per.png");
-    }
-
-    var sort_2D = {
-      type: 'free-sort',
-      stimuli: stim_2D,
-      prompt: "<p>Click and drag the items to place them inside the arena such that more similar items are closer together.</p>",
-      sort_area_height: 500,
-      sort_area_width: 500,
-      sort_area_shape: "ellipse",
-      stim_height: 100,
-      stim_width: 100,
-      prompt_location: "above"
-    };
-
-    var sort_3D = Object.assign({}, sort_2D);
-
-    sort_3D["stimuli"]=stim_3D
-
-    timeline.push(sort_2D, sort_3D);
-
-    var debrief_block = {
-      type: "html-keyboard-response",
-      stimulus: function() {
-
-      var trials = jsPsych.data.get().filter({test_part: 'test'});
-      var correct_trials = trials.filter({correct: true});
-      var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
-      var rt = Math.round(correct_trials.select('rt').mean());
-
-      return "<p>You responded correctly on "+accuracy+"% of the trials.</p>"+
-      "<p>Your average response time was "+rt+"ms.</p>"+
-      "<p>Press any key to complete the experiment. Thank you!</p>";
+      let stim_2D = [];
+        for (let i = 1; i <= 1; i++) {
+          stim_2D.push("img/select_asym/asym_00" + i + "_2D_ort.png");
+          stim_2D.push("img/select_asym/asym_00" + i + "_2D_per.png");
+          stim_2D.push("img/select_sym/sym_00" + i + "_2D_ort.png");
+          stim_2D.push("img/select_sym/sym_00" + i + "_2D_per.png");
       }
-    };
 
-    // timeline.push(debrief_block);
+      const sort_2D = {
+        type: 'free-sort-ext',
+        stimuli: stim_2D,
+        prompt: "<p>Click and drag the items to place them inside the arena such that more similar items are closer together.</p>",
+        sort_area_height: 600,
+        sort_area_width: 600,
+        sort_area_shape: "ellipse",
+        stim_height: 100,
+        stim_width: 100,
+        prompt_location: "above"
+      };
 
-    /* start the experiment */
-    jsPsych.init({
-      timeline: timeline,
-      on_finish: function(){jsPsych.data.displayData();},
-      exclusions: {
-        min_width: 1200,
-        min_height: 700
+      const sort_3D = Object.assign({}, sort_2D);
+
+      sort_3D["stimuli"]=stim_3D
+
+      timeline.push(sort_2D, sort_3D);
+
+      function completion_code(prefix, suffix) {
+        let code = "";
+        for (const i of Array(8).keys()) {
+          let this_num = Math.floor(Math.random() * 10);
+          let this_char = this_num.toString();
+          code = code + this_char;
+        }
+        code = `${code}-${prefix}-`;
+
+        for (const i of Array(12).keys()) {
+          let this_num = Math.floor(Math.random() * 10);
+          let this_char = this_num.toString();
+          code = code + this_char;
+        }
+        code = `${code}-${suffix}`;
+        return code;
       }
-    });
-  </script>
+      function end_display(code) {
+        const display_element = jsPsych.getDisplayElement();
+        display_element.innerHTML = "<p>You have completed the experiment.</p>"+
+                                    "<p>We appreciate your participation.</p>"+
+                                    "<p>Your secret key code is: <strong>" + code + "</strong></p>"
+      }
+
+      /* start the experiment */
+      jsPsych.init({
+        timeline: timeline,
+        on_finish: function(){
+          const turk_info = jsPsych.turk.turkInfo();
+          const set_c = completion_code("KVNL", "GSQP")
+          jsPsych.data.addProperties(
+            {
+              workerId: turk_info.workerId,
+              assignmentId: turk_info.assignmentId,
+              hitId: turk_info.hitId,
+              turk_code: set_c
+            }
+          );
+          end_display(set_c)
+        },
+        exclusions: {
+          min_width: 1200,
+          min_height: 700
+        }
+      });
+    </script>
   </body> 
 </html>

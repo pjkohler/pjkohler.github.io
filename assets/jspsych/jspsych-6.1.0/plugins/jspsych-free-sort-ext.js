@@ -1,20 +1,19 @@
 /**
- * jspsych-free-sort
+ * jspsych-free-sort-ext
+ * extension of Josh de Leeuw's free-sort
  * plugin for drag-and-drop sorting of a collection of items
- * Josh de Leeuw
- *
- * documentation: docs.jspsych.org
+ * 
  */
 
 
-jsPsych.plugins['free-sort'] = (function() {
+jsPsych.plugins['free-sort-ext'] = (function() {
 
-  var plugin = {};
+  let plugin = {};
 
-  jsPsych.pluginAPI.registerPreload('free-sort', 'stimuli', 'item');
+  jsPsych.pluginAPI.registerPreload('free-sort-ext', 'stimuli', 'image');
 
   plugin.info = {
-    name: 'free-sort',
+    name: 'free-sort-ext',
     description: '',
     parameters: {
       stimuli: {
@@ -85,26 +84,21 @@ jsPsych.plugins['free-sort'] = (function() {
 
   plugin.trial = function(display_element, trial) {
 
-    var start_time = performance.now();
+    const start_time = performance.now();
 
-    var html = 
+    let html = 
       '<div '+
       'id="jspsych-free-sort-arena" '+
       'class="jspsych-free-sort-arena" '+
-      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; border:'+trial.sort_area_height*.05+'px solid #fc9272; margin: auto; line-height: 0em; ';
-    
-    if ( trial.sort_area_shape == "ellipse") {
-      html += 'webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%"></div>'
-    } else {
-      html += 'webkit-border-radius: 0%; moz-border-radius: 0%; border-radius: 0%"></div>'
-    }
+      'style="position: relative; width:'+trial.sort_area_width+'px; height:'+trial.sort_area_height+'px; margin: auto; line-height: 0em"</div>';
 
     // variable that has the prompt text, counter and button
-    var html_text = '<div style="line-height: 0em">' + trial.prompt + 
+    const html_text = '<div style="line-height: 0em">' + trial.prompt + 
       '<p id="jspsych-free-sort-counter" style="display: inline-block; line-height: 1em">You still need to place ' + trial.stimuli.length + ' items inside the arena.</p>' +
       '<button id="jspsych-free-sort-done-btn" class="jspsych-btn" '+ 
       'style="display: none; margin: 5px; padding: 5px; text-align: center; font-weight: bold; font-size: 18px; vertical-align:baseline; line-height: 1em">' + trial.button_label+'</button></div>'
-    // check if there is a prompt and if it is shown above
+    
+    // position prompt above or below
     if (trial.prompt_location == "below") {
         html += html_text
     } else {
@@ -113,43 +107,63 @@ jsPsych.plugins['free-sort'] = (function() {
 
     display_element.innerHTML = html;
 
-    // store initial location data
-    var init_locations = [];
+    // another div for border
+    let border_div = '<div '+
+      'id="jspsych-free-sort-border" '+
+      'class="jspsych-free-sort-border" '+
+      'style="position: relative; width:'+trial.sort_area_width*.94+'px; height:'+trial.sort_area_height*.94+'px; border:'+trial.sort_area_height*.03+'px solid #fc9272; margin: auto; line-height: 0em; ';
+    
+    if ( trial.sort_area_shape == "ellipse") {
+      border_div += 'webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%"></div>'
+    } else {
+      border_div += 'webkit-border-radius: 0%; moz-border-radius: 0%; border-radius: 0%"></div>'
+    }
 
-    num_rows = Math.ceil(Math.sqrt(trial.stimuli.length))
-    if ( num_rows % 2 == 0) {
+    // add border div code
+    display_element.querySelector("#jspsych-free-sort-arena").innerHTML += border_div
+
+    // store initial location data
+    let init_locations = [];
+
+    // determine number of rows and colums, must be a even number
+    let num_rows = Math.ceil(Math.sqrt(trial.stimuli.length))
+    if ( num_rows % 2 != 0) {
       num_rows = num_rows + 1
     }
 
-    var right_coords = [];
-    var left_coords = [];
-    for (x of make_arr(0, trial.sort_area_width-trial.stim_width, num_rows) ) {
-      for (y of make_arr(0, trial.sort_area_height-trial.stim_height, num_rows) ) {
-        if ( x > (trial.sort_area_width  * .5) ) {
-            right_coords.push({ x:x + trial.sort_area_width * .5 , y:y });
-        } else if ( x < (trial.sort_area_width  * .5 - trial.stim_width) ) {
-            left_coords.push({ x:x - trial.sort_area_width * .5, y:y});
+    // compute coords for left and right side of arena
+    let r_coords = [];
+    let l_coords = [];
+    for (const x of make_arr(0, trial.sort_area_width - trial.stim_width, num_rows) ) {
+      for (const y of make_arr(0, trial.sort_area_height - trial.stim_height, num_rows) ) {
+        if ( x > ( (trial.sort_area_width - trial.stim_width)  * .5 ) ) {
+          //r_coords.push({ x:x, y:y } )
+          r_coords.push({ x:x + (trial.sort_area_width)  * .5 , y:y });
+        } else {
+          l_coords.push({ x:x - (trial.sort_area_width)  * .5 , y:y });
+          //l_coords.push({ x:x, y:y } )
         }
       }
     }
 
-    // repeat coordinates until you have enough coords
-    while ( ( right_coords.length + left_coords.length ) < trial.stimuli.length ) {
-      right_coords = right_coords.concat(right_coords)
-      left_coords = left_coords.concat(left_coords)
+    // repeat coordinates until you have enough coords (may be obsolete)
+    while ( ( r_coords.length + l_coords.length ) < trial.stimuli.length ) {
+      r_coords = r_coords.concat(r_coords)
+      l_coords = l_coords.concat(l_coords)
     }
+    // reverse left coords, so that coords closest to arena is used first
+    l_coords = l_coords.reverse()
 
-    //right_coords = shuffle(right_coords);
-    //left_coords = shuffle(left_coords);
+    // shuffle stimuli, so that starting positions are random
     trial.stimuli = shuffle(trial.stimuli);
 
-    var inside = []
-    for (var i = 0; i < trial.stimuli.length; i++) {
-      var coords = []
+    let inside = []
+    for (let i = 0; i < trial.stimuli.length; i++) {
+      let coords = []
       if ( (i % 2) == 0 ) {
-        coords = right_coords[Math.floor(i * .5)];
+        coords = r_coords[Math.floor(i * .5)];
       } else {
-        coords = left_coords[Math.floor(i * .5)];
+        coords = l_coords[Math.floor(i * .5)];
       }
       display_element.querySelector("#jspsych-free-sort-arena").innerHTML += '<img '+
         'src="'+trial.stimuli[i]+'" '+
@@ -167,49 +181,52 @@ jsPsych.plugins['free-sort'] = (function() {
       });
       inside.push(false);
     }
+    // moves within a trial
+    let moves = [];
 
-    // display_element.innerHTML += '<button id="jspsych-free-sort-done-btn" class="jspsych-btn">'+trial.button_label+'</button>';
+    // are objects currently inside
+    let cur_in = false
 
-    var maxz = 1;
+    // draggable items 
+    const draggables = display_element.querySelectorAll('.jspsych-free-sort-draggable');
 
-    var moves = [];
+    // button (will show when all items are inside) and border (will change color)
+    const border = display_element.querySelector("#jspsych-free-sort-border")
+    const button = display_element.querySelector('#jspsych-free-sort-done-btn')
 
-    var cur_in = false
-
-    var draggables = display_element.querySelectorAll('.jspsych-free-sort-draggable');
-
-    var arena = display_element.querySelector("#jspsych-free-sort-arena")
-    var button = display_element.querySelector('#jspsych-free-sort-done-btn')
-
-    for(var i=0;i<draggables.length; i++){
+    for(let i=0; i<draggables.length; i++){
       draggables[i].addEventListener('mousedown', function(event){
-        var x = event.pageX - event.currentTarget.offsetLeft;
-        var y = event.pageY - event.currentTarget.offsetTop - window.scrollY;
-        var elem = event.currentTarget;
-        elem.style.zIndex = ++maxz;
+        let x = event.pageX - event.currentTarget.offsetLeft;
+        let y = event.pageY - event.currentTarget.offsetTop - window.scrollY;
+        let elem = event.currentTarget;
         elem.style.transform = "scale(" + trial.scale_factor + "," + trial.scale_factor + ")";
-        var mousemoveevent = function(e){
+        let mousemoveevent = function(e){
           cur_in = inside_ellipse(e.clientX - x, e.clientY - y, 
               trial.sort_area_width*.5 - trial.stim_width*.5, trial.sort_area_height*.5 - trial.stim_height*.5, 
               trial.sort_area_width*.5, trial.sort_area_height*.5,
               trial.sort_area_shape == "square");
-          elem.style.top =  Math.min(trial.sort_area_height - trial.stim_height, Math.max(-trial.stim_height*.5, (e.clientY - y))) + 'px';
+          elem.style.top =  Math.min(trial.sort_area_height - trial.stim_height*.5, Math.max(- trial.stim_height*.5, (e.clientY - y))) + 'px';
           elem.style.left = Math.min(trial.sort_area_width*1.5  - trial.stim_width,  Math.max(-trial.sort_area_width*.5, (e.clientX - x)))+ 'px';
+          
+          // modify border while items is being moved
           if (cur_in) {
-            arena.style.borderColor = "#a1d99b";
-            arena.style.background = "None";
+            border.style.borderColor = "#a1d99b";
+            border.style.background = "None";
           } else {
-            arena.style.borderColor = "#fc9272";
-            arena.style.background = "None";
+            border.style.borderColor = "#fc9272";
+            border.style.background = "None";
           }
+          
           // replace in overall array, grab idx from item id
           inside.splice(elem.id, true, cur_in)
+
+          // modify text and background if all items are inside
           if (inside.every(Boolean)) {
-            arena.style.background = "#a1d99b";
+            border.style.background = "#a1d99b";
             button.style.display = "inline-block";
             display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "All items placed. Feel free to reposition any item if necessary. Otherwise, click here to "
           } else {
-            arena.style.background = "none";
+            border.style.background = "none";
             button.style.display = "none";
             if ( (inside.length - inside.filter(Boolean).length) > 1 ) {
               display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "You still need to place " + (inside.length - inside.filter(Boolean).length) + " items inside the arena."
@@ -224,14 +241,11 @@ jsPsych.plugins['free-sort'] = (function() {
           document.removeEventListener('mousemove', mousemoveevent);
           elem.style.transform = "scale(1, 1)";
           if (inside.every(Boolean)) {
-            arena.style.background = "#a1d99b";
-            arena.style.borderColor = "#a1d99b";
-            // button.style.display = "inline-block";
-            // display_element.querySelector("#jspsych-free-sort-counter").innerHTML = "All items placed. Feel free to reposition any item if necessary. Otherwise, click here to "
+            border.style.background = "#a1d99b";
+            border.style.borderColor = "#a1d99b";
           } else {
-            arena.style.background = "none";
-            arena.style.borderColor = "#fc9272";
-            // button.style.display = "none";
+            border.style.background = "none";
+            border.style.borderColor = "#fc9272";
           }
           moves.push({
             "src": elem.dataset.src,
@@ -244,31 +258,29 @@ jsPsych.plugins['free-sort'] = (function() {
       });
     }
 
-    display_element.querySelector('#jspsych-free-sort-done-btn').addEventListener('click', function(){
-      
-      //display_element.querySelectorAll('.jspsych-free-sort-counter').innerHTML = inside.filter(Boolean).length + ' out of ' + inside.length + '</div>'
+    display_element.querySelector('#jspsych-free-sort-done-btn').addEventListener('click', function(){      
       if (inside.every(Boolean)) {
-        var end_time = performance.now();
-        var rt = end_time - start_time;
+        const end_time = performance.now();
+        const rt = end_time - start_time;
         // gather data
+        const items = display_element.querySelectorAll('.jspsych-free-sort-draggable');
         // get final position of all items
-        var final_locations = [];
-        var matches = display_element.querySelectorAll('.jspsych-free-sort-draggable');
-        for(var i=0; i<matches.length; i++){
+        let final_locations = [];
+        for(let i=0; i<items.length; i++){
           final_locations.push({
-            "src": matches[i].dataset.src,
-            "x": parseInt(matches[i].style.left),
-            "y": parseInt(matches[i].style.top)
+            "src": items[i].dataset.src,
+            "x": parseInt(items[i].style.left),
+            "y": parseInt(items[i].style.top)
           });
         }
 
-        var trial_data = {
+        const trial_data = {
           "init_locations": JSON.stringify(init_locations),
           "moves": JSON.stringify(moves),
           "final_locations": JSON.stringify(final_locations),
           "rt": rt
         };
-
+        
         // advance to next part
         display_element.innerHTML = '';
         jsPsych.finishTrial(trial_data);
@@ -279,56 +291,34 @@ jsPsych.plugins['free-sort'] = (function() {
   // helper functions
 
   function shuffle(array) {
-    
-    var cur_idx = array.length, tmp_val, rand_idx;
+    // define three variables
+    let cur_idx = array.length, tmp_val, rand_idx;
 
     // While there remain elements to shuffle...
     while (0 !== cur_idx) {
+      // Pick a remaining element...
+      rand_idx = Math.floor(Math.random() * cur_idx);
+      cur_idx -= 1;
 
-    // Pick a remaining element...
-    rand_idx = Math.floor(Math.random() * cur_idx);
-    cur_idx -= 1;
-
-    // And swap it with the current element.
-    tmp_val = array[cur_idx];
-    array[cur_idx] = array[rand_idx];
-    array[rand_idx] = tmp_val;
+      // And swap it with the current element.
+      tmp_val = array[cur_idx];
+      array[cur_idx] = array[rand_idx];
+      array[rand_idx] = tmp_val;
+    }
+    return array;
   }
-  return array;
-}
   
   function make_arr(startValue, stopValue, cardinality) {
-    var arr = [];
-    var step = (stopValue - startValue) / (cardinality - 1);
-    for (var i = 0; i < cardinality; i++) {
+    const step = (stopValue - startValue) / (cardinality - 1);
+    let arr = [];
+    for (let i = 0; i < cardinality; i++) {
       arr.push(startValue + (step * i));
     }
     return arr;
   }
 
-  function random_coordinate(max_width, max_height) {
-    var rnd_x = Math.floor(Math.random() * (max_width - 1));
-    var rnd_y = Math.floor(Math.random() * (max_height - 1));
-
-    return {
-      x: rnd_x,
-      y: rnd_y
-    };
-  }
-
-  function car2pol(x, y){
-    distance = Math.sqrt(x*x + y*y)
-    radians = Math.atan2(y,x) //This takes y first
-    polar = { distance:distance, radians:radians }
-    return polar
-  }
-
-  function pol2car(polar) {
-    car = { x:polar.distance * Math.cos(polar.radians), y:polar.distance * Math.sin(polar.radians) }
-    return car
-  }
-
   function inside_ellipse(x, y, x0, y0, rx, ry, square=false) {
+    const results = [];
     if (square) {
       result = ( Math.abs(x - x0) <= rx ) && ( Math.abs(y - y0) <= ry )
     } else {
@@ -337,5 +327,30 @@ jsPsych.plugins['free-sort'] = (function() {
     return result 
   }
 
+  /* 
+  un-used functions (that might be useful for something else)
+
+  function random_coordinate(max_width, max_height) {
+    const rnd_x = Math.floor(Math.random() * (max_width - 1));
+    const rnd_y = Math.floor(Math.random() * (max_height - 1));
+    return {
+      x: rnd_x,
+      y: rnd_y
+    };
+  }
+
+  function car2pol(x, y){
+    const distance = Math.sqrt(x*x + y*y)
+    const radians = Math.atan2(y,x) //This takes y first
+    const polar = { distance:distance, radians:radians }
+    return polar
+  }
+
+  function pol2car(polar) {
+    const car = { x:polar.distance * Math.cos(polar.radians), y:polar.distance * Math.sin(polar.radians) }
+    return car
+  } 
+
+  */
   return plugin;
 })();
