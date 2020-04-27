@@ -9,6 +9,7 @@
     <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-free-sort-ext.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
+    <script src="jspsych-6.1.0/plugins/jspsych-survey-html-form.js"></script>
     <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   </head>
@@ -43,6 +44,35 @@
         check_fn: check_consent
       };
 
+      const survey = {
+        type: "survey-html-form",
+        html: "<div style='text-align: left; vertical-align: top; display: inline-block; float: left; width: 100%'>"+
+          "<p><u>Birth Date:</u> <input style='font-size: 18px; line-height: 1.6em;' type='date' id='start' name='dob' min='1960-01-01' max='2020-01-01'></p>"+
+          "<p><u>Handedness:</u> </strong><input type='radio' id='left' name='handedness' value='left'>"+
+          "<label for='left'>Left-handed</label>"+
+          "<input type='radio' id='right' name='handedness' value='right' checked>"+
+          "<label for='right'>Right-handed</label>"+
+          "<input type='radio' id='ambi' name='handedness' value='ambi'>"+
+          "<label for='ambi'>Ambidextrous</label></p>"+
+          "<p><u>Sex:</u> <input type='radio' id='female' name='sex' value='female' checked>"+
+          "<label for='female'>Female</label>"+
+          "<input type='radio' id='male' name='sex' value='male'>"+
+          "<label for='male'>Male</label>"+
+          "<input type='radio' name='sex' value='other'><label for='other'>Other, please specify: </label>"+ 
+          "<input type='text' name='other_sex' id='other_sex' value=''></p>"+
+          "<p><u>What race(s) do you identify with? (choose all that apply)</u><br>"+
+          "<input type='checkbox' name='race' id='indigenous' value='indigenous' /><label for='indigenous'>Aboriginal (Indigenous) American</label><br>"+
+          "<input type='checkbox' name='race' id='black' value='black' /><label for='black'>Black or African-American</label><br>"+
+          "<input type='checkbox' name='race' id='asian' value='asian' /><label for='asian'>Asian</label><br>"+
+          "<input type='checkbox' name='race' id='white' value='white' /><label for='white'>White</label><br>"+
+          "<input type='checkbox' name='race' id='hispanic' value='hispanic' /><label for='hispanic'>Hispanic or Latino/a/x</label><br>"+
+          "<input type='checkbox' name='race' id='pacific' value='pacific' /><label for='pacific'>Native Hawaiian or other Pacific Islander</label><br>"+
+          "<input type='checkbox' name='race' id='other' value='other' /><label for='other'>Multiracial/Other, please specify: </label>"+
+          "<input type='text' name='other_race' id='other_race' value=''>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</p></div>",
+        preamble: "<strong>Please provide some personal information: </strong>",
+        button_label: "continue"
+      }
+
       const div_style = "margin-right: 20px; width: 200px; height: 200px; display: inline-block;"+
         "webkit-border-radius: 50%; moz-border-radius: 50%; border-radius: 50%; border: 6px solid"
 
@@ -62,7 +92,7 @@
             "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
           "<p>Press any key to begin.</p>"
       };
-      timeline.push(welcome, consent, instructions);
+      timeline.push(welcome, survey, consent, survey, instructions);
 
       let stim_3D = [];
         for (let i = 1; i <= 1; i++) {
