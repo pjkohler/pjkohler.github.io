@@ -45,6 +45,49 @@
                 check_fn: ask_consent
             };
 
+            const survey = {
+            type: "survey-html-form",
+            html: "<div style='text-align: left; vertical-align: top; display: inline-block; float: left; width: 100%'>"+
+                "<p><u>Birth Date:</u> <input style='font-size: 18px; line-height: 1.6em;' type='date' id='start' name='dob' min='1960-01-01' max='2020-01-01'></p>"+
+                "<p><u>Handedness:</u> </strong><input type='radio' id='left' name='handedness' value='left'>"+
+                "<label for='left'>Left-handed</label>"+
+                "<input type='radio' id='right' name='handedness' value='right' checked>"+
+                "<label for='right'>Right-handed</label>"+
+                "<input type='radio' id='ambi' name='handedness' value='ambi'>"+
+                "<label for='ambi'>Ambidextrous</label></p>"+
+                "<p><u>Sex:</u> <input type='radio' id='female' name='sex' value='female' checked>"+
+                "<label for='female'>Female</label>"+
+                "<input type='radio' id='male' name='sex' value='male'>"+
+                "<label for='male'>Male</label>"+
+                "<input type='radio' name='sex' value='other'><label for='other'>Other, please specify: </label>"+ 
+                "<input type='text' name='other_sex' id='other_sex' value=''></p>"+
+                "<p><u>What race(s) do you identify with? (choose all that apply)</u><br>"+
+                "<input type='checkbox' name='race' id='indigenous' value='indigenous' /><label for='indigenous'>Aboriginal (Indigenous) Peoples</label><br>"+
+                "<input type='checkbox' name='race' id='black' value='black' /><label for='black'>Black or African-American</label><br>"+
+                "<input type='checkbox' name='race' id='asian' value='asian' /><label for='asian'>Asian</label><br>"+
+                "<input type='checkbox' name='race' id='white' value='white' /><label for='white'>White</label><br>"+
+                "<input type='checkbox' name='race' id='hispanic' value='hispanic' /><label for='hispanic'>Hispanic or Latino/a/x</label><br>"+
+                "<input type='checkbox' name='race' id='pacific' value='pacific' /><label for='pacific'>Native Hawaiian or other Pacific Islander</label><br>"+
+                "<input type='checkbox' name='race' id='other' value='other' /><label for='other'>Multiracial/Other, please specify: </label>"+
+                "<input type='text' name='other_race' id='other_race' value=''>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</p></div>",
+                preamble: "<strong>Please provide some personal information: </strong>",
+                button_label: "continue"
+            }
+
+            const instructions = {
+            type: "html-keyboard-response",
+            stimulus: '<p>On each trial of this experiment, you will be presented with a pattern</p>' +
+                '<p>that looks like a wallpaper or a carpet. Patterns will vary in size from trial to trial.</p>' + 
+                '<p>Your job is to look for patches where the pattern is <strong>broken</strong> or looks different.</p>' +
+                '<p>These patches can occur anywhere in the pattern, but on some trials there will be no broken patch!</p>' +
+                '<p>Your goal is to correctly identify both broken and intact patterns.' +
+                '<p>Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact</p>' +
+                '<p>Please respond as quickly and accurately as possible.</p>' +
+                '<p>Press any key to begin.</p>'
+            };
+
+            timeline.push(welcome, consent, survey, instructions);
+
             // define some variables
             const tile_h = 120
             const tile_w = 120
@@ -148,7 +191,7 @@
                         stimulus: full_html, //this must be an <img> tag in our case
                         choices: letter_keys,
                         prompt_location: 'below',
-                        prompt: '<p align="top">Press d if pattern is broken, press l if pattern is not broken</p>',
+                        prompt: '<p align="top">Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact.</p>',
                         post_trial_gap: 1000
                     }
                     trial_set.push(cur_trial) 
