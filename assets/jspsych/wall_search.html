@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Blob Similarity</title>
+        <title>Wallpaper Search</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="jspsych-6.1.0/jspsych.js"></script>
@@ -12,6 +12,7 @@
         <script src="jspsych-6.1.0/plugins/jspsych-survey-html-form.js"></script>
         <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <meta charset="utf-8"/>
     </head>
     <body>
         <script>
@@ -69,32 +70,29 @@
                 "<input type='checkbox' name='race' id='hispanic' value='hispanic' /><label for='hispanic'>Hispanic or Latino/a/x</label><br>"+
                 "<input type='checkbox' name='race' id='pacific' value='pacific' /><label for='pacific'>Native Hawaiian or other Pacific Islander</label><br>"+
                 "<input type='checkbox' name='race' id='other' value='other' /><label for='other'>Multiracial/Other, please specify: </label>"+
-                "<input type='text' name='other_race' id='other_race' value=''>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</p></div>",
+                "<input type='text' name='other_race' id='other_race' value=''</p></div>",
                 preamble: "<strong>Please provide some personal information: </strong>",
                 button_label: "continue"
             }
 
-            const instructions = {
-            type: "html-keyboard-response",
-            stimulus: '<p>On each trial of this experiment, you will be presented with a pattern</p>' +
-                '<p>that looks like a wallpaper or a carpet. Patterns will vary in size from trial to trial.</p>' + 
-                '<p>Your job is to look for patches where the pattern is <strong>broken</strong> or looks different.</p>' +
-                '<p>These patches can occur anywhere in the pattern, but on some trials there will be no broken patch!</p>' +
-                '<p>Your goal is to correctly identify both broken and intact patterns.' +
-                '<p>Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact</p>' +
-                '<p>Please respond as quickly and accurately as possible.</p>' +
-                '<p>Press any key to begin.</p>'
-            };
-
-            timeline.push(welcome, consent, survey, instructions);
-
-            // define some variables
-            const tile_h = 120
-            const tile_w = 120
-            const letter_keys = ['d', 'l']
-
+            // timeline.push(welcome, consent, survey);
 
             // CODE FOR DEFINING WALLPAPERS
+
+            // wallpaper variables
+            const tile_h = 120
+            const tile_w = 120
+
+            // generate array use for image preloading (not used below at all)
+            let image_set = []
+            for (let i = 1; i <= 5; i++) {
+                if (i == 5) {
+                    image_set.push('img/simple_wallpapers/PMM_tile.png')
+                } else {
+                    image_set.push('img/simple_wallpapers/random_tile' + i + '.png')
+                }
+            }
+
             // general style settings for all images
             const img_dims = 'height=' + Math.floor(tile_h*0.5) + 'px width=' + Math.floor(tile_w*0.5) + 'px '
             const img_style = 'margin:None; vertical-align:top;'
@@ -149,59 +147,130 @@
 
             // NOW DEFINE trials
 
-            const target_trials = 40
-            const null_trials = 10
+            // trial variables
+            const letter_keys = ['d', 'l']
 
-            trial_set = []
+            const exp_reps = 60
+            const prac_reps = 6
+            const array_sizes = [3, 4, 5, 6]
+            const block_len = 40
 
-            for (const row_len of [3, 4, 5, 6] ) {
-                let num_loc = row_len * row_len
-                let loc_list = [];
-                while (loc_list.length < target_trials ) {
-                    let sub_list = []
-                    for (let i = 1; i <= num_loc; i++) {
-                        sub_list.push(i);
-                    }
-                    // add shuffled values to list
-                    loc_list = loc_list.concat(shuffle(sub_list))
-                    console.log(loc_list)
-                }
-                let target_list = loc_list.slice(0, target_trials);
-                while (target_list.length < target_trials + null_trials) {
-                    target_list.push(0)
-                }
-                console.log(target_list)
-                target_list = shuffle(target_list) // shuffle again
-                for (const target of target_list) {
-                    let full_html = '<div id= ' + num_loc + '_' + target + ' '
-                        full_html += 'style="background-color: #7f7f7f; ; width: ' + tile_w * row_len + 'px; height: ' + tile_h * row_len + 'px; display: block; margin-left: auto; margin-right: auto">'
-                    for (let i = 1; i <= (row_len * row_len); i++) {
-                        if ( i == target ) {
-                            full_html += p1_html
+            let prac_trials = trial_set(prac_reps, array_sizes, true)
+            let exp_trials = trial_set(exp_reps, array_sizes, false)  
+
+            prac_trials = shuffle(prac_trials) // shuffle the trial sets
+            exp_trials = shuffle(exp_trials) // shuffle the trial sets
+
+            // INSTRUCTIONS
+            const instructions = {
+                type: "html-keyboard-response",
+                stimulus: '<div style="text-align: center; vertical-align: top; display: inline-block; width: 800px; margin: auto">'+
+                    '<p>On each trial of this experiment, you will be presented with a pattern<br>' +
+                    ' that looks like a wallpaper or a carpet. Patterns will vary in size from trial to trial.<br>' + 
+                    'Your job is to look for patches where the pattern looks <strong>broken</strong> or different.</p>' +
+                    '<p>Broken patches can occur anywhere in the pattern, <br>but <strong>on some trials there will be no broken patch!</strong>' +
+                    '<br>Your goal is to correctly identify both broken and intact patterns.</p>' +
+                    '<p>Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact.<br>' +
+                    'Please respond as quickly and accurately as possible.</p>' +
+                    '<p>There are <strong>' + exp_trials.length + ' trials </strong> in the experiment.' +
+                    ' You will first do ' + prac_trials.length + ' practice trials.<br>' +
+                    'After each trial, you will be told if your answer was correct.<br>'+
+                    'The experiment trials are broken into blocks of ' + block_len + ' trials.<br>You will have the opportunity to take a break between blocks.' +
+                    '<div style="text-align:center; vertical-align: middle; display: inline-block; padding-right: 5%; ' + tile_w * 3 + 'px">' + 
+                    make_wallpaper(p1_html, pmm_html, 0, 3, tile_h, tile_w) + 'intact pattern</div>' + 
+                    '<div style="text-align:center; vertical-align: middle; display: inline-block; ' + tile_w * 3 + 'px">' +  
+                    make_wallpaper(p1_html, pmm_html, 4, 3, tile_h, tile_w) + 'broken pattern</div>' + 
+                    '<p>Press any key to begin.</p></div>'
+            };
+
+            timeline.push(instructions);
+
+            // end of practice notification 
+            const end_practice = {
+                type: "html-keyboard-response",
+                stimulus: '<div style="text-align: center; vertical-align: top; display: inline-block; width: 800px; margin: auto">'+
+                    '<p>End of practice trials.</p>'+
+                    '<p>Press any key to continue with experiment trials.</p></div>',
+                    post_trial_gap: 1000
+            };
+
+            // add trial counter (needs to be done in order)
+            let feedback = []
+            let trial_count = 0
+            let test_procedure = []
+
+            for (const elem of prac_trials) {
+                trial_count++
+                elem.prompt = '<p align="top">Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact.<br>'
+                // feedback block                 
+                feedback = {
+                    type: 'html-keyboard-response',
+                    stimulus: function(){
+                        let last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+                        if (last_trial_correct) {
+                            return '<p><span style="color: green"><strong>Correct Response!</strong></span></p>'
+                                    
                         } else {
-                            full_html += pmm_html
+                            return '<p><span style="color: red"><strong>Incorrect Response!</strong></span> </p>'
                         }
-                        if ( (i % row_len) == 0 ) {
-                            full_html += '<br>'
-                        }
-                    }
-                    full_html += '</div>'
-                    let cur_trial = {
-                        type: 'html-keyboard-response', //this is the plugin that allows for HTML_STRING as stimuli input
-                        stimulus: full_html, //this must be an <img> tag in our case
-                        choices: letter_keys,
-                        prompt_location: 'below',
-                        prompt: '<p align="top">Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact.</p>',
-                        post_trial_gap: 1000
-                    }
-                    trial_set.push(cur_trial) 
+                    },
+                    choices: jsPsych.NO_KEYS, 
+                    prompt: '<p>Practice trial ' + trial_count + ' of ' + prac_trials.length + '</p>',
+                    trial_duration: 1000,
+                    response_ends_trial: false
                 }
+                if (trial_count == prac_trials.length) {
+                    test_procedure = { 
+                        timeline: [elem, feedback, end_practice]
+                    }
+                } else {
+                    test_procedure = { 
+                        timeline: [elem, feedback]
+                    }
+                }
+                timeline.push(test_procedure)
             }
 
-            trial_set = shuffle(trial_set) // shuffle the trial set
-            timeline = timeline.concat(trial_set) // and add to timeline
-            
-            
+            let break_statement = [] 
+            trial_count = 0
+            for (const elem of exp_trials) {
+                trial_count++
+                elem.prompt = '<p align="top">Press <strong>D</strong> if pattern is broken, press <strong>L</strong> if pattern is intact.<br>'
+                // feedback block                 
+                feedback = {
+                    type: 'html-keyboard-response',
+                    stimulus: function(){
+                        let last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+                        if (last_trial_correct) {
+                            return '<p><span style="color: green"><strong>Correct Response!</strong></span></p>'
+                        } else {
+                            return '<p><span style="color: red"><strong>Incorrect Response!</strong></span> </p>'
+                        }
+                    },
+                    choices: jsPsych.NO_KEYS, 
+                    prompt: '<p>Trial ' + trial_count + ' of ' + exp_trials.length + '</p>',
+                    trial_duration: 1000,
+                }
+
+                if ( ( ( trial_count % block_len ) == 0 ) && ( trial_count < exp_trials.length ) ) {
+                    break_statement = {
+                        type: "html-keyboard-response",
+                        stimulus: '<div style="text-align: center; vertical-align: top; display: inline-block; width: 800px; margin: auto">'+
+                                    '<p>You have completed ' + (trial_count/exp_trials.length * 100).toFixed(0) + '% of the trials. <br>Good job! Take a break if you need to.</p>'+
+                                    '<p>Press any key to continue the experiment.</p></div>',
+                        post_trial_gap: 1000
+                    }
+                    test_procedure = { 
+                        timeline: [elem, feedback, break_statement]
+                    }
+                } else {
+                    test_procedure = { 
+                        timeline: [elem, feedback]
+                    }
+                }
+                timeline.push(test_procedure)
+            }
+                        
             jsPsych.init({
                 timeline:timeline,
                 on_finish: function(){
@@ -214,16 +283,140 @@
                         hitId: turk_info.hitId,
                         turk_code: set_c
                     });
-                end_display(set_c)
+                    end_display(set_c, debrief())
                 },
                 exclusions: {
                   min_width: 800,
                   min_height: 800
-                }
-                //preload_images: stim_set
+                },
+                preload_images: image_set
             });
 
             // FUNCTIONS
+            function make_wallpaper(t_html, d_html, target, row_len, tile_w, tile_h) {
+                let full_html = '<div style="background-color: #7f7f7f; ; width: ' + tile_w * row_len + 'px; height: ' + tile_h * row_len + 'px; display: block; margin-left: auto; margin-right: auto">'
+                for (let i = 1; i <= (row_len * row_len); i++) {
+                    if ( i == target ) {
+                        full_html += t_html
+                    } else {
+                        full_html += d_html
+                    }
+                    if ( (i % row_len) == 0 ) {
+                        full_html += '<br>'
+                    }
+                }
+                full_html += '</div>'
+                return full_html
+            }
+
+            function trial_set(n_trials, array_sizes, practice) { 
+                let trial_set = []
+                const present_n = Math.floor(n_trials * .75) // make two thirds of trials target present
+                for (const row_len of array_sizes ) {
+                    let num_loc = row_len * row_len
+                    let loc_list = [];
+                    // determine target locations pseudo-randomly
+                    while (loc_list.length < present_n ) {
+                        let sub_list = []
+                        for (let i = 1; i <= num_loc; i++) {
+                            sub_list.push(i);
+                        }
+                        // add shuffled values to list
+                        loc_list = loc_list.concat(shuffle(sub_list))
+                    }
+                    let target_list = loc_list.slice(0, present_n);
+                    // add zeros to location list
+                    while (target_list.length < n_trials) {
+                        target_list.push(0)
+                    }
+                    target_list = shuffle(target_list) // shuffle again
+
+                    for (const target of target_list) {
+                        full_html = make_wallpaper(p1_html, pmm_html, target, row_len, tile_h, tile_w)
+                        let cur_trial = {
+                            type: 'html-keyboard-response', // this is the plugin that allows for HTML_STRING as stimuli input
+                            stimulus: full_html, // this must be an <img> tag in our case
+                            choices: letter_keys,
+                            prompt_location: 'below',
+                            data: {
+                                target: target,
+                                array_size: num_loc,
+                                practice: practice
+                            },
+                            on_finish: function(data){
+                                if ( data.target == 0 ) {
+                                    if ( data.key_press == 76 ) {
+                                        data.correct = true;
+                                        data.class = "correct reject"
+                                    } else if ( data.key_press == 68 ) {
+                                        data.class = "false alarm"
+                                    } else {
+                                        data.correct = false;
+                                    }
+
+                                } else {
+                                    if ( data.key_press == 68 ) {
+                                        data.correct = true; 
+                                        data.class = "hit" 
+                                    } else if ( data.key_press == 76 ) {
+                                        data.class = "miss"
+                                    } else {
+                                        data.correct = false;
+                                    }
+                                }
+                            }
+                        }
+                        trial_set.push(cur_trial) 
+                    }
+                }
+                return trial_set
+            }
+
+            function debrief() {
+                // get unique array sizes
+                const unique = (value, index, self) => {
+                  return self.indexOf(value) === index
+                }
+                const array_sizes = jsPsych.data.get().select("array_size").values.filter(unique)
+                array_sizes.sort(function(a, b){return a - b});
+
+                // loop over them
+                let html_debrief = '<table style="border-collapse: collapse; border: 1px solid black"><tr>'+
+                                        '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black"># trials</th>'+
+                                        '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">array size</th>'+
+                                        '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">rt</th>'+
+                                        '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">accuracy</th>'+
+                                        '<th style="background-color: #D3D3D3; border-bottom: 1px solid black">d&#39</th><tr>'
+                for ( const size of array_sizes ) {
+                    let trials = jsPsych.data.get().filter({practice: false})
+                    trials = trials.filter({array_size: size})
+                    let correct_trials = trials.filter({correct: true});
+                    let ht = trials.filter({class: "hit"});
+                    let fa = trials.filter({class: "false alarm"});
+                    let cr = trials.filter({class: "correct reject"});
+                    let mi = trials.filter({class: "miss"});
+                    let hit_prob = ht.count()/(ht.count()+mi.count())
+                    let fa_prob = fa.count()/(fa.count()+cr.count())
+                    let d_prime = hit_prob - fa_prob
+                    let accuracy = (correct_trials.count() / trials.count() * 100);
+                    let rt = (correct_trials.select('rt').mean());
+                    html_debrief += '<tr><td width=100 style="border-right: 1px solid black">' + trials.count() + '</td>' +
+                                        '<td width=100 style="border-right: 1px solid black">' + size + '</td>' +
+                                        '<td width=100 style="border-right: 1px solid black">' + rt.toFixed(0) + ' ms</td>' +
+                                        '<td width=100 style="border-right: 1px solid black">' + accuracy.toFixed(0) + '%</td>' +
+                                        '<td width=100>' + d_prime.toFixed(2) + '</td></tr>'
+                    jsPsych.data.get().addToLast({ [ size + "_summary"]: 
+                           {"n-trials": trials.count(),
+                           "hit-prob": hit_prob,
+                           "fa-prob": fa_prob,
+                           "d-prime": d_prime,
+                           "accuracy": accuracy,
+                           "rt": rt}
+                        })              
+                }
+                return html_debrief
+            }
+
             function completion_code(prefix, suffix) {
                 let code = "";
                 for (const i of Array(8).keys()) {
@@ -242,11 +435,13 @@
                 return code;
             }
 
-            function end_display(code) {
+            function end_display(code, debrief='') {
                 const display_element = jsPsych.getDisplayElement();
                 display_element.innerHTML = "<p>You have completed the experiment.</p>"+
                                             "<p>We appreciate your participation.</p>"+
-                                            "<p>Your secret key code is: <strong>" + code + "</strong></p>"
+                                            "<p>Your secret key code is: <strong>" + code + "</strong></p>"+
+                                            debrief
+                console.log(display_element.innerHTML)
             }
             // shuffle any input array
             function shuffle(array) {
