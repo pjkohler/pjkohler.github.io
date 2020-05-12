@@ -390,16 +390,16 @@
                 for ( const size of array_sizes ) {
                     let trials = jsPsych.data.get().filter({practice: false})
                     trials = trials.filter({array_size: size})
-                    let correct_trials = trials.filter({correct: true});
-                    let ht = trials.filter({class: "hit"});
-                    let fa = trials.filter({class: "false alarm"});
-                    let cr = trials.filter({class: "correct reject"});
-                    let mi = trials.filter({class: "miss"});
-                    let hit_prob = ht.count()/(ht.count()+mi.count())
-                    let fa_prob = fa.count()/(fa.count()+cr.count())
-                    let d_prime = hit_prob - fa_prob
-                    let accuracy = (correct_trials.count() / trials.count() * 100);
-                    let rt = (correct_trials.select('rt').mean());
+                    const correct_trials = trials.filter({correct: true})
+                    const ht = trials.filter({class: "hit"})
+                    const fa = trials.filter({class: "false alarm"})
+                    const cr = trials.filter({class: "correct reject"})
+                    const mi = trials.filter({class: "miss"})
+                    const hit_prob = ht.count()/(ht.count()+mi.count())
+                    const fa_prob = fa.count()/(fa.count()+cr.count())
+                    const d_prime = hit_prob - fa_prob
+                    const accuracy = (correct_trials.count() / trials.count() * 100);
+                    const rt = (correct_trials.select('rt').mean());
                     html_debrief += '<tr><td width=100 style="border-right: 1px solid black">' + trials.count() + '</td>' +
                                         '<td width=100 style="border-right: 1px solid black">' + size + '</td>' +
                                         '<td width=100 style="border-right: 1px solid black">' + rt.toFixed(0) + ' ms</td>' +
