@@ -2,13 +2,13 @@
 layout: default
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
 
-	<title>Peter J. Kohler's Blog</title>
-	<link href="http://pjkohler.github.io/atom.xml" rel="self"/>
-	<link href="http://pjkohler.github.io"/>
+	<title>Kohler Visual Neuroscience Blog</title>
+	<link href="https://kohlerlab.com/atom.xml" rel="self"/>
+	<link href="https://kohlerlab.com"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://pjkohler.github.io</id>
+	<id>https://kohlerlab.com</id>
 	<author>
 		<name>Peter J. Kohler, PhD</name>
 		<email>pjkohl3r@gmail.com</email>
@@ -17,9 +17,9 @@ layout: default
 	{% for post in site.posts %}
 		<entry>
 			<title>{{ post.title }}</title>
-			<link href="http://pjkohler.github.io{{ post.url }}"/>
+			<link href="https://kohlerlab.com{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://pjkohler.github.io{{ post.id }}</id>
+			<id>https://kohlerlab.com{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
