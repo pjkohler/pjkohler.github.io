@@ -1,5 +1,5 @@
 name: Kohler Visual Neuroscience Laboratory
-title: KVNL
+title: Kohler Visual Neuroscience Laboratory
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 kramdown:
@@ -10,6 +10,7 @@ include: ["_pages"]
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 navigation:
 - title: About
@@ -28,3 +29,4 @@ navigation:
   url: /pubs/
 - title: CV
   url: /cv/
+
