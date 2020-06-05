@@ -14,10 +14,12 @@ plugins:
 navigation:
 - title: About
   url: /
-- title: People
-  url: /people/
+- title: Lab Members
+  url: /lab-members/
 - title: Research
   url: /research/
+- title: Collaborators
+  url: /collaborators/
 - title: Online Experiments
   url: /online-exp/
 - title: Datasets
