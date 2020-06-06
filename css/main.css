@@ -141,6 +141,7 @@ ul#posts {
     line-height: 27px;
     position: relative;
     left: -40px;
+    display: block;
 }
 
 #posts li {
@@ -153,15 +154,20 @@ ul#posts {
     padding-bottom: 18px;
     color: var(--red);
     text-decoration: none;
-    font-style: italic;
     list-style-type: none;
     float: left;
     clear: left;
 }
+
+#posts li span {
+  float: left;
+  width: 110px;
+}
+
 #posts li a {
     color: var(--blue);
     text-decoration: underline;
-    font-style: normal;
+    font-style: italic;
 }
 
 /* ordered list (used for publications and presentations) */
