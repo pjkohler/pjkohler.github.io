@@ -19,7 +19,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: "Helvetica", Helvetica, Arial,sans-serif;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
@@ -161,13 +161,15 @@ ul#posts {
 
 #posts li span {
   float: left;
-  width: 110px;
+  width: 120px;
+  text-align: right; 
+  padding-right: 10px;
 }
 
 #posts li a {
     color: var(--blue);
     text-decoration: underline;
-    font-style: italic;
+    font-style: italic
 }
 
 /* ordered list (used for publications and presentations) */
