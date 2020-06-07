@@ -1,5 +1,6 @@
 name: Kohler Visual Neuroscience Laboratory
 title: Kohler Visual Neuroscience Laboratory
+url: "https://www.kohlerlab.com" # the base hostname & protocol for your site
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 kramdown:
