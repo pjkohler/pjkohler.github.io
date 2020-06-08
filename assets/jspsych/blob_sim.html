@@ -92,10 +92,11 @@
             "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
           "<p>Press any key to begin.</p>"
       };
-      timeline.push(welcome, consent, survey, instructions);
+      //timeline.push(welcome, consent, survey, instructions);
+      timeline.push(welcome, instructions)
 
       let stim_3D = [];
-        for (let i = 1; i <= 1; i++) {
+        for (let i = 1; i <= 8; i++) {
           stim_3D.push("img/select_asym/asym_00" + i + "_3D_ort.png");
           stim_3D.push("img/select_asym/asym_00" + i + "_3D_per.png");
           stim_3D.push("img/select_sym/sym_00" + i + "_3D_ort.png");
@@ -103,7 +104,7 @@
       }
 
       let stim_2D = [];
-        for (let i = 1; i <= 1; i++) {
+        for (let i = 1; i <= 8; i++) {
           stim_2D.push("img/select_asym/asym_00" + i + "_2D_ort.png");
           stim_2D.push("img/select_asym/asym_00" + i + "_2D_per.png");
           stim_2D.push("img/select_sym/sym_00" + i + "_2D_ort.png");
