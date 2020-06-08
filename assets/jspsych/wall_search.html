@@ -83,19 +83,35 @@
             const tile_h = 120
             const tile_w = 120
 
-            // generate array use for image preloading (not used below at all)
-            let image_set = []
-            for (let i = 1; i <= 5; i++) {
-                if (i == 5) {
-                    image_set.push('img/simple_wallpapers/PMM_tile.png')
-                } else {
-                    image_set.push('img/simple_wallpapers/random_tile' + i + '.png')
-                }
+            let pmm_set = []
+            let p1_set = []
+            let p2_set = []
+            let p4_set = []
+
+            for (let i = 1; i <= 10; i++) {
+                p1_set.push('img/simple_wallpapers/p1_tile' + i + '.png')
+                p2_set.push('img/simple_wallpapers/p2_tile' + i + '.png')
+                p4_set.push('img/simple_wallpapers/p4_tile' + i + '.png')
+                pmm_set.push('img/simple_wallpapers/pmm_tile' + i + '.png')
             }
 
+            // generate array used for image preloading (not used in the experiment code at all)
+            const image_set = p1.concat(p2_set, p4_set, pmm_set)
+
             // general style settings for all images
-            const img_dims = 'height=' + Math.floor(tile_h*0.5) + 'px width=' + Math.floor(tile_w*0.5) + 'px '
+            const img_dims = 'height=' + tile_h + 'px width=' + tile_w + 'px '
             const img_style = 'margin:None; vertical-align:top;'
+
+            let pmm_html = []
+            for (const cur_pmm of pmm_set) {
+                let html_temp = '<div style="display: inline-block; width: ' + tile_w + 'px; height: ' + tile_h + 'px">'
+                html_temp += '<img src="' + cur_pmm + '"' + img_dims
+                html_temp += 'style="' + img_style + '"></img>'
+                html_temp += '</div>'
+                pmm_html.push(html_temp)
+            }
+
+
 
             let p1_html = '<div style="display: inline-block; width: ' + tile_w + 'px; height: ' + tile_h + 'px">'
             for (let i = 1; i <= 4; i++) {
@@ -107,7 +123,11 @@
             }
             p1_html += '</div>'
 
-            let pmm_html = '<div style="display: inline-block; width: ' + tile_w + 'px; height: ' + tile_h + 'px">'
+
+
+
+
+
             for (let i = 1; i <= 4; i++) {
                 pmm_html += '<img src="img/simple_wallpapers/PMM_tile.png"' + img_dims
                 let pmm_style = img_style
@@ -316,7 +336,7 @@
                     let num_loc = row_len * row_len
                     let loc_list = [];
                     // determine target locations pseudo-randomly
-                    while (loc_list.length < present_n ) {
+                    while ( loc_list.length < present_n ) {
                         let sub_list = []
                         for (let i = 1; i <= num_loc; i++) {
                             sub_list.push(i);
@@ -331,8 +351,12 @@
                     }
                     target_list = shuffle(target_list) // shuffle again
 
+                    for 
+
+                    exemplar_list = [..]
+
                     for (const target of target_list) {
-                        full_html = make_wallpaper(p1_html, pmm_html, target, row_len, tile_h, tile_w)
+                        full_html = make_wallpaper(p1_html[0], pmm_html[0], target, row_len, tile_h, tile_w)
                         let cur_trial = {
                             type: 'html-keyboard-response', // this is the plugin that allows for HTML_STRING as stimuli input
                             stimulus: full_html, // this must be an <img> tag in our case
