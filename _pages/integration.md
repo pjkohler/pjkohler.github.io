@@ -3,6 +3,7 @@ layout: default
 title: Spatial and Interocular Integration
 permalink: /research/integration
 image: /assets/logos/logo_integration.gif
+
 ---
 <h3><span class="long-heading">Spatial and Interocular Integration</span></h3>
 <h3><span class="short-heading">Integration</span></h3>

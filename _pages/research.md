@@ -2,6 +2,7 @@
 layout: default
 title: Research
 permalink: /research/
+
 ---
 <a class="box-head" href="/research/symmetry">Symmetry in Textures</a>
 <p class="box-body"><img id="logo-img" src="/assets/logos/logo_symmetry.png" alt="Symmetry Logo"> 

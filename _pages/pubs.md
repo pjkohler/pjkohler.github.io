@@ -2,6 +2,7 @@
 layout: default
 title: Publications
 permalink: /pubs/
+
 ---
 <div class="row">
 <div class="column">

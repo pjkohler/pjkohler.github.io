@@ -2,6 +2,7 @@
 layout: default
 title: Online Experiments
 permalink: /online-exp/
+
 ---
 <a class="box-head" href="/assets/jspsych/blob_sort">Blob Sorting</a>
 <p class="box-body"><img id="logo-img" src="/assets/logos/blob_logo.png" alt="Blob Logo"> 

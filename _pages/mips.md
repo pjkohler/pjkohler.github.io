@@ -3,6 +3,7 @@ layout: default
 title: Motion-Induced Position Shifts
 permalink: /research/mips
 image: /assets/logos/logo_mips.png
+
 ---
 ### Motion-Induced Position Shifts
 <span class="big-image">
