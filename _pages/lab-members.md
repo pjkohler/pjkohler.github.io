@@ -2,6 +2,7 @@
 layout: default
 title: Kohler Visual Neuroscience Lab Members
 permalink: /lab-members/
+image: /assets/people/pjkohler.png
 ---
 <a class="box-head">
 	<span class="alignleft">Peter J. Kohler</span>
