@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab Members
+title: Kohler Visual Neuroscience Lab Members
 permalink: /lab-members/
 ---
 <a class="box-head">

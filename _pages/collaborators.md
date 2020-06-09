@@ -1,6 +1,6 @@
 ---
 layout: default
-title: collaborators
+title: Kohler Visual Neuroscience Lab | Collaborators
 permalink: /collaborators/
 ---
 <a class="box-head" href="https://www.freud.lab.yorku.ca/"> 

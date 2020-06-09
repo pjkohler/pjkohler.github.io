@@ -1,6 +1,6 @@
 ---
 layout: default
-title: publications
+title: Kohler Visual Neuroscience Lab | Publications
 permalink: /pubs/
 ---
 <div class="row">

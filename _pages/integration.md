@@ -1,6 +1,6 @@
 ---
 layout: default
-title: research
+title: Kohler Visual Neuroscience Lab | Spatial and Interocular Integration
 permalink: /research/integration
 ---
 <h3><span class="long-heading">Spatial and Interocular Integration</span></h3>

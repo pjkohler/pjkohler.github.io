@@ -1,6 +1,6 @@
 ---
 layout: default
-title: research
+title: Kohler Visual Neuroscience Lab | Research
 permalink: /research/
 ---
 <a class="box-head" href="/research/symmetry">Symmetry in Textures</a>

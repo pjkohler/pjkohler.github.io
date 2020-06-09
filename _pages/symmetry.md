@@ -1,6 +1,6 @@
 ---
 layout: default
-title: research
+title: Kohler Visual Neuroscience Lab | Symmetry
 permalink: /research/symmetry
 ---
 ### Symmetry in Textures
