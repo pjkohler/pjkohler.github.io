@@ -2,9 +2,7 @@
 layout: default
 title: Symmetry in Textures
 permalink: /research/symmetry
-image: 
-	path: /assets/logos/logo_symmetry.png
- 	height: 100
+image: /assets/logos/logo_symmetry.png
 ---
 ### Symmetry in Textures
 <img class="big-image" src="/assets/research/symmetry_allgroups.png" alt="Schematic of the 17 wallpaper groups">

@@ -3,6 +3,7 @@ layout: default
 title: Collaborators
 permalink: /collaborators/
 image: /assets/people/efreud.png
+
 ---
 <a class="box-head" href="https://www.freud.lab.yorku.ca/"> 
 	<span class="alignleft">Erez Freud</span>
