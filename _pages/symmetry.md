@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Symmetry
+title: Symmetry
 permalink: /research/symmetry
 image: /assets/logos/logo_symmetry.png
 ---

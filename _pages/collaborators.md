@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Collaborators
+title: Collaborators
 permalink: /collaborators/
 image: /assets/people/efreud.png
 ---

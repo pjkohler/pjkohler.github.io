@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Spatial and Interocular Integration
+title: Spatial and Interocular Integration
 permalink: /research/integration
 image: /assets/logos/logo_integration.gif
 ---

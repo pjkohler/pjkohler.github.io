@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Motion-Induced Position Shifts
+title: Motion-Induced Position Shifts
 permalink: /research/mips
 image: /assets/logos/logo_mips.png
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Online Experiments
+title: Online Experiments
 permalink: /online-exp/
 ---
 <a class="box-head" href="/assets/jspsych/blob_sort">Blob Sorting</a>

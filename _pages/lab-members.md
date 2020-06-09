@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab Members
+title: Lab Members
 permalink: /lab-members/
 image: /assets/people/pjkohler.png
 ---

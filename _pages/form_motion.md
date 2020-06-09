@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kohler Visual Neuroscience Lab | Form-Motion Interaction
+title: Form-Motion Interaction
 permalink: /research/form-motion
 image: /assets/logos/logo_formmotion.png
 ---
