@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Symmetry
+title: Symmetry in Textures
 permalink: /research/symmetry
 image: /assets/logos/logo_symmetry.png
 ---
