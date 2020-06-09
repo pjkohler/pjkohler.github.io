@@ -2,7 +2,10 @@
 layout: default
 title: Lab Members
 permalink: /lab-members/
-image: /assets/people/pjkohler.png
+image: 
+	path: /assets/people/pjkohler.png
+ 	height: 100
+ 	width: 100
 ---
 <a class="box-head">
 	<span class="alignleft">Peter J. Kohler</span>
