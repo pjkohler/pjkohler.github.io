@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
@@ -33,9 +34,9 @@
      inkscape:window-maximized="1"
      inkscape:window-y="23"
      inkscape:window-x="0"
-     inkscape:cy="100"
-     inkscape:cx="100"
-     inkscape:zoom="1"
+     inkscape:cy="218.54152"
+     inkscape:cx="-41.81034"
+     inkscape:zoom="1.5653853"
      showgrid="false"
      id="namedview835"
      inkscape:window-height="1005"
@@ -60,11 +61,53 @@
        id="rect1115"
        style="fill:#ffffff;stroke-width:1.2" />
     <rect
+       inkscape:export-ydpi="192"
+       inkscape:export-xdpi="192"
        y="0"
        x="0"
        height="200"
        width="200"
        id="rect1135"
-       style="fill:#ffffff;stroke-width:1.2" />
+       style="fill:#a1d99b;stroke-width:1.2;fill-opacity:1" />
+    <image
+       sodipodi:absref="/Users/kohler/code/git/pjkohler.github.io/assets/jspsych/img/select_sym/sym_002_3D_per.png"
+       xlink:href="../jspsych/img/select_sym/sym_002_3D_per.png"
+       y="12.690402"
+       x="13.96804"
+       width="100"
+       height="100"
+       preserveAspectRatio="none"
+       style="stroke-width:19.968;image-rendering:optimizeQuality"
+       id="image1313" />
+    <image
+       sodipodi:absref="/Users/kohler/code/git/pjkohler.github.io/assets/jspsych/img/select_sym/sym_007_3D_ort.png"
+       xlink:href="../jspsych/img/select_sym/sym_007_3D_ort.png"
+       y="72.690399"
+       x="93.96804"
+       width="100"
+       height="100"
+       preserveAspectRatio="none"
+       style="stroke-width:19.968;image-rendering:optimizeQuality"
+       id="image1313-0" />
+    <image
+       sodipodi:absref="/Users/kohler/code/git/pjkohler.github.io/assets/jspsych/img/select_sym/sym_008_3D_ort.png"
+       xlink:href="../jspsych/img/select_sym/sym_008_3D_ort.png"
+       y="95.012222"
+       x="9.410284"
+       width="100"
+       height="100"
+       preserveAspectRatio="none"
+       style="stroke-width:19.968;image-rendering:optimizeQuality"
+       id="image1313-9" />
+    <image
+       sodipodi:absref="/Users/kohler/code/git/pjkohler.github.io/assets/jspsych/img/select_sym/sym_001_3D_per.png"
+       xlink:href="../jspsych/img/select_sym/sym_001_3D_per.png"
+       id="image1313-9-2"
+       style="stroke-width:19.968;image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="100"
+       width="100"
+       x="95.012222"
+       y="8.1326408" />
   </g>
 </svg>
