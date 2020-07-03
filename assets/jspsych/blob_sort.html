@@ -3,15 +3,15 @@
   <head>
     <title>Blob Sort</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="jspsych-6.1.0/jspsych.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-free-sort-ext.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-survey-html-form.js"></script>
     <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="kvnl-js/kvnl-functions.js"></script>
+    <script src="kvnl-js/jspsych-free-sort-ext.js"></script>
+    <meta charset="utf-8"/>
   </head>
   <body>
     <script>
@@ -46,29 +46,7 @@
 
       const survey = {
         type: "survey-html-form",
-        html: "<div style='text-align: left; vertical-align: top; display: inline-block; float: left; width: 100%'>"+
-          "<p><u>Birth Date:</u> <input style='font-size: 18px; line-height: 1.6em;' type='date' id='start' name='dob' min='1960-01-01' max='2020-01-01'></p>"+
-          "<p><u>Handedness:</u> </strong><input type='radio' id='left' name='handedness' value='left'>"+
-          "<label for='left'>Left-handed</label>"+
-          "<input type='radio' id='right' name='handedness' value='right' checked>"+
-          "<label for='right'>Right-handed</label>"+
-          "<input type='radio' id='ambi' name='handedness' value='ambi'>"+
-          "<label for='ambi'>Ambidextrous</label></p>"+
-          "<p><u>Sex:</u> <input type='radio' id='female' name='sex' value='female' checked>"+
-          "<label for='female'>Female</label>"+
-          "<input type='radio' id='male' name='sex' value='male'>"+
-          "<label for='male'>Male</label>"+
-          "<input type='radio' name='sex' value='other'><label for='other'>Other, please specify: </label>"+ 
-          "<input type='text' name='other_sex' id='other_sex' value=''></p>"+
-          "<p><u>What race(s) do you identify with? (choose all that apply)</u><br>"+
-          "<input type='checkbox' name='race' id='indigenous' value='indigenous' /><label for='indigenous'>Aboriginal (Indigenous) Peoples</label><br>"+
-          "<input type='checkbox' name='race' id='black' value='black' /><label for='black'>Black or African-American</label><br>"+
-          "<input type='checkbox' name='race' id='asian' value='asian' /><label for='asian'>Asian</label><br>"+
-          "<input type='checkbox' name='race' id='white' value='white' /><label for='white'>White</label><br>"+
-          "<input type='checkbox' name='race' id='hispanic' value='hispanic' /><label for='hispanic'>Hispanic or Latino/a/x</label><br>"+
-          "<input type='checkbox' name='race' id='pacific' value='pacific' /><label for='pacific'>Native Hawaiian or other Pacific Islander</label><br>"+
-          "<input type='checkbox' name='race' id='other' value='other' /><label for='other'>Multiracial/Other, please specify: </label>"+
-          "<input type='text' name='other_race' id='other_race' value=''>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</p></div>",
+        html: get_survey("simple"),
         preamble: "<strong>Please provide some personal information: </strong>",
         button_label: "continue"
       }
@@ -92,8 +70,8 @@
             "<p style = '" + p_style + "'>All items are inside <br>the sorting arena. <br> You may now click button to continue.</p></div>"+
           "<p>Press any key to begin.</p>"
       };
-      //timeline.push(welcome, consent, survey, instructions);
-      timeline.push(welcome, instructions)
+      timeline.push(welcome, instructions);
+      /*timeline.push(welcome, consent, survey, instructions);*/
 
       let stim_3D = [];
         for (let i = 1; i <= 8; i++) {
@@ -128,30 +106,6 @@
       sort_3D["stimuli"]=stim_3D
 
       timeline.push(sort_2D, sort_3D);
-
-      function completion_code(prefix, suffix) {
-        let code = "";
-        for (const i of Array(8).keys()) {
-          let this_num = Math.floor(Math.random() * 10);
-          let this_char = this_num.toString();
-          code = code + this_char;
-        }
-        code = `${code}-${prefix}-`;
-
-        for (const i of Array(12).keys()) {
-          let this_num = Math.floor(Math.random() * 10);
-          let this_char = this_num.toString();
-          code = code + this_char;
-        }
-        code = `${code}-${suffix}`;
-        return code;
-      }
-      function end_display(code) {
-        const display_element = jsPsych.getDisplayElement();
-        display_element.innerHTML = "<p>You have completed the experiment.</p>"+
-                                    "<p>We appreciate your participation.</p>"+
-                                    "<p>Your secret key code is: <strong>" + code + "</strong></p>"
-      }
 
       /* start the experiment */
       jsPsych.init({

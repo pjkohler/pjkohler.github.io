@@ -275,23 +275,21 @@ p {
 /* TEXT BOX STYLES (used for research and data sets) */
 .box-head {
     border: 0px; 
-    border-radius: 15px 15px 0px 0px;
-    padding: 24px 12px 24px 12px; 
-    margin-right: 0px;
-    margin-top: 9px; 
+    border-radius: 25px 25px 0px 0px;
+    padding: 24px 12px 24px 12px;
+    width: 100%;
+    min-width: 400px;
+    margin-top: 9px;
     background-color: var(--blue);
-    display: block;
     font-size: 24px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 400px;
     line-height: 0px;
-    display: block;
     text-decoration: none;
     color: var(--white);
-    margin-right: 0px; 
+    overflow:auto;
     display: block;
-    height:100%;
-    width:100%
+    vertical-align: top
 }
 
 .box-head:hover {
@@ -301,14 +299,18 @@ p {
 }
 
 .box-body {
+    display: block;
     border-left: 5px solid var(--blue);
     border-right: 5px solid var(--blue); 
     border-bottom: 5px solid var(--blue);
     padding: 18px;
     border-radius: 0px 0px 15px 15px;
-    top: 0px;"
-    min-height: 50%;
-    overflow:auto
+    top: 0px;
+    width: 100%;
+    min-width: 400px;
+    overflow:auto;
+    display: block
+    vertical-align: top
 }
 
 .box-head:hover .box-body,
@@ -334,6 +336,20 @@ p {
     padding-right: 10px;
     display: inline-block;
     float: left;
+    vertical-align: text-top;
+}
+
+.big-round {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
+    vertical-align: text-top;
+    webkit-border-radius: 50%; 
+    moz-border-radius: 50%; 
+    border-radius: 50%
 }
 
 .small-image {
@@ -342,6 +358,16 @@ p {
     padding-right: 10px;
     display: inline-block;
     float: left;
+    vertical-align: text-top;
+}
+
+.small-round {
+    width: 200px;
+    height: auto;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
+    vertical-align: text-top;
     webkit-border-radius: 50%; 
     moz-border-radius: 50%; 
     border-radius: 50%
@@ -357,7 +383,7 @@ p {
 }
 
 /* research logos */
-#logo-img{
+/*#logo-img{
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -367,7 +393,7 @@ p {
     float: left;
     vertical-align: text-top;
     display: inline-block;
-}
+}*/
 
 /* stanford logo (not currently used) */
 #stanford-img {

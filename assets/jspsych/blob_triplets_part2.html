@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Triplets: 3D blobs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+  <script src="jspsych-6.1.0/jspsych.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-survey-html-form.js"></script>
+  <link href="jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+  <script src="kvnl-js/kvnl-functions.js"></script>
+  <script src="kvnl-js/jspsych-free-sort-ext.js"></script>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <script>
+
+  timeline = [];
+  /* init connection with pavlovia.org */
+  
+  /*
+  var pavlovia_init = {
+    type: "pavlovia",
+    command: "init"
+  }
+  timeline.push(pavlovia_init)
+  */
+  
+   /* define welcome message and URPP code collection */
+  const welcome = {
+    type: 'survey-html-form',
+    html: "<div style='text-align: center; vertical-align: top; display: inline-block; float: left; width: 100%'>"+
+              "<p>Welcome to the experiment. <br><br>" + 
+              "Please enter your URPP code here (if applicable): <input style='font-size: 18px; line-height: 1.6em;' input type='text' id='start' name='urpp'></p>"+
+              "</div>",
+    button_label: 'continue'
+  }
+
+  // consent block
+  var ask_consent = function(elem) {
+    if(document.getElementById('consent_checkbox').checked) {
+      return true;
+    } else {
+      alert("Please consent before continuing.");
+      return false;
+    }
+    return false;
+  }
+
+  const consent = {
+    type: 'external-html',
+    url: 'consent.html',
+    cont_btn: "start",
+    check_fn: ask_consent
+  }
+
+  // subject instructions
+  // MAKE THE INSTRUCTIONS MORE EXPLICIT, tell the participant which keys to use 
+  const option_1 = ['f']
+  const option_2 = ['g']
+  const option_3 = ['h']
+  const ig = '<div style="text-align: left; display: inline-block; padding: 10px 60px">'+ option_1 + '</div>' + '<div style="text-align: middle; display: inline-block; padding: 10px 60px">' 
+  + option_2 + '</div>' + '<div style="text-align: right; display: inline-block; padding: 10px 60px">' + option_3 + '</div>' + '<img src="img/triplets_example.png" width="400" height="250"></img>'
+  
+
+  // survey
+  const survey = {
+    type: "survey-html-form",
+    html: get_survey("simple"),
+    preamble: "<strong>Please provide some personal information: </strong>",
+    button_label: "continue"
+  }
+
+  const experiment_instructions = {
+    type: 'html-keyboard-response',
+    stimulus: '<div style:"visibility: hidden"</div>',
+    prompt:   "<div style='height: 100px; width: 1000px'><p> On each trial of this experiment you will be asked to select the <strong> odd </strong> image out of three images presented."+
+              " An example of this task is, for instance, being asked to select the odd image out of the three for each set below: </p></div>"+ 
+              "<div style='position: relative'><div style='background-color:#D3D3D3; padding-top: 5px; padding-bottom: 5px; text-align:center; vertical-align: middle; display: inline-block; height: 250px; width: 400px'" + 
+              "'>" + ig + "</div></div>"+
+              "<div style='height: 200px; width: 1000px'><p> There are no right or wrong answers. In some cases, it may be hard to choose which image is the odd one out."+
+              " In other cases, it may be more obvious. It is important that you select the image that appears the most odd out of the three you see."+
+              " To select the odd image, simply press the key corresponding to your choice (either <strong>'f'</strong> , <strong>'g'</strong> or <strong>'h'</strong>).</p>"+
+              "<p style='color:red;'>Press any key on your keyboard to begin the experiment.</p>"
+  };
+  
+  timeline.push(welcome, experiment_instructions);
+  /*timeline.push(welcome, consent, survey, experiment_instructions);*/
+
+  // EXPERIMENT CODE STARTS HERE
+
+  // FIRST THE FUNCTIONS
+  // calculate combinations based on given input array
+  function combinations(n, k) {
+    const result= [];
+    const combos = [];
+    const recurse = start => {
+      if (combos.length + (n - start + 1) < k) { return }
+      recurse(start + 1);
+      combos.push(start);
+      if(combos.length === k) {     
+         result.push(combos.slice());
+      } else if (combos.length + (n - start + 2) >= k){
+        recurse(start + 1);
+      }
+        combos.pop();     
+    }
+    recurse(1, combos);
+    return result;
+  }
+  // shuffle any input array
+  function shuffle(array) {
+    // define three variables
+    let cur_idx = array.length, tmp_val, rand_idx;
+
+    // While there remain elements to shuffle...
+    while (0 !== cur_idx) {
+      // Pick a remaining element...
+      rand_idx = Math.floor(Math.random() * cur_idx);
+      cur_idx -= 1;
+
+      // And swap it with the current element.
+      tmp_val = array[cur_idx];
+      array[cur_idx] = array[rand_idx];
+      array[rand_idx] = tmp_val;
+    }
+    return array;
+  }
+
+  // how many exemplars
+  const num_ex = 4
+
+  // define two arrays of images (note: for this experiment you will only use one of them)
+  let stim_2D = [];
+    for (let i = 1; i <= num_ex; i++) {
+    stim_2D.push("img/select_asym/asym_00" + i + "_2D_ort.png");
+    stim_2D.push("img/select_asym/asym_00" + i + "_2D_per.png");
+    stim_2D.push("img/select_sym/sym_00" + i + "_2D_ort.png");
+    stim_2D.push("img/select_sym/sym_00" +i + "_2D_per.png");
+  }
+
+  let stim_3D = [];
+    for (let i = 1; i <= num_ex; i++) {
+    stim_3D.push('img/select_asym/asym_00' + i + "_3D_ort.png");
+    stim_3D.push("img/select_asym/asym_00" + i + "_3D_per.png");
+    stim_3D.push("img/select_sym/sym_00" + i + "_3D_ort.png");
+    stim_3D.push("img/select_sym/sym_00" + i + "_3D_per.png");
+  }
+
+  //throw an exception if number of 2D and 3D images is not the same
+  if (stim_2D.length != stim_3D.length) {
+    throw "Not the same number of 2D and 3D images!";
+  }
+
+  // get array of all possible combinations 
+  combo_array = combinations(stim_2D.length, 3)
+
+  // shuffle the order of combinations 
+  combo_array = shuffle(combo_array)
+
+  // define some variables
+  const img_h = 300
+  const img_w = 300
+  const letter_keys = ['f','g','h']
+
+  // dynamically alter stimuli parameter based on permutations made 
+  for (let cur_set of combo_array) {
+  
+    // shuffle the set of three images as well, order does not matter and should be random
+    cur_set = shuffle(cur_set)
+    
+    let cur_trial = []
+    for (const rep of [1,2]) {
+      // counter for looping through the response keys
+      let count = 0
+      // add div to html_str, that will surround all objects and keys
+      let html_str = '<div style="background-color:#D3D3D3; padding-top: 5px; padding-bottom: 5px; position: relative; height: ' + img_h + 'px">'
+      for (const q of cur_set ) {
+        if (rep == 2) {
+          // the div just adds the letter keys above each image
+          html_str += '<div style="width:' + img_w + 'px; text-align:center; vertical-align: middle; display: inline-block; font-size: 200%; color:black; position: absolute;'   
+          html_str += '">' + letter_keys[count] + '</div>'
+          html_str += '<img src ="' +stim_3D[q-1] + '" ' + 'data-src="' + stim_3D[q-1] + '" ' + 'height=' + img_h + ' px width=' + img_w + 'px</img>';
+        } else {
+          if (count == 1) {
+            // add fixation
+            html_str += '<div style="width:' + img_w + 'px; text-align:center; vertical-align: middle; display: inline-block; font-size: 200%; color:black; position: absolute;'   
+            html_str += 'transform: translateY(' + (img_h * .5 - 9) + 'px)' 
+            html_str += '">+</div>'
+          }
+          html_str += '<img src ="' + stim_3D[q-1] + '" ' + 'data-src="' + stim_3D[q-1] + '" ' + 'height=' + img_h + ' px width=' + img_w + 'px style="visibility: hidden"</img>';
+        }
+        // increment the counter
+        count++
+      }
+      // close outer div
+      html_str += '</div>'
+
+      if ( rep == 2 ) { 
+        cur_trial = {
+          type: 'html-keyboard-response', //this is the plugin that allows for HTML_STRING as stimuli input
+          stimulus: html_str, //this must be an <img> tag in our case
+          choices: letter_keys,
+          prompt_location: 'below',
+          prompt: '<p align="top">Select the <strong>odd</strong> image out of the three presented.</p>' +
+                  '<p align="top">The keyboard keys "f", "g" and "h" correspond to the three images shown.</p>'
+        }
+      } else {
+        cur_trial = {
+          type: 'html-keyboard-response', //this is the plugin that allows for HTML_STRING as stimuli input
+          stimulus: html_str, //this must be an <img> tag in our case
+          choices: jsPsych.NO_KEYS,
+          trial_duration: 500,
+          prompt_location: 'below',
+          prompt: '<div style="visibility: hidden"><p align="top">Select the <strong>odd</strong> image out of the three presented.</p>' +
+                  '<p align="top">The keyboard keys "f", "g" and "h" correspond to the three images shown.</p></div>'
+        }
+      }
+      timeline.push(cur_trial) 
+    }
+  }
+
+  /* finish connection with pavlovia.org */
+  
+  /* var pavlovia_finish = {
+    type: "pavlovia",
+    command: "finish"
+  };
+
+  timeline.push(pavlovia_finish);*/
+  
+  //set screen exclusions later
+  jsPsych.init({
+    timeline:timeline,
+    on_finish: function(){
+      const turk_info = jsPsych.turk.turkInfo();
+      const set_c = completion_code("KVNL", "ASPJ") 
+          // you can change these two four-letter codes, KVNL stands for Kohler Visual Neuroscience Lab, ASPJ are just random letters
+      jsPsych.data.addProperties(
+        {
+          workerId: turk_info.workerId,
+          assignmentId: turk_info.assignmentId,
+          hitId: turk_info.hitId,
+          turk_code: set_c
+          }
+          );
+          end_display(set_c)
+        },
+        exclusions: {
+        min_width: 1200,
+        min_height: 600
+        },
+        preload_images: stim_2D, stim_3D
+  });
+  </script>
+</body> 
+</html>
