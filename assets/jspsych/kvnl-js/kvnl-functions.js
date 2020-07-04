@@ -31,28 +31,53 @@ function shuffle(array) {
 }
 
 function completion_code(prefix, suffix) {
-  let code = "";
-  for (const i of Array(8).keys()) {
-    let this_num = Math.floor(Math.random() * 10);
-    let this_char = this_num.toString();
-    code = code + this_char;
-  }
-  code = `${code}-${prefix}-`;
+    let code = "";
+    for (const i of Array(8).keys()) {
+        let this_num = Math.floor(Math.random() * 10);
+        let this_char = this_num.toString();
+        code = code + this_char;
+    }
+    code = `${code}-${prefix}-`;
 
-  for (const i of Array(12).keys()) {
-    let this_num = Math.floor(Math.random() * 10);
-    let this_char = this_num.toString();
-    code = code + this_char;
-  }
-  code = `${code}-${suffix}`;
-  return code;
+    for (const i of Array(12).keys()) {
+        let this_num = Math.floor(Math.random() * 10);
+        let this_char = this_num.toString();
+        code = code + this_char;
+    }
+    code = `${code}-${suffix}`;
+    return code;
 }
 
-function end_display(code) {
-  const display_element = jsPsych.getDisplayElement();
-  display_element.innerHTML = "<p>You have completed the experiment.</p>"+
-                              "<p>We appreciate your participation.</p>"+
-                              "<p>Your secret key code is: <strong>" + code + "</strong></p>"
+// END DISPLAY AND AUTOMATIC CREDIT GRANTING FUNCTION // 
+/*
+The following function is meant to be used at the end of the experiment like so
+
+on_finish: function(){
+  end_display(debrief(), 
+  "https://yorku.sona-systems.com/webstudy_credit.aspx?experiment_id=3947&credit_token=b518a1342fd848388cb4ca7d8c4524a8&survey_code=", 8000)
+}
+
+redirects participants back to the specified URL to be granted a credit upon completion of an experiment. 
+  - debrief: html_code with any non-generic debriefing
+  - url: redirect URL code (if not set, no redirect will be done ) 
+  - delay: delay in ??? before redirection   
+You may use this function to redirect participants back to any site you wish, it is NOT limited to URPP.
+This function is to be used in conjuction with the jsPsych plugin package. 
+*/
+
+function end_display(debrief='', url=null, delay=8000) {
+    const display_element = jsPsych.getDisplayElement();
+    if ( url ) {
+      display_element.innerHTML = "<p>You have completed the experiment.</p>"+
+                                  "<p>We appreciate your participation.</p>"+
+                                  "<p>Please wait to be redirected to URPP.</p>"+debrief
+      let ppn = jsPsych.data.urlVariables()['participant'] // the string in the square brackets should be changed accordingly
+      console.log(url+ppn)
+      setTimeout( function() { window.location.assign(url+ppn) }, delay) //timeout amount can be changed
+    } else {
+      display_element.innerHTML = "<p>You have completed the experiment.</p>"+
+                                  "<p>We appreciate your participation.</p>"+debrief
+    }
 }
 
 function get_survey(type) {
@@ -99,31 +124,6 @@ function get_survey(type) {
   }
   return survey_html
 }
-// AUTOMATIC CREDIT FUNCTION // 
-/*
-The following function redirects participants back to the specified URL to be granted a credit upon completion of an experiment. 
-You may use this function to redirect participants back to any site you wish, it is NOT limited to URPP.
-This function is to be used in conjuction with the jsPsych plugin package. 
-*/
-
-function automatic_credit(url) {
-  let ppn = jsPsych.data.urlVariables()['participant'] // the string in the square brackets should be changed accordingly
-  setTimeout( function() { window.location.assign(url+ppn) }, 8000) //timeout amount can be changed
-}
-
-// --example usage in jsPsych.init()-- //
-/*
-jsPsych.init({
-  timeline: timeline,
-  on_finish: function () {
-      document.body.innerHTML = '<p>Thanks for participating. You will be redirected shortly.</p>'
-      automatic_credit("https://www.google.ca/")
-  },
-  function() {
-      jsPsych.data.get()
-  }
-});
-*/
 
 // PASSWORD PROTECT FUNCTION //
 /*
@@ -151,7 +151,7 @@ var password_func = function passWord() {
       if (pass1.toLowerCase()!="password" & testV ==100) //testV value can be changed to lock people out after n number of attempts
       history.go(-1);
       return " ";
-      }
+}
 
 //EXAMPLE USE CASE (with jsPsych)//
 //seperate html file//

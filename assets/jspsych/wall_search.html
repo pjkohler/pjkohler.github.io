@@ -53,7 +53,6 @@
             }
 
             timeline.push(welcome);
-            /*timeline.push(welcome, consent, survey);*/
 
             // CODE FOR DEFINING WALLPAPERS
 
@@ -250,13 +249,14 @@
                     const turk_info = jsPsych.turk.turkInfo();
                     const set_c = completion_code("KVNL", "QRUL") 
                     // you can change these two four-letter codes, KVNL stands for Kohler Visual Neuroscience Lab, QRUL are just random letters
+                    // not set_c is not used with URPP
                     jsPsych.data.addProperties({
                         workerId: turk_info.workerId,
                         assignmentId: turk_info.assignmentId,
                         hitId: turk_info.hitId,
                         turk_code: set_c
                     });
-                    end_display(set_c, debrief())
+                    end_display(debrief())
                 },
                 exclusions: {
                   min_width: 800,
@@ -264,8 +264,6 @@
                 },
                 preload_images: image_set
             });
-
-
 
             // FUNCTIONS
             function make_wallpaper(t_html, d_html, target, row_len, tile_w, tile_h) {
@@ -382,7 +380,13 @@
                 return trial_set;
             }
             
-            function debrief() {
+            function debrief(code=null) {
+                let html_debrief = ""
+                
+                if (code) {
+                    html_debrief += "<p>Your secret key code is: <strong>" + code + "</strong></p>"
+                }
+
                 // get unique array sizes
                 const unique = (value, index, self) => {
                   return self.indexOf(value) === index
@@ -391,13 +395,13 @@
                 array_size.sort(function(a, b){return a - b});
 
 
-                // loop over them
-                let html_debrief = '<table style="border-collapse: collapse; border: 1px solid black"><tr>'+
+                html_debrief +='<table style="border-collapse: collapse; border: 1px solid black"><tr>'+
                                         '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black"># trials</th>'+
                                         '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">array size</th>'+
                                         '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">rt</th>'+
                                         '<th style="background-color: #D3D3D3; border-right: 1px solid black; border-bottom: 1px solid black">accuracy</th>'+
                                         '<th style="background-color: #D3D3D3; border-bottom: 1px solid black">d&#39</th><tr>'
+                // loop over sizes
                 for ( const size of array_size ) {
                     let trials = jsPsych.data.get().filter({practice: false})
                     trials = trials.filter({array_size: size})
@@ -427,50 +431,6 @@
                 }
                 return html_debrief
             }
-
-            function completion_code(prefix, suffix) {
-                let code = "";
-                for (const i of Array(8).keys()) {
-                    let this_num = Math.floor(Math.random() * 10);
-                    let this_char = this_num.toString();
-                    code = code + this_char;
-                }
-                code = `${code}-${prefix}-`;
-
-                for (const i of Array(12).keys()) {
-                    let this_num = Math.floor(Math.random() * 10);
-                    let this_char = this_num.toString();
-                    code = code + this_char;
-                }
-                code = `${code}-${suffix}`;
-                return code;
-            }
-
-            function end_display(code, debrief='') {
-                const display_element = jsPsych.getDisplayElement();
-                display_element.innerHTML = "<p>You have completed the experiment.</p>"+
-                                            "<p>We appreciate your participation.</p>"+
-                                            "<p>Your secret key code is: <strong>" + code + "</strong></p>"+
-                                            debrief
-            }
-            // shuffle any input array
-            function shuffle(array) {
-                // define three variables
-                let cur_idx = array.length, tmp_val, rand_idx;
-
-                // While there remain elements to shuffle...
-                while (0 !== cur_idx) {
-                    // Pick a remaining element...
-                    rand_idx = Math.floor(Math.random() * cur_idx);
-                    cur_idx -= 1;
-
-                    // And swap it with the current element.
-                    tmp_val = array[cur_idx];
-                    array[cur_idx] = array[rand_idx];
-                    array[rand_idx] = tmp_val;
-                }
-                return array;
-            }   
         </script>
     </body> 
 </html>

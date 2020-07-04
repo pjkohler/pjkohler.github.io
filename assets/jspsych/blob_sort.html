@@ -71,7 +71,6 @@
           "<p>Press any key to begin.</p>"
       };
       timeline.push(welcome, instructions);
-      /*timeline.push(welcome, consent, survey, instructions);*/
 
       let stim_3D = [];
         for (let i = 1; i <= 8; i++) {
@@ -121,7 +120,7 @@
               turk_code: set_c
             }
           );
-          end_display(set_c)
+          end_display("<p>Your secret key code is: <strong>" + set_c + "</strong></p>")
         },
         exclusions: {
           min_width: 1000,

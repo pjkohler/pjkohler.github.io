@@ -86,7 +86,6 @@
   };
   
   timeline.push(welcome, experiment_instructions);
-  /*timeline.push(welcome, consent, survey, experiment_instructions);*/
 
   // EXPERIMENT CODE STARTS HERE
 
@@ -243,15 +242,15 @@
           assignmentId: turk_info.assignmentId,
           hitId: turk_info.hitId,
           turk_code: set_c
-          }
-          );
-          end_display(set_c)
-        },
-        exclusions: {
-        min_width: 1200,
-        min_height: 600
-        },
-        preload_images: stim_2D, stim_3D
+        }
+      )
+      end_display("<p>Your secret key code is: <strong>" + set_c + "</strong></p>")
+    },
+    exclusions: {
+      min_width: 1200,
+      min_height: 600
+    },
+    preload_images: stim_2D, stim_3D
   });
   </script>
 </body> 
