@@ -9,6 +9,8 @@ gem 'jekyll-seo-tag'
 
 gem 'jekyll-sitemap', '~> 1.4'
 
+gem 'nokogiri', '~> 1.10', '>= 1.10.9'
+
 # gem "rails"
 
 # gem "jekyll", "~> 3.8"
