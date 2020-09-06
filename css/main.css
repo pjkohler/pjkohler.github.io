@@ -207,12 +207,14 @@ h1 {
     font-size: 48px;
     font-weight: 400;
     line-height: 0%;
+    text-transform: uppercase;
 }
 h2 {
     font-family: "Futura", Futura, sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 100%;
+    text-transform: uppercase;
 }
 h3 {
     font-size: 30px;
@@ -275,7 +277,7 @@ p {
 /* TEXT BOX STYLES (used for research and data sets) */
 .box-head {
     border: 0px; 
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     padding: 24px 12px 24px 12px;
     width: 100%;
     min-width: 400px;
