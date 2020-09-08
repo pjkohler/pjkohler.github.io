@@ -9,7 +9,7 @@ permalink: /pubs/
 <h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
 <h3 class="relative"><span class="short-heading">Articles</span></h3>
 0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J &amp; Hardan, AY (under review). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Journal of Vision*.
-0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a neural code for perceived emotion. *Nature Neuroscience.*
+0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (under review). Visual and auditory brain areas share a representational geometry for perceiving emotion. *eLife.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/vanrinsfeld_et_al_2020.pdf) Van Rinsveld, A, Guillaume, M, **Kohler**, PJ, 		Schiltz, C, Gevers, W &amp; Content, A (2020). The neural signature of numerosity by separating numerical and continuous magnitude extraction in visual 		cortex with frequency-tagged EEG. *Proceedings of the National Academy of Sciences*.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/barzegaran_et_al_2019.pdf) Barzegaran, E, Bosse, S, **Kohler**,
 	PJ &amp; Norcia, AM (2019). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods* 328:108377.
