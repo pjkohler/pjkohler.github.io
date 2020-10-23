@@ -25,17 +25,17 @@ We are currently recruiting graduate students, and would also love to hear from 
 </p>
 
 <a class="box-head">
-	<span class="alignleft">Asviniya Kokilathasan (she, her, hers)</span>
-	<span class="alignright">Undergraduate RA</span>
-</a>
-<p class="box-body"><img class="small-round" src="/assets/people/akokilathasan.png" alt="AsviniyaKokilathasan">Asviniya is a fourth-year Honours Psychology student at York University. Her current research interest involves analyzing how EEG can be used to study the human visual system and understanding how the information is represented in the brain. She enjoys listening to music, gardening, and photography.
-</p>
-
-<a class="box-head">
 	<span class="alignleft">Christopher Lee (he, him, his)</span>
 	<span class="alignright">Undergraduate RA</span>
 </a>
 <p class="box-body"><img class="small-round" src="/assets/people/clee.png" alt="ChristopherLee">Christopher is a third-year undergraduate student at York University’s honours program in Applied Mathematics. Christopher is currently interested in using data science, image analysis, and graph theory to more effectively analyze data for the purpose of better understanding visual and other neurological processes. He has become well versed in creating and improving existing scripts use for stimulus generation and data collection in the lab. Christopher can often be found watching videos of math and computer science lectures for fun, reading, or playing video games to relax after a long day of lab work.
+</p>
+
+<a class="box-head">
+	<span class="alignleft">Rachel Lysenko (she, her, hers)</span>
+	<span class="alignright">Undergraduate RA</span>
+</a>
+<p class="box-body"><img class="small-round" src="/assets/people/rlysenko.png" alt="RachelLysenko">Rachel is an Honours Psychology student in her second year of undergraduate studies at York University. Her current research interests include the neural basis of visual working memory in relation to pattern and object recognition of symmetrical and asymmetrical generated images. She hopes to expand her understanding of how behavioural studies and neuroimaging are used for further conceptualization of the human visual system. Rachel enjoys the outdoors, playing piano, and reading science fiction.
 </p>
 
 <a class="box-head">
