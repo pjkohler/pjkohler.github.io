@@ -12,13 +12,10 @@
 		{% seo %}
 	</head>
 	<body>
-		<!-- <img id="stanford-img" src="/assets/logos/su_seal.png" alt="Stanford Logo">-->
-		<div class="header">
-			<h1 class="relative"><span class="long-title">{{ "KOHLER VISUAL NEUROSCIENCE LAB" }}</span></h1>
-			<h1 class="relative"><span class="short-title">{{ "KVNL" }}</span></h1>
-			<h2 class="relative"><span class="long-title">{{ "YORK UNIVERSITY" }}</span></h2>
-			<h2 class="relative"><span class="short-title">{{ "YORK" }}</span></h2>
-		</div>
+		<header>
+			<h1 class="relative"><span class="long-title">KOHLER VISUAL NEUROSCIENCE LAB</span><span class="short-title">KVNL</span></h1>
+			<h2 class="relative"><span class="long-title">YORK UNIVERSITY</span><span class="short-title">YORK</span></h2>
+		</header>
 		<div class="topnav" id="myTopnav">
 		  	{% for node in site.navigation %}
 		  		{% if node.url == "/" %}
