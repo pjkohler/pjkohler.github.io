@@ -445,33 +445,26 @@ p {
 
 /* RESPONSIVE LAYOUT, LONG AND SHORT HEADINGS TITLES */
 
-.short-title {
-    display: none;
-}
 
-.shorter-title {
-    display: none;
-}
-
-.long-title {
+.wide {
     display: inline-block;
 }
-.short-heading {
+.mid {
     display: none;
 }
-.long-heading {
-    display: inline-block;
+.narrow {
+    display: none;
 }
 
 @media screen and (max-width: 1150px) 
 {
-    .short-title {
+    .wide {
         display: none;
     }
-    .shorter-title {
+    .mid {
         display: inline-block;
     }
-    .long-title {
+    .narrow {
         display: none;
     }
 }
@@ -494,24 +487,15 @@ p {
         visibility:hidden
     }
 
-    .short-heading {
-        display: inline-block;
+    .wide {
+    display: none;
     }
-    .long-heading {
+    .mid {
         display: none;
     }
-
-    .short-title {
+    .narrow {
         display: inline-block;
     }
-    
-    .shorter-title {
-        display: none
-    }
-    .long-title {
-        display: none;
-    }
-
 
     /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
     .topnav.responsive {

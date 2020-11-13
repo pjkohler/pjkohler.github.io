@@ -6,8 +6,9 @@ permalink: /pubs/
 ---
 <div class="row">
 <div class="column">
-<h3 class="relative"><span class="long-heading">Peer-reviewed Articles</span></h3>
-<h3 class="relative"><span class="short-heading">Articles</span></h3>
+<h3 class="relative wide">Peer-reviewed Articles</h3>
+<h3 class="relative mid">Articles</h3>
+<h3 class="relative narrow">Peer-reviewed Articles</h3>
 0. **Kohler**, PJ, Barzegaran, E, Norcia, AM &amp; McCandliss, B (under review). Parietal contributions to abstract numerosity measured with steady state visual evoked potentials. *Journal of Cognitive Neuroscience*.
 0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (under review). Visual and auditory brain areas share a representational geometry for perceiving emotion. *eLife.*
 0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J &amp; Hardan, AY (in revision). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Journal of Vision*.
@@ -60,15 +61,18 @@ permalink: /pubs/
 	Mala, H, Castro, MR, Knippel, J, **Kohler**, PJ, Lassen, P &amp; Mogensen, J (2008). Therapeutic effects of a restraint procedure on posttraumatic place learning in fimbria-fornix transected rats. *Brain Research 1217* (221-231).
 {: reversed="reversed"}
 
-<h3 class="relative">Book Chapters</h3>
+<h3 class="relative wide">Book Chapters</h3>
+<h3 class="relative mid">Book Chapters</h3>
+<h3 class="relative narrow">Book Chapters</h3>
 0. Caplovitz, GP Hsieh, P-J, Kohler, PJ &amp; Porter, KB (2017). The Spinning Ellipse Speed Illusion. In *Oxford Compendium of Visual Illusions*: Oxford University Press.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/tse_et_al_2013.pdf)
 	Tse, PU, Reavis, EA, **Kohler**, PJ, Caplovitz, GP, &amp; Wheatley, T (2013). How Attention can Alter Appearances. In *Handbook of Experimental Phenomenology* (pp. 291-315): John Wiley & Sons, Ltd.
 {: reversed="reversed"}
 </div>
 <div class="column">
-<h3 class="relative"><span class="long-heading">Selected Conference Presentations</span></h3>
-<h3 class="relative"><span class="short-heading">Conferences</span></h3>
+<h3 class="relative wide">Selected Conference Presentations</h3>
+<h3 class="relative mid">Conferences</h3>
+<h3 class="relative narrow">Conference Presentations</h3>
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_sfn2019.pdf)
 	**Kohler**, PJ, Norcia, AM & McCandliss, B (2019). Steady-state visual evoked potentials reveal parietal contributions to abstract numerosity. Poster at *Neuroscience*, Chicago, IL.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/posters/kohler_vss2019.pdf)

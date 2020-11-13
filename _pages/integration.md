@@ -5,8 +5,9 @@ permalink: /research/integration
 image: /assets/logos/logo_integration.gif
 
 ---
-<h3><span class="long-heading">Spatial and Interocular Integration</span></h3>
-<h3><span class="short-heading">Integration</span></h3>
+<h3 class="wide">Spatial and Interocular Integration</h3>
+<h3 class="mid">Spatial and Interocular Integration</h3>
+<h3 class="narrow">Integration</h3>
 
 <div id="p5-holder"><script language="javascript" type="text/javascript" src="/assets/processing/interocular.js"></script></div>
 The perception of movement in depth and image segmentation of motion relies on integration both over space (***spatial integration***) and between the two eyes (***interocular integration***). In a recent series of experiments, I used a steady-state EEG design to measure response thresholds from separate neural populations coding movement and segmentation. EEG presents an easy and cost-effective way of measuring population responses from the whole brain in vivo, and I have utilized this advantage to collect several large datasets with subtle variations of the same basic design, to directly test specific model-based predictions of how integration occurs, while also estimating the reproducibility of the main effects. Steady-state EEG also accommodates measurement of responses in infant observers, which I have compared to the adult data to draw conclusions about how these mechanisms change over development. In our recent publication of these experiments in *Nature Communications* ([Kohler, Meredith & Norcia, 2018](http://www.nature.com/articles/s41467-018-05918-7)), we show that the results challenge several predictions from the literature and provide evidence for a relatively late-developing mechanism in binocular vision, which depends on both spatial and interocular integration, and cannot be accommodated by existing models of movement-in-depth. Besides our publication in *Nature Communications*, I have presented this work at the Vision Sciences Society conference in 2017 and 2018. 
