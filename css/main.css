@@ -42,8 +42,10 @@ header {
     height: 200px;
     width: 100%;
     top: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
     background-image:url('/assets/logos/lab_logo.png'); 
     background-origin:content-box; background-repeat:no-repeat;
     background-size: auto 100%
@@ -206,16 +208,20 @@ h1 {
     font-family: "Futura", Futura, sans-serif;
     font-size: 48px;
     font-weight: 400;
-    line-height: 0%;
     text-transform: uppercase;
-    text-align: top
+    text-align: top;
+    vertical-align: top;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
 }
 h2 {
     font-family: "Futura", Futura, sans-serif;
     font-size: 30px;
     font-weight: 400;
-    line-height: 0%;
-    padding-top: 15px;
+    margin: 0px;
+    padding:0px;
+    top: 0px;
     text-transform: uppercase;
 }
 h3 {
@@ -226,20 +232,16 @@ h3 {
 }
 
 h2.relative, h3.relative{
-    font-weight: 400;
     color: var(--red);
     position:relative;
     text-align: center;
     z-index:1;
 }
 h1.relative{
-    top:0px;
-    font-weight: 400;
     color: var(--black);
     text-align: center;
     position:relative;
     z-index:1;
-    text-decoration: bold;
 }
 
 /* paragraph style, used for all regular text */
