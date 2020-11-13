@@ -1,6 +1,7 @@
 name: Kohler Visual Neuroscience Laboratory
 title: Kohler Visual Neuroscience Laboratory
 url: https://www.kohlerlab.com # the base hostname & protocol for your site
+image: '/assets/logos/lab_logo.png'
 lang: en_CA
 description: Studying the brain at the Center for Vision Research, York University
 markdown: kramdown
