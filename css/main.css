@@ -217,6 +217,8 @@ h1 {
     margin: 0px;
     padding: 0px;
     top: 0px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 h2 {
     font-family: "Futura", Futura, sans-serif;
@@ -226,6 +228,8 @@ h2 {
     padding:0px;
     top: 0px;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
 }
 h3 {
     font-size: 30px;
@@ -296,7 +300,8 @@ p {
     line-height: 0px;
     text-decoration: none;
     color: var(--white);
-    overflow:auto;
+    white-space: nowrap;
+    overflow: hidden;
     display: block;
     vertical-align: top
 }
@@ -443,6 +448,11 @@ p {
 .short-title {
     display: none;
 }
+
+.shorter-title {
+    display: none;
+}
+
 .long-title {
     display: inline-block;
 }
@@ -453,17 +463,12 @@ p {
     display: inline-block;
 }
 
-@media screen and (max-width: 1100px) 
+@media screen and (max-width: 1150px) 
 {
-    /* use short headings */
-    .short-heading {
-        display: inline-block;
-    }
-    .long-heading {
+    .short-title {
         display: none;
     }
-
-    .short-title {
+    .shorter-title {
         display: inline-block;
     }
     .long-title {
@@ -488,13 +493,25 @@ p {
     #logo {
         visibility:hidden
     }
-    /* use long headings */
+
     .short-heading {
-        display: none;
-    }
-    .long-heading {
         display: inline-block;
     }
+    .long-heading {
+        display: none;
+    }
+
+    .short-title {
+        display: inline-block;
+    }
+    
+    .shorter-title {
+        display: none
+    }
+    .long-title {
+        display: none;
+    }
+
 
     /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
     .topnav.responsive {
