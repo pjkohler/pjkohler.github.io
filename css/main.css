@@ -16,8 +16,7 @@ html{
 body {
     background-color: var(--taupe);
     color: var(--black);
-    margin: 0;
-    padding: 0;
+    margin: 200px 0px 0px 0px;
     font-size: 18px;
     font-family: "Helvetica", Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -26,6 +25,7 @@ body {
     position:relative;
     z-index:10;
     vertical-align: middle;
+
 }
 footer {
     bottom: 0px;
@@ -44,8 +44,11 @@ header {
     top: 0px;
     margin: 0px;
     padding: 20px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    z-index: 99;
+    background-color: var(--taupe);
     background-image:url('/assets/logos/lab_logo.png'); 
     background-origin:content-box; background-repeat:no-repeat;
     background-size: auto 100%
@@ -64,7 +67,7 @@ header {
   background-color: var(--red);
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: 0px;
+  top: 200px;
   margin: 0;
   padding: 0;
   overflow: hidden;
