@@ -496,12 +496,11 @@ p {
 
     /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
     .topnav.responsive {
-        position: -webkit-sticky; /* Safari */
+        position: -webkit-sticky;
         position: sticky;
     }
     .topnav.responsive a.icon {
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
+        position: absolute;
         right: 0;
         top: 0;
     }
