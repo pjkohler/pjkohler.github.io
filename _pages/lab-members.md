@@ -44,6 +44,17 @@ We are currently recruiting graduate students, and would also love to hear from 
 </p>
 
 <a class="box-head">
+	<span class="wide alignleft">Linda Godley (she, her, hers)</span>
+	<span class="mid alignleft">Linda Godley</span>
+	<span class="narrow alignleft">Linda Godley</span>
+	<span class="wide alignright">Undergraduate RA</span>
+	<span class="mid alignright">Undergraduate RA</span>
+	<span class="narrow alignright">Undergrad RA</span>
+</a>
+<p class="box-body"><img class="small-round" src="/assets/people/lgodley.png" alt="LindaGodley">Linda is in her third year of undergraduate studies in the specialized honours Cognitive Science program at York University, with a special interest in Psychology. She is interested in examining and better understanding the visual system of the brain through fMRI technology, how it processes different types of visual inputs, and the neural architectures underlying these processes. In her free time, Linda enjoys writing, practicing calligraphy, and playing her ukulele. 
+</p>
+
+<a class="box-head">
 	<span class="wide alignleft">Rachel Lysenko (she, her, hers)</span>
 	<span class="mid alignleft">Rachel Lysenko</span>
 	<span class="narrow alignleft">Rachel Lysenko</span>
