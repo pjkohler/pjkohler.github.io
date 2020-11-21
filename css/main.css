@@ -49,9 +49,13 @@ header {
     overflow: hidden;
     z-index: 99;
     background-color: var(--taupe);
-    background-image: url('/assets/logos/lab_logo.png'); 
+    background-image: url('/assets/logos/lab_brain.png');
     background-origin:content-box; background-repeat:no-repeat;
     background-size: auto 100%
+}
+
+html.no-svg header {
+    background-image: url('/assets/logos/lab_logo.png');*/
 }
 
 /* NAVIGATION BARS AND LISTS */
