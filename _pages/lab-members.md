@@ -33,17 +33,6 @@ We are currently recruiting graduate students, and would also love to hear from 
 </p>
 
 <a class="box-head">
-	<span class="wide alignleft">Christopher Lee (he, him, his)</span>
-	<span class="mid alignleft">Christopher Lee</span>
-	<span class="narrow alignleft">Christopher Lee</span>
-	<span class="wide alignright">Undergraduate RA</span>
-	<span class="mid alignright">Undergraduate RA</span>
-	<span class="narrow alignright">Undergrad RA</span>
-</a>
-<p class="box-body"><img class="small-round" src="/assets/people/clee.png" alt="ChristopherLee">Christopher is a third-year undergraduate student at York University’s honours program in Applied Mathematics. Christopher is currently interested in using data science, image analysis, and graph theory to more effectively analyze data for the purpose of better understanding visual and other neurological processes. He has become well versed in creating and improving existing scripts use for stimulus generation and data collection in the lab. Christopher can often be found watching videos of math and computer science lectures for fun, reading, or playing video games to relax after a long day of lab work.
-</p>
-
-<a class="box-head">
 	<span class="wide alignleft">Linda Godley (she, her, hers)</span>
 	<span class="mid alignleft">Linda Godley</span>
 	<span class="narrow alignleft">Linda Godley</span>
@@ -52,6 +41,17 @@ We are currently recruiting graduate students, and would also love to hear from 
 	<span class="narrow alignright">Undergrad RA</span>
 </a>
 <p class="box-body"><img class="small-round" src="/assets/people/lgodley.png" alt="LindaGodley">Linda is in her third year of undergraduate studies in the specialized honours Cognitive Science program at York University, with a special interest in Psychology. She is interested in examining and better understanding the visual system of the brain through fMRI technology, how it processes different types of visual inputs, and the neural architectures underlying these processes. In her free time, Linda enjoys writing, practicing calligraphy, and playing her ukulele. 
+</p>
+
+<a class="box-head">
+	<span class="wide alignleft">Christopher Lee (he, him, his)</span>
+	<span class="mid alignleft">Christopher Lee</span>
+	<span class="narrow alignleft">Christopher Lee</span>
+	<span class="wide alignright">Undergraduate RA</span>
+	<span class="mid alignright">Undergraduate RA</span>
+	<span class="narrow alignright">Undergrad RA</span>
+</a>
+<p class="box-body"><img class="small-round" src="/assets/people/clee.png" alt="ChristopherLee">Christopher is a third-year undergraduate student at York University’s honours program in Applied Mathematics. Christopher is currently interested in using data science, image analysis, and graph theory to more effectively analyze data for the purpose of better understanding visual and other neurological processes. He has become well versed in creating and improving existing scripts use for stimulus generation and data collection in the lab. Christopher can often be found watching videos of math and computer science lectures for fun, reading, or playing video games to relax after a long day of lab work.
 </p>
 
 <a class="box-head">
