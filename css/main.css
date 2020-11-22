@@ -51,13 +51,13 @@ header {
     background-color: var(--taupe);
 }
 
-html.svg-logo header, span{
+html.svg-logo header, span.lab-logo{
     background-image: url('/assets/logos/lab_brain.png');
     background-origin:content-box; background-repeat:no-repeat;
     background-size: auto 100%
 }
 
-html.no-svg-logo header, span{
+html.no-svg-logo header, span.lab-logo{
     background-image: url('/assets/logos/lab_brain.png');
     background-origin:content-box; background-repeat:no-repeat;
     background-size: auto 100%
