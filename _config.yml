@@ -11,7 +11,7 @@ twitter:
 social:
   type: Organization
 lang: en_CA
-description: Lead by Dr. Peter J. Kohler at York University. Dedicated to understanding how the brain gives rise to visual experience. 
+description: Dedicated to understanding how the brain gives rise to visual experience. Lead by Dr. Peter J. Kohler at York University.
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 github: [metadata]
