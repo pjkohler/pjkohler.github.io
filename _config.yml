@@ -2,6 +2,8 @@ name: Kohler Visual Neuroscience Laboratory
 title: Kohler Visual Neuroscience Laboratory
 url: https://www.kohlerlab.com # the base hostname & protocol for your site
 image: /assets/logos/lab_logo.png
+og_image: /assets/logos/lab_logo.png
+logo: /assets/logos/lab_logo.png
 twitter:
   username: k_v_n_l
 lang: en_CA
