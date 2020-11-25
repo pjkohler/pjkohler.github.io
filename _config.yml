@@ -6,6 +6,8 @@ og_image: /assets/logos/lab_logo.png
 logo: /assets/logos/lab_logo.png
 twitter:
   username: k_v_n_l
+social:
+  type: Organization
 lang: en_CA
 description: Studying the brain at the Center for Vision Research, York University
 markdown: kramdown
