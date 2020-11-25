@@ -2,10 +2,10 @@ name: Kohler Visual Neuroscience Laboratory
 title: Kohler Visual Neuroscience Laboratory
 url: https://www.kohlerlab.com # the base hostname & protocol for your site
 image:
-  path: /assets/logos/lab_logo.png
+  path: /assets/logos/lab_logo_social.png
   height: 160
   width: 214
-logo: /assets/logos/lab_logo.png
+logo: /assets/logos/lab_logo_social.png
 twitter:
   username: k_v_n_l
 social:
@@ -20,7 +20,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/logos/lab_logo.png
+      image: /assets/logos/lab_logo_social.png
 
 kramdown:
   # parse markdown inside block-level HTML tag
