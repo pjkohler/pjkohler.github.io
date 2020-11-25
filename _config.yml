@@ -1,18 +1,26 @@
 name: Kohler Visual Neuroscience Laboratory
 title: Kohler Visual Neuroscience Laboratory
 url: https://www.kohlerlab.com # the base hostname & protocol for your site
-image: /assets/logos/lab_logo.png
-og_image: /assets/logos/lab_logo.png
+image:
+  path: /assets/logos/lab_logo.png
+  height: 160
+  width: 214
 logo: /assets/logos/lab_logo.png
 twitter:
   username: k_v_n_l
 social:
   type: Organization
 lang: en_CA
-description: Studying the brain at the Center for Vision Research, York University
+description: We Study How the Brain Constructs our Visual Experience at York University
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 github: [metadata]
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/logos/lab_logo.png
 
 kramdown:
   # parse markdown inside block-level HTML tag
