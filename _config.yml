@@ -11,7 +11,7 @@ twitter:
 social:
   type: Organization
 lang: en_CA
-description: We Study How the Brain Constructs our Visual Experience at York University
+description: Lead by Dr. Peter J. Kohler at York University. Dedicated to understanding how the brain gives rise to visual experience. 
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 github: [metadata]

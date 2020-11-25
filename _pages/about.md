@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Kohler Visual Neuroscience Laboratory
 permalink: /
 
 ---
