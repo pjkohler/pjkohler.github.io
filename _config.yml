@@ -17,10 +17,16 @@ permalink: /:year/:month/:day/:title
 github: [metadata]
 
 defaults:
-  - scope:
+  - 
+    scope:
       path: ""
     values:
       image: /assets/logos/lab_logo_social.png
+  -  
+    scope:
+      path: /assets/jspsych/
+    values:
+      sitemap: false
 
 kramdown:
   # parse markdown inside block-level HTML tag
