@@ -27,6 +27,11 @@ defaults:
       path: /assets/jspsych/
     values:
       sitemap: false
+  -  
+    scope:
+      path: "/assets/*/*.pdf"
+    values:
+      sitemap: false
 
 kramdown:
   # parse markdown inside block-level HTML tag
