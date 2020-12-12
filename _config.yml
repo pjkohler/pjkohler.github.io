@@ -21,7 +21,6 @@ defaults:
       path: ""
     values:
       image: /assets/logos/lab_logo_social.png
-      lang: "en"
   -  
     scope:
       path: /assets/jspsych/
