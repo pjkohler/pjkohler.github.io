@@ -10,7 +10,6 @@ twitter:
   username: k_v_n_l
 social:
   type: Organization
-lang: en_CA
 description: Dedicated to understanding how the brain gives rise to visual experience. Lead by Dr. Peter J. Kohler at York University.
 markdown: kramdown
 permalink: /:year/:month/:day/:title
@@ -22,6 +21,7 @@ defaults:
       path: ""
     values:
       image: /assets/logos/lab_logo_social.png
+      lang: en_CA
   -  
     scope:
       path: /assets/jspsych/
