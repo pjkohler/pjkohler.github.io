@@ -18,8 +18,7 @@ image: /assets/people/pjkohler.png
 
 <a class="box-head">[your name here]</a>
 <p class="box-body"> 
-We are currently recruiting graduate students, and would also love to hear from undergraduate students at York who are interested in learning about using EEG and functional MRI to study the human visual system.
-</p>
+<b>We are currently recruiting graduate students!</b> For more information on applying to the graduate program in Psychology at York University, please see [here](https://psychology.gradstudies.yorku.ca/). Please note that if you are interested in being supervised by Professor Kohler, <b>you must select Brain, Behaviour and Cognitive Sciences (BBCS) as your first choice area of specialization</b> during the application process, otherwise he will not have access to your application.<br><br><b>We are also recruiting undergraduate students!</b> Please get in touch if you are an undergrad at York who is interested in learning about using behavioral methods, EEG and functional MRI to study the human visual system.</p>
 
 <a class="box-head">
 	<span class="wide alignleft">Rachel Moreau (she, her, hers)</span>
