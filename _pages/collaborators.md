@@ -14,14 +14,14 @@ image: /assets/people/efreud.png
 <p class="box-body"><img class="small-round" src="/assets/people/efreud.png" alt="Erez Freud">Erez Freud is another recent addition to the [Center for Vision Research](http://cvr.yorku.ca/). He joined York University as an Assistant Professor in 2018. His interests in object perception and mid- to high-level vision are closely aligned with the KVNL, so it was natural to begin collaborating as soon as the KVNL was established. Dr. Freud is a co-advisor to Rachel Moreau and we currently hold joint lab meetings between the Freud lab and the KVNL. More information is available on the Freud lab [website](https://www.freud.lab.yorku.ca/). 
 </p>
 
-<a class="box-head" href="https://myweb.sabanciuniv.edu/nihanalp/avnl">
+<a class="box-head" href="https://psy.sabanciuniv.edu/en/people/faculty/detail/3298">
 	<span class="alignleft">Nihan Alp</span>
-	<span class="wide alignright">Sabanci University</span>
-	<span class="mid alignright">Sabanci University</span>
-	<span class="narrow alignright">Sabanci U</span>
+	<span class="wide alignright">Sabancı University</span>
+	<span class="mid alignright">Sabancı University</span>
+	<span class="narrow alignright">Sabancı U</span>
 </a>
 <p class="box-body">
-	<img class="small-round" src="/assets/people/nalp.png" alt="Nihan Alp">
+	<img class="small-round" src="/assets/people/nalp.png" alt="Nihan Alp">Nihan Alp is a Professor in the [Psychology Department of Sabancı University](https://psy.sabanciuniv.edu/en/people/faculty/detail/3298) where she runs the [Alp Visual Neuroscience Lab](https://alvinlab.com). Her research focuses on how the visual system combines local properties of the visual scene (e.g., elements, features, parts) to obtain holistic representations (e.g., patterns, objects, wholes). Professor Alp visited Stanford University during her PhD and collaborated with Professor Kohler on a project using Steady-State Visual Evoked Potentials to study integration processes in symmetry perception. That study was [published in 2018](https://www.nature.com/articles/s41598-018-24513-w) and Professor Alp began her position at Sabancı around the same time. Professors Alp and Kohler have continued their productive collaboration, currently focusing on a project led by KVNL grad student Rachel Moreau where visual search is used to probe processing of symmetries in regular textures. 
 </p>
 
 <a class="box-head" href="http://iphome.hhi.de/bosse">
@@ -31,7 +31,7 @@ image: /assets/people/efreud.png
 	<span class="narrow alignright">Fraunhofer HHI</span>
 </a>
 <p class="box-body">
-	<img class="small-round" src="/assets/people/sbosse.png" alt="Sebastian Bosse">Sebastian Bosse heads the Interactive & Cogntive Systems research group in the [Vision & Imaging Technologies Department](https://www.hhi.fraunhofer.de/en/departments/vit.html) at the [Fraunhofer Institute for Telecommunications – Heinrich Hertz Institute](https://www.hhi.fraunhofer.de/en.html) in Berlin, Germany. A primary research interest of Dr. Bosse is the assessment and prediction of perceived image and video quality. He approaches that problem using insights from visual neuroscience, EEG techniques and computational modeling of visual perception. Although Dr. Bosse is an early career researcher, he is already a group leader at Fraunhofer and has made numerous high-impact contributions to the field as he pioneered the fields of psychophysiological quality assessment and machine learning-based quality prediction. Professor Kohler met Sebastian when the latter was a visiting scholar at Stanford University, and they have had an ongoing collaboration since. Dr. Bosse is currently involved in ongoing work in the KVNL on the perception of symmetries in regular textures.
+	<img class="small-round" src="/assets/people/sbosse.png" alt="Sebastian Bosse">Sebastian Bosse heads the Interactive & Cogntive Systems research group in the [Vision & Imaging Technologies Department](https://www.hhi.fraunhofer.de/en/departments/vit.html) at the [Fraunhofer Institute for Telecommunications – Heinrich Hertz Institute](https://www.hhi.fraunhofer.de/en.html) in Berlin, Germany. A primary research interest of Dr. Bosse is the assessment and prediction of perceived image and video quality. He approaches that problem using insights from visual neuroscience, EEG techniques and computational modeling of visual perception. Although Dr. Bosse is an early career researcher, he is already a group leader at Fraunhofer and has made numerous high-impact contributions to the field as he pioneered the fields of psychophysiological quality assessment and machine learning-based quality prediction. Professor Kohler met Dr. Bosse when the latter was a visiting scholar at Stanford University, and they have had an ongoing collaboration since. Dr. Bosse is currently involved in ongoing work in the KVNL on the perception of symmetries in regular textures.
 </p>
 <a class="box-head" href="https://www.unr.edu/psychology/faculty/gideon-caplovitz">
 	<span class="alignleft">Gideon Caplovitz</span>
