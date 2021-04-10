@@ -9,9 +9,12 @@ permalink: /pubs/
 <h3 class="relative wide">Peer-reviewed Articles</h3>
 <h3 class="relative mid">Articles</h3>
 <h3 class="relative narrow">Peer-reviewed Articles</h3>
-0. **Kohler**, PJ, Barzegaran, E, Norcia, AM &amp; McCandliss, B (under review). Parietal contributions to abstract numerosity measured with steady state visual evoked potentials. *Journal of Cognitive Neuroscience*.
-0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (under review). Visual and auditory brain areas share a representational geometry for perceiving emotion. *eLife.*
-0. Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J &amp; Hardan, AY (in revision). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Journal of Vision*.
+0. **Moreau**, R, Alp, N, Clarke, A, Freud, E & **Kohler**, PJ (in preparation). Differential processing of reflection and rotation symmetries in visual textures. Upcoming talk at the Vision Sciences Society conference 2021, paper in preparation. *student-led project*
+0. **Kohler**, PJ, Barzegaran, E, Norcia, AM &amp; McCandliss, B (in preparation). Parietal contributions to abstract numerosity measured with steady state visual evoked potentials. *Journal of Cognitive Neuroscience*.
+0. **Kohler**, PJ &amp; Clarke, A (under review). Visual and auditory brain areas share a representational geometry for perceiving emotion. *Proceeding of the Royal Society B.*
+0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a representational geometry for perceiving emotion. *Current Biology.*
+0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/norcia_et_al_2021.pdf)
+	Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J &amp; Hardan, AY (2021). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Journal of Vision 21* (4):5, 1–20.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/vanrinsfeld_et_al_2020.pdf) Van Rinsveld, A, Guillaume, M, **Kohler**, PJ, 		Schiltz, C, Gevers, W &amp; Content, A (2020). The neural signature of numerosity by separating numerical and continuous magnitude extraction in visual 		cortex with frequency-tagged EEG. *Proceedings of the National Academy of Sciences*.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/barzegaran_et_al_2019.pdf) Barzegaran, E, Bosse, S, **Kohler**,
 	PJ &amp; Norcia, AM (2019). EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods* 328:108377.
