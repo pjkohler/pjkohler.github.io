@@ -12,8 +12,8 @@ permalink: /pubs/
 0. **Moreau**, R, Alp, N, Clarke, A, Freud, E &amp; **Kohler**, PJ (in preparation). Differential processing of reflection and rotation symmetries in visual textures. *student-led project*
 0. **Kohler**, PJ, Barzegaran, E, Norcia, AM &amp; McCandliss, B (in preparation). Parietal contributions to abstract numerosity measured with steady state visual evoked potentials. *Journal of Cognitive Neuroscience*.
 0. Boswell, A., **Kohler**, PJ, McCarthy, JD &amp; Caplovitz, GP (under review). Perceived group size is determined by the centroids of the component elements. *Journal of Vision*. 
-0. **Kohler**, PJ &amp; Clarke, A (in revision). The human visual system preserves the hierarchy of 2-dimensional pattern regularity. *Proceedings of the Royal Society B: Biological Sciences.*
-0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (in revision). Visual and auditory brain areas share a representational geometry for perceiving emotion. *Current Biology.*
+0. **Kohler**, PJ &amp; Clarke, A (revised and resubmitted). The human visual system preserves the hierarchy of 2-dimensional pattern regularity. *Proceedings of the Royal Society B: Biological Sciences.*
+0. Sievers, B, Parkinson, C, **Kohler**, PJ, Hughes, J, Fogelson, S &amp; Wheatley, T (revised and resubmitted). Visual and auditory brain areas share a representational geometry for perceiving emotion. *Current Biology.*
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/norcia_et_al_2021.pdf)
 	Norcia, AM, Lee, A, Meredith, W, **Kohler**, PJ, Pei, F, Ghassan, S, Libove, R, Phillips, J &amp; Hardan, AY (2021). A case-control study of visual, auditory and audio-visual sensory interactions in children with Autism Spectrum Disorder. *Journal of Vision, 21*(4), 5.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/vanrinsfeld_et_al_2020.pdf) Van Rinsveld, A, Guillaume, M, **Kohler**, PJ, Schiltz, C, Gevers, W &amp; Content, A (2020). The neural signature of numerosity by separating numerical and continuous magnitude extraction in visual cortex with frequency-tagged EEG. *Proceedings of the National Academy of Sciences, 117*(11), 5726-5732.
@@ -50,7 +50,7 @@ permalink: /pubs/
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/schlegel_et_al_2013.pdf)
 	Schlegel, AS, **Kohler**, PJ, Fogelson, SV, Alexander, P, Konuthula, D &amp; Tse, PU (2013). Network structure and dynamics of the mental workspace. *Proceedings of the National Academy of Sciences, 110*(40), 16277-16282.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/kohler_et_al_2013.pdf)
-	**Kohler**, PJ, Fogelson, SV Reavis, EA, Meng, M, Guntupalli, JS, Hanke, M, Halchenko, YO, Connolly, AC, Haxby, JV &amp; Tse, PU (2013). Pattern classification precedes regional-average hemodynamic response in early visual cortex. *NeuroImage, 78*, 249–260).
+	**Kohler**, PJ, Fogelson, SV Reavis, EA, Meng, M, Guntupalli, JS, Hanke, M, Halchenko, YO, Connolly, AC, Haxby, JV &amp; Tse, PU (2013). Pattern classification precedes regional-average hemodynamic response in early visual cortex. *NeuroImage, 78*, 249–260.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/reavis_et_al_2013.pdf)
 	Reavis, EA, **Kohler**, PJ, Caplovitz, CP, Wheatley, T &amp; Tse, PU (2013). Effects of attention on visual experience during monocular rivalry. *Vision Research, 83*, 76-81.
 0. [![pdf_icon](/assets/icons/pdf.png "download pdf"){: #pdf-icon }](/assets/papers/parkinson_et_al_2012.pdf)
